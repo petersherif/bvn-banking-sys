@@ -1,0 +1,78 @@
+// Baseic Colors
+
+$white:											#FFFFFF;
+$off-white: 								#F9FAFB;
+$black:											#000000;
+$mine-shaft:								#222222;
+$shadow:										rgba(57,73,76,.35);
+$limed-spruce:							#364347;
+$silver-chalice:						#ACACAC;
+// $hit-gray:									#93A4AA;
+$lean-blue:    							#02BAF2;
+$brown-chico:								#885353;
+$green-rock:								#2BE080;
+$red-bird:									#D51D1D;
+
+
+// Theme Colors
+
+$color-shadow:							rgba($black, .125);
+$color-primary:							$lean-blue;
+$color-primary-hover:				mix($black, $lean-blue, 15%);
+$color-accent:							$red-bird;
+$color-accent-hover:				mix($black, $red-bird, 15%);
+$color-bg-light:						$off-white;
+$color-bg-light-hover:			mix($black, $color-bg-light, 15%);
+$color-bg-white:						$white;
+$color-bg-white-hover:			mix($black, $color-bg-white, 15%);
+$color-bg-invert:						$color-primary;
+$color-bg-invert-hover:			$color-primary-hover;
+$color-text:								$limed-spruce;
+$color-text-weak:						$silver-chalice;
+$color-text-strong:					mix($black, $lean-blue, 80%);
+$color-text-heading:				$silver-chalice;
+$color-text-invert:					$color-bg-white;
+$color-text-strong-invert:	mix($black, $color-bg-white, 15%);
+$color-text-link:						$color-primary;
+$color-text-link-hover:			$color-text-strong;
+$color-border:							$silver-chalice;
+$block-shadow:							0 0 6px $shadow;
+
+$icon-primary:							$color-primary;
+$icon-blue:									$lean-blue;
+$icon-brown:								$brown-chico;
+$icon-green:								$green-rock;
+$icon-red:									$red-bird;
+
+// Widths and Heights
+
+$nav-height:								50px;
+$sidebar-width-opened:			280px;
+$sidebar-width-closed:			45px;
+$input-height:							40px;
+
+// Fonts
+$serif-font:		"Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$heading-font: 	"Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+$body-font:			"Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// Border Radius
+$br-lv1: 5px;
+$br-lv2: 10px;
+$br-lv3: 30px;
+$br-lv4: 40px;
+$br-lv5: 50px;
+
+// Border Radius Top
+$br-lv1-t: 5px 5px 0 0;
+$br-lv2-t: 10px 10px 0 0;
+$br-lv3-t: 30px 30px 0 0;
+$br-lv4-t: 40px 40px 0 0;
+$br-lv5-t: 50px 50px 0 0;
+
+// Border Radius bottom
+$br-lv1-b: 0 0 5px 5px;
+$br-lv2-b: 0 0 10px 10px;
+$br-lv3-b: 0 0 30px 30px;
+$br-lv4-b: 0 0 40px 40px;
+$br-lv5-b: 0 0 50px 50px;

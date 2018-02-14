@@ -1,0 +1,43 @@
+/*
+************ COLORS ************ 
+*/
+
+/*****************************************  
+[Text Colors]
+*****************************************/
+.color-primary { color: $color-primary; }
+.color-primary-hover:hover { color: $color-primary-hover; }
+.color-accent { color: $color-accent; }
+.color-accent-hover:hover { color: $color-accent-hover; }
+.color-text { color: $color-text; }
+.color-text-weak { color: $color-text-weak; }
+.color-text-strong { color: $color-text-strong; }
+.color-text-heading { color: $color-text-heading; }
+.color-text-invert { color: $color-text-invert; }
+.color-text-strong-invert { color: $color-text-strong-invert; }
+.color-text-link { color: $color-text-link; }
+.color-text-link-hover { color: $color-text-link-hover; }
+
+/*****************************************  
+[Icons Colors]
+*****************************************/
+.icon-primary { color: $icon-primary; }
+.icon-blue { color: $icon-blue; }
+.icon-brown { color: $icon-brown; }
+.icon-green { color: $icon-green; }
+.icon-red { color: $icon-red; }
+
+/*****************************************  
+[Background Colors]
+*****************************************/
+.bg-light { background: $color-bg-light; }
+.bg-light-hover:hover { background: $color-bg-light-hover; }
+.bg-white { background: $color-bg-white; }
+.bg-white-hover:hover { background: $color-bg-white-hover; }
+.bg-invert { background: $color-bg-invert; }
+.bg-invert-hover:hover { background: $color-bg-invert-hover; }
+
+/*****************************************  
+[Border Colors]
+*****************************************/
+.color-border { color: $color-border; }

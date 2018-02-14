@@ -1,0 +1,15 @@
+.navbar-custom {
+	background: $color-bg-white;
+	box-shadow: $block-shadow;
+	border: 0;
+	border-radius: 0;
+	
+	.hello-msg {
+	  float: right;
+	  margin: 14px;
+	}
+
+	.navbar-brand {
+		color: $color-primary;
+	}
+}

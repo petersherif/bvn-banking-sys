@@ -1,0 +1,94 @@
+.sidebar {
+	width: $sidebar-width-closed;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	background: $color-bg-white;
+	box-shadow: $block-shadow;
+	z-index: 9999;
+	transition: width .3s ease-in-out;
+
+	&__header {
+		height: $nav-height;
+		position: relative;
+		overflow: hidden;
+
+		a {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	&__logo {
+		max-width: 80px;
+		transform: translateY(-50%);
+		position: absolute;
+		top: 50%;
+		left: 7px;
+		transition: left .225s ease-in-out;
+	}
+
+	&__body {
+		padding: 10px 0;
+	}
+
+	&__list {
+
+		.list__item {
+			overflow: hidden;
+			padding: 10px 15px;
+			width: 100%;
+			cursor: pointer;
+			white-space: nowrap;
+
+			.fa {
+				min-width: 20px;
+				margin: 0 10px 0 0;
+			}
+
+			a {
+				color: $color-text;
+				text-decoration: none;
+
+				&:hover {
+					color: $color-primary;
+				}
+			}
+
+			&:hover,
+			&.active {
+				a {
+					color: $color-primary;
+				}
+			}
+
+			&.active {
+				background: $color-bg-light;
+				border-width: 1px 0;
+				border-style: solid;
+				border-color: mix($white, $color-border, 50%);
+				border-left-width: 5px;
+				border-left-color: $color-primary;
+				padding-left: 10px;
+			}
+		}
+	}
+
+	&:hover {
+		width: $sidebar-width-opened;
+
+		.sidebar__header {
+			box-shadow: 10px 0 0 $white;
+		}
+
+		.sidebar__body {
+			border-top: 1px solid mix($white, $color-border, 50%);
+		}
+		
+		.sidebar__logo {
+			left: 30px;
+		}
+	} // Sidebar Hover Effects
+} // Sidebar

@@ -1,0 +1,18 @@
+/*****************************************  
+[Fonts]
+*****************************************/
+
+@mixin serif-font {
+  font-family: $serif-font;
+
+}
+
+@mixin body-font {
+  font-family: $body-font;
+  
+}
+
+@mixin heading-font {
+  font-family: $heading-font;
+  
+}
