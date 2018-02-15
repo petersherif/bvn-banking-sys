@@ -22,30 +22,34 @@
 	}
 
 	&__logo {
+		width: 177%;
 		max-width: 80px;
 		transform: translateY(-50%);
 		position: absolute;
 		top: 50%;
 		left: 7px;
-		transition: left .225s ease-in-out;
+		transition: all .225s ease-in-out;
 	}
 
 	&__body {
 		padding: 10px 0;
+		border-top: 1px solid $white;
 	}
 
 	&__list {
 
 		.list__item {
 			overflow: hidden;
-			padding: 10px 15px;
+			padding: 10px 13px;
 			width: 100%;
 			cursor: pointer;
 			white-space: nowrap;
+			transition: all .225s ease-in-out;
 
 			.fa {
 				min-width: 20px;
-				margin: 0 10px 0 0;
+				margin: 0 12px 0 0;
+				text-align: center;
 			}
 
 			a {
@@ -71,7 +75,13 @@
 				border-color: mix($white, $color-border, 50%);
 				border-left-width: 5px;
 				border-left-color: $color-primary;
-				padding-left: 10px;
+				padding-left: 8px;
+			}
+
+			&:last-child {
+				position: absolute;
+				bottom: 0;
+				
 			}
 		}
 	}
@@ -84,7 +94,7 @@
 		}
 
 		.sidebar__body {
-			border-top: 1px solid mix($white, $color-border, 50%);
+			border-top-color: mix($white, $color-border, 50%);
 		}
 		
 		.sidebar__logo {
@@ -92,3 +102,22 @@
 		}
 	} // Sidebar Hover Effects
 } // Sidebar
+
+
+//Media queries
+@media(max-width: 767px) {
+	.sidebar {
+		width: $sidebar-width-closed - $sidebar-width-closed*0.1;
+
+		&__list {
+			.list__item {
+				padding: 10px;
+
+				&.active {
+					border-left-width: 3px;
+					padding-left: 7px;
+				}
+			}
+		}
+	}
+}

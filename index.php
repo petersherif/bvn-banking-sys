@@ -19,7 +19,7 @@
 	<link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 	<!-- Tachyons css library - Allows us to write less custom css code -->
-	<link rel="stylesheet" href="vendor/tachyons/css/tachyons.min.css">
+	<link href="/vendor/tachyons/css/tachyons.min.css" rel="stylesheet">
 
 	<!-- Fontawesome library - for icons -->
 	<link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -73,48 +73,49 @@
 				<div class="col-xs-12 text-center">
 					<h2 class="section__heading text-center color-text">Login to BVN</h2>
 				</div> <!-- Section Heading -->
+			</div> <!-- Heading Row -->
 
-				<div class="col-xs-10 col-xs-offset-1">
+			<div class="row">
+				<div class="col-xs-12">
 
-					<div class="row">
-						<div class="login-box col-xs-12">
-							<form action="/dashboard" class="login-box__form">
+					<div class="light-box light-box--small form-box">
+						<form action="/dashboard" class="form-box__form">
+						
+							<div class="form-group">
+								<i class="fa fa-user"></i>
+								<input type="text" placeholder="Username or Email" id="username" class="form-control">
+							</div>
+						
+							<div class="form-group">
+								<i class="fa fa-lock"></i>
+								<input type="password" placeholder="Password" id="password" class="form-control">
+								<a href="#" class="helper">Forgot?</a>
+							</div>
+						
+							<div class="form-group">
+								<i class="fa fa-university"></i>
+								<input type="text" placeholder="Bank Name" id="bank-name" class="form-control">
+							</div>
 							
-								<div class="form-group">
-									<i class="fa fa-user"></i>
-									<input type="text" placeholder="Username or Email" id="username" class="form-control">
-								</div>
-							
-								<div class="form-group">
-									<i class="fa fa-lock"></i>
-									<input type="password" placeholder="Password" id="password" class="form-control">
-									<a href="#" class="helper">Forgot?</a>
-								</div>
-							
-								<div class="form-group">
-									<i class="fa fa-university"></i>
-									<input type="text" placeholder="Bank Name" id="bank-name" class="form-control">
-								</div>
-								
-								<div class="form-group">
-									<input type="submit" value="log in" class="submit form-control btn btn-block btn-primary">
-								</div>
-							
-								<div class="form-group form-group--options">
-									<input type="checkbox" class="remember-me" id="remember-me">
-									<label for="remember-me">
-										<span>Remember me</span>
-									</label>
-								</div>
-							
-							</form>
-						</div>
+							<div class="form-group">
+								<input type="submit" value="log in" class="submit form-control btn btn-block btn-primary">
+							</div>
+						
+							<div class="form-group form-group--options">
+								<input type="checkbox" class="remember-me" id="remember-me">
+								<label for="remember-me">
+									<span>Remember me</span>
+								</label>
+							</div>
+						
+						</form>
 					</div>
 				</div> <!-- Login Form -->
-			</div> <!-- Row -->
+			</div> <!-- Login Form Row -->
 		</div> <!-- Container -->
 	</section>
 
+	<?php include_once($root . 'includes/shared-components/index.php'); ?>
 
 	<!-- *********** Javascript *********** -->
 
