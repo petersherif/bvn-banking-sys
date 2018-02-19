@@ -1,0 +1,56 @@
+/*****************************************  
+[Currency Rate Box]
+*****************************************/
+.cur-rate-box {
+	padding: 7px 0;
+	margin-top: 7.5px;
+
+	.cur-rate__heading {
+		color: $white;
+		background: $color-primary;
+		margin: 0;
+		padding: 3px 15px 10px;
+		font-size: 1.2em;
+	}
+
+	.cur-rate__table {
+		font-size: 1.1em;
+		min-height: 1px;
+		overflow: hidden;
+
+		.table__row {
+			padding: 10px 15px;
+			border-bottom: 1px solid $color-border;
+			min-height: 1px;
+			overflow: hidden;
+
+			&:last-child {
+				border-bottom: 0;
+				padding-bottom: 3px;
+			}
+
+			&:nth-child(even) {
+				background: mix($white, $color-primary, 90%);
+			}
+		}
+		.table__heading {
+			text-transform: uppercase;
+			font-weight: 700;
+		}
+
+		.row__cell {
+			display: block;
+			width: 25%;
+			float: left;
+		}
+	}
+}
+
+//Media queries
+@media(max-width: 767px) {
+	.cur-rate-box {
+		margin-top: 7.5px;
+		float: none;
+		clear: both;
+	}
+}
