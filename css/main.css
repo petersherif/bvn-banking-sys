@@ -208,13 +208,13 @@ input[type=checkbox]:checked + label:before {
     background: #02BAF2;
     margin: 0;
     padding: 3px 15px 10px;
-    font-size: 1.2em; }
+    font-size: 1.4em; }
   .cur-rate-box .cur-rate__table {
-    font-size: 1.1em;
+    font-size: 1.3em;
     min-height: 1px;
     overflow: hidden; }
     .cur-rate-box .cur-rate__table .table__row {
-      padding: 10px 15px;
+      padding: 10px 0;
       border-bottom: 1px solid #ACACAC;
       min-height: 1px;
       overflow: hidden; }
@@ -223,13 +223,16 @@ input[type=checkbox]:checked + label:before {
         padding-bottom: 3px; }
       .cur-rate-box .cur-rate__table .table__row:nth-child(even) {
         background: #e6f8fe; }
-    .cur-rate-box .cur-rate__table .table__heading {
-      text-transform: uppercase;
-      font-weight: 700; }
     .cur-rate-box .cur-rate__table .row__cell {
       display: block;
-      width: 25%;
-      float: left; }
+      width: 33.3333333333%;
+      float: left;
+      text-align: center; }
+      .cur-rate-box .cur-rate__table .row__cell.row__cell--heading {
+        text-transform: uppercase;
+        font-weight: 700; }
+      .cur-rate-box .cur-rate__table .row__cell:not(:last-child) {
+        border-right: 1px solid #ACACAC; }
 
 @media (max-width: 767px) {
   .cur-rate-box {
