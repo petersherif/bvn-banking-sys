@@ -86,8 +86,12 @@
 					<div class="row">
 						<div class="col-xs-12">
 							<div class="light-box light-box--small date-time-box">
-								<p class="date">thursday 1 february 2018</p>
-								<p class="time">10:22:59 am</p>
+								<p class="date"></p>
+								<p class="time">
+									<span class="hr"></span>
+									<span class="min"></span>
+									<span class="sec"></span>
+									<span class="ampm"></span></p>
 							</div>
 						</div> <!-- Date and Time Box -->
 					</div>
