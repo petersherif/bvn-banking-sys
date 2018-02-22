@@ -112,7 +112,7 @@
 							?> 
 							<div class="form-group">
 								<i class="fa fa-user"></i>
-								<input type="text" placeholder="Username or Email" name="username" id="username" class="form-control" autocomplete="off" required="required">
+								<input type="text" placeholder="Username" name="username" id="username" class="form-control" autocomplete="off" required="required">
 							</div>
 						
 							<div class="form-group">
@@ -123,7 +123,7 @@
 
 							<div class="form-group">
 								<i class="fa fa-university"></i>
-								<input type="text" placeholder="Bank Name" name="bankName" id="bank-name" class="form-control">
+								<input type="text" placeholder="Bank Name" name="bankName" id="bank-name" class="form-control" required="required">
 							</div>
 							
 							<div class="form-group">
