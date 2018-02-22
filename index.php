@@ -112,7 +112,7 @@
 							?> 
 							<div class="form-group">
 								<i class="fa fa-user"></i>
-								<input type="text" placeholder="Username or Email" name="username" id="username" class="form-control" autocomplete="off">
+								<input type="text" placeholder="Username or Email" name="username" id="username" class="form-control" autocomplete="off" required="required">
 							</div>
 						
 							<div class="form-group">
