@@ -194,7 +194,6 @@ input[type=checkbox]:checked + label:before {
 
 @media (max-width: 767px) {
   .date-time-box {
-    margin-bottom: 7.5px;
     float: none;
     clear: both; } }
 /*****************************************  
@@ -233,12 +232,17 @@ input[type=checkbox]:checked + label:before {
 
 @media (max-width: 767px) {
   .cur-rate-box {
-    margin-top: 7.5px;
+    margin-bottom: 7.5px;
     float: none;
     clear: both; } }
 /*****************************************  
 [Currency Rate Graph Box]
 *****************************************/
+@media (max-width: 767px) {
+  .rate-chart-box {
+    margin-top: 7.5px;
+    float: none;
+    clear: both; } }
 .navbar-custom {
   background: #FFFFFF;
   box-shadow: 0 0 6px rgba(57, 73, 76, 0.35);

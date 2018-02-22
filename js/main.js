@@ -78,4 +78,38 @@ $(document).ready(function () {
 	updateClock();
 	window.setInterval(updateClock, 1000);
 
+
+	// Drawing Currency Rate Chart
+	
+	var rateChartOut = $("#rate-chart");
+	var rateChart    = new Chart(rateChartOut, {
+		type: 'line',
+		data: {
+        labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+        datasets: [{
+            label: 'Buy',
+            data: [17.60, 17.60, 17.60, 17.60, 17.60, 17.60, 17.60],
+            backgroundColor: 'rgba(54, 162, 235, 0.4)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1,
+            fill: false
+        }, {
+        		label: 'Sell',
+            data: [18.00, 18.00, 18.00, 18.00, 18.00, 18.00, 18.00],
+            backgroundColor: 'rgba(255, 99, 132, 0.4)',
+            borderColor: 'rgba(255,99,132,1)',
+            borderWidth: 1,
+            fill: false
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                	beginAtZero: false
+                }
+            }]
+        }
+    }
+	});
 });
