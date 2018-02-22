@@ -1,3 +1,5 @@
+<?php session_start() ?>
+
 <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
 		<div class="container-fluid">
 		  
@@ -8,12 +10,12 @@
 		      <span class="icon-bar"></span>
 		      <span class="icon-bar"></span>
 		    </button>
-		  	<p class="hello-msg color-text visible-xs"><span class="color-text-weak">Hello,</span> John Doe</p>
+		  	<p class="hello-msg color-text visible-xs"><span class="color-text-weak">Hello,</span> <?php echo ucfirst($_SESSION['username']); ?></p>
 		  </div>
 
 		  <div class="collapse navbar-collapse" id="topnav">
 		    <ul class="nav navbar-nav navbar-right">
-		    	<li><a class="hidden-xs"><span class="color-text"><span class="color-text-weak">Hello,</span> John Doe</span></a></li>
+		    	<li><a class="hidden-xs"><span class="color-text"><span class="color-text-weak">Hello,</span> <?php echo ucfirst($_SESSION['username']); ?></span></a></li>
 		      <li class="dropdown">
 		        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user"></i><span class="visible-xs-inline pl3">Profile</span></a>
 		        <ul class="dropdown-menu">

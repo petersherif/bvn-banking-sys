@@ -17,7 +17,7 @@
 
 				<hr />
 				
-				<li class="list__item"><i class="fa fa-sign-out icon-gray"></i><a href="#">Log Out</a></li>
+				<li class="list__item"><i class="fa fa-sign-out icon-gray"></i><a href="logout.php">Log Out</a></li>
 			</ul>
 		</div>
 	</aside>
