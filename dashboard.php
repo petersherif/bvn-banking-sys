@@ -145,10 +145,12 @@
 		</div>
 	</section>
 
-	<?php include_once($templates . 'shared-components.php'); ?>
+	<?php
+		//include_once($templates . 'shared-components.php'); 
 
-	<!-- *********** Scripts *********** -->
-	<?php include_once($templates . 'scripts.php'); ?>
+		//<!-- *********** Scripts *********** -->
+		include_once($templates . 'scripts.php');
+	  ?>
 
 </body>
 </html>
