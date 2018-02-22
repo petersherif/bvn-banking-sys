@@ -10,16 +10,16 @@
 		background: $color-primary;
 		margin: 0;
 		padding: 3px 15px 10px;
-		font-size: 1.2em;
+		font-size: 1.4em;
 	}
 
 	.cur-rate__table {
-		font-size: 1.1em;
+		font-size: 1.3em;
 		min-height: 1px;
 		overflow: hidden;
 
 		.table__row {
-			padding: 10px 15px;
+			padding: 10px 0;
 			border-bottom: 1px solid $color-border;
 			min-height: 1px;
 			overflow: hidden;
@@ -33,15 +33,21 @@
 				background: mix($white, $color-primary, 90%);
 			}
 		}
-		.table__heading {
-			text-transform: uppercase;
-			font-weight: 700;
-		}
 
 		.row__cell {
 			display: block;
-			width: 25%;
+			width: (100% / 3);
 			float: left;
+			text-align: center;
+			
+			&.row__cell--heading {
+				text-transform: uppercase;
+				font-weight: 700;
+			}
+
+			&:not(:last-child) {
+				border-right: 1px solid $color-border;
+			}
 		}
 	}
 }

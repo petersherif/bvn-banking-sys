@@ -101,23 +101,30 @@
 							<div class="light-box light-box--small cur-rate-box">
 								<h4 class="cur-rate__heading">Currency Exchange Rate</h4>
 								<ul class="cur-rate__table">
-									<li class="table__heading table__row">
-										<span class="row__cell">cur</span>
-										<span class="row__cell">usd</span>
-										<span class="row__cell">eur</span>
-										<span class="row__cell">gdp</span>
+									<li class="table__row">
+										<span class="row__cell row__cell--heading">cur</span>
+										<span class="row__cell row__cell--heading">Sell</span>
+										<span class="row__cell row__cell--heading">Buy</span>
 									</li>
 									<li class="table__row">
-										<span class="row__cell">Sell</span>
+										<span class="row__cell row__cell--heading">usd</span>
 										<span class="row__cell">18.00</span>
-										<span class="row__cell">23.00</span>
-										<span class="row__cell">23.40</span>
+										<span class="row__cell">17.60</span>
 									</li>
 									<li class="table__row">
-										<span class="row__cell">Buy</span>
-										<span class="row__cell">17.60</span>
+										<span class="row__cell row__cell--heading">eur</span>
+										<span class="row__cell">23.00</span>
 										<span class="row__cell">20.83</span>
+									</li>
+									<li class="table__row">
+										<span class="row__cell row__cell--heading">gdp</span>
+										<span class="row__cell">23.40</span>
 										<span class="row__cell">22.30</span>
+									</li>
+									<li class="table__row">
+										<span class="row__cell row__cell--heading">cad</span>
+										<span class="row__cell">16.40</span>
+										<span class="row__cell">15.30</span>
 									</li>
 								</ul>
 							</div>
