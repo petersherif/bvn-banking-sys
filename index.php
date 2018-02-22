@@ -117,7 +117,7 @@
 						
 							<div class="form-group">
 								<i class="fa fa-lock"></i>
-								<input type="password" placeholder="Password" name="password" id="password" class="form-control" autocomplete="new-password">
+								<input type="password" placeholder="Password" name="password" id="password" class="form-control" autocomplete="new-password" required="required">
 								<a href="#" class="helper">Forgot?</a>
 							</div>
 
