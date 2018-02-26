@@ -17,19 +17,20 @@
 		$bankName = $_POST['bankName'];
 		$hashedPassword = sha1($password);
 
-		// select the required user form database
-		$stmt = $con -> prepare("SELECT * FROM users WHERE user_name = ? AND password = ?");
+		// select the required userId form database
+		$stmt = $con -> prepare("SELECT * FROM users WHERE user_name = ? AND password = ? ");
 		$stmt -> execute(array($username, $hashedPassword));
 		$row = $stmt -> fetch();
 		$count = $stmt -> rowCount();
 
 		if($count > 0){
-			$_SESSION['username'] = $username; // Add Session UserName
-			$_SESSION['id'] = $row['id'];  // Add Session ID
+			$_SESSION['username'] 	= $username; // Add Session UserName
+			$_SESSION['id']			= $row['id'];  // Add Session ID
+			$_SESSION['auth'] 		= $row['auth']; // Add Session Auth
 			header('location:dashboard.php'); // Redirect To Dashboard Page
 			exit();
 		}
-		if($username != $row['user_name']){
+		else{
 			$error = 'Invalid Username Or Password';
 		}
 	}

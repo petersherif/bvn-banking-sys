@@ -10,12 +10,15 @@
 				<li class="list__item"><i class="fa fa-credit-card icon-red"></i><a href="withdraw.php">Withdraw</a></li>
 
 				<hr />
+				<?php if(isset($_SESSION['auth']) && $_SESSION['auth'] == 1){}else{ ?>
 
-				<li class="list__item"><i class="fa fa-user-secret icon-black"></i><a href="add-employee.php">Add Employee</a></li>
-				<li class="list__item"><i class="fa fa-users icon-black"></i><a href="search-clients.php">Search Clients</a></li>
-				<li class="list__item"><i class="fa fa-users icon-black"></i><a href="search-employees.php">Search Employees</a></li>
+					<li class="list__item"><i class="fa fa-user-secret icon-black"></i><a href="add-employee.php">Add Employee</a></li>
+					<li class="list__item"><i class="fa fa-users icon-black"></i><a href="search-clients.php">Search Clients</a></li>
+					<li class="list__item"><i class="fa fa-users icon-black"></i><a href="search-employees.php">Search Employees</a></li>
 
-				<hr />
+					<hr />
+				<?php } ?>
+
 				
 				<li class="list__item"><i class="fa fa-sign-out icon-gray"></i><a href="logout.php">Log Out</a></li>
 			</ul>
