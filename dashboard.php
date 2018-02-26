@@ -50,8 +50,12 @@
 
 
 	<!-- Sidebar -->
-	<?php include_once($templates . 'sidebar.php'); ?>
+	<?php
 
+		$DashboardActive = 'active';
+		include_once($templates . 'sidebar.php');
+
+	?>
 
 	<!-- BVN login form -->
 	<section class="login-section">
