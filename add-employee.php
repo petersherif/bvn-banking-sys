@@ -115,13 +115,14 @@
 							</div>
 
 							<div class="form-group">
-								<i class="fa fa-thumbs-up"></i>
-								<input type="text" placeholder="Scan the Employee's Fingerprint" id="fingerprint" class="form-control">
-							</div>
-
-							<div class="form-group">
 								<i class="fa fa-user-circle"></i>
 								<input type="file" placeholder="Upload the Employee's Picture" id="picture" class="form-control">
+							</div>
+
+
+							<div class="form-group">
+								<i class="fa fa-briefcase"></i>
+								<input type="text" placeholder="Enter the Employee's Job Type" id="job-type" class="form-control">
 							</div>
 						
 							<div class="form-group">
