@@ -6,7 +6,7 @@
 			<ul class="sidebar__list">
 				<li class="list__item <?php echo $DashboardActive; ?>"><a href="dashboard.php"><i class="fa fa-home icon-primary"></i> Dashboard</a></li>
 				<li class="list__item <?php echo $newClientActive; ?>"><a href="new-client.php"><i class="fa fa-user-plus icon-brown"></i> New Client</a></li>
-				<li class="list__item <?php echo $DepositActive; ?>"><a href="deposit-manager.php"><i class="fa fa-money icon-green"></i> Deposit</a></li>
+				<li class="list__item <?php echo $DepositActive; ?>"><a href="deposit.php"><i class="fa fa-money icon-green"></i> Deposit</a></li>
 				<li class="list__item <?php echo $WithdrawActive; ?>"><a href="withdraw.php"><i class="fa fa-credit-card icon-red"></i> Withdraw</a></li>
 
 				<hr />
