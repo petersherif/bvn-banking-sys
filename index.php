@@ -1,4 +1,40 @@
-<?php include_once('init.php'); ?>
+<?php 
+	// Start Session
+	session_start();
+	
+	if(isset($_SESSION['username'])){
+		header('location:dashboard.php'); // Redirect To Dashboard Page
+		exit();
+	}
+
+	include_once('init.php');
+
+	// Check If The User Coming From HTTP POST Request 
+	if($_SERVER['REQUEST_METHOD'] == 'POST'){
+
+		$username = $_POST['username'];
+		$password = $_POST['password'];
+		$bankName = $_POST['bankName'];
+		$hashedPassword = sha1($password);
+
+		// select the required userId form database
+		$stmt = $con -> prepare("SELECT * FROM users WHERE user_name = ? AND password = ? ");
+		$stmt -> execute(array($username, $hashedPassword));
+		$row = $stmt -> fetch();
+		$count = $stmt -> rowCount();
+
+		if($count > 0){
+			$_SESSION['username'] 	= $username; // Add Session UserName
+			$_SESSION['id']			= $row['id'];  // Add Session ID
+			$_SESSION['auth'] 		= $row['auth']; // Add Session Auth
+			header('location:dashboard.php'); // Redirect To Dashboard Page
+			exit();
+		}
+		else{
+			$error = 'Invalid Username Or Password';
+		}
+	}
+ ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -69,23 +105,26 @@
 				<div class="col-xs-12">
 
 					<div class="light-box light-box--small form-box">
-						<!-- action="dashboard.php" is a placeholder and must be changed for backend -->
-						<form action="dashboard.php" class="form-box__form">
-						
+						<form action="index.php" class="form-box__form" method="POST"> 
+							<?php
+								if(isset($error)){
+									echo $error;
+								} 
+							?> 
 							<div class="form-group">
 								<i class="fa fa-user"></i>
-								<input type="text" placeholder="Username or Email" id="username" class="form-control">
+								<input type="text" placeholder="Username" name="username" id="username" class="form-control" autocomplete="off" required="required">
 							</div>
 						
 							<div class="form-group">
 								<i class="fa fa-lock"></i>
-								<input type="password" placeholder="Password" id="password" class="form-control">
+								<input type="password" placeholder="Password" name="password" id="password" class="form-control" autocomplete="new-password" required="required">
 								<a href="#" class="helper">Forgot?</a>
 							</div>
-						
+
 							<div class="form-group">
 								<i class="fa fa-university"></i>
-								<input type="text" placeholder="Bank Name" id="bank-name" class="form-control">
+								<input type="text" placeholder="Bank Name" name="bankName" id="bank-name" class="form-control" required="required">
 							</div>
 							
 							<div class="form-group">
@@ -106,10 +145,14 @@
 		</div> <!-- Container -->
 	</section>
 
-	<?php include_once($templates . 'shared-components.php'); ?>
+	<?php
+	
+		//include_once($templates . 'shared-components.php');
 
-	<!-- *********** Scripts *********** -->
-	<?php include_once($templates . 'scripts.php'); ?>
+		// *********** Scripts *********** 
+		include_once($templates . 'scripts.php');
+
+	 ?>
 	
 </body>
 </html>

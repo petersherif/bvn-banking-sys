@@ -16,6 +16,14 @@ $(document).ready(function () {
 		$('body').addClass('loaded');
 	});
 
+	// Move placeholder when focus
+
+	$('[placeholder]').focus(function(){
+		$(this).attr('text',$(this).attr('placeholder'));
+		$(this).attr('placeholder','');
+	}).blur(function(){
+		$(this).attr('placeholder',$(this).attr('text'));
+	});
 
 	// Append date and time to date and time box
 	var dateTimeBox = $('.date-time-box'),
