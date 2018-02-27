@@ -1,4 +1,8 @@
-<?php include_once('init.php'); ?>
+<?php
+    session_start();
+    include_once('init.php');
+    if(isset($_SESSION['username'])){
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -52,16 +56,20 @@
 <!-- Sidebar -->
 <?php
 
-$DashboardActive = 'active';
-include_once($templates . 'sidebar.php');
+        $DashboardActive = 'active';
+        include_once($templates . 'sidebar.php');
 
 ?>
 <?php
-if (str_replace('/bvn-banking-sys', '', $_SERVER['REQUEST_URI']) == '/' || str_replace('/bvn-banking-sys', '', $_SERVER['REQUEST_URI']) == '/dashboard.php' || str_replace('/bvn-banking-sys', '', $_SERVER['REQUEST_URI']) == '') {
-    include('./main.php');
-} else {
-    include_once($templates . 'content.php');
-}
+        if (str_replace('/bvn-banking-sys', '', $_SERVER['REQUEST_URI']) == '/' || str_replace('/bvn-banking-sys', '', $_SERVER['REQUEST_URI']) == '/dashboard.php' || str_replace('/bvn-banking-sys', '', $_SERVER['REQUEST_URI']) == '') {
+            include('./main.php');
+        } else {
+            include_once($templates . 'content.php');
+        }
+    }else{
+        header('location:index.php');
+        exit();
+    }
 ?>
 
 <?php

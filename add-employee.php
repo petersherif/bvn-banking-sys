@@ -1,8 +1,9 @@
 <?php
- 	include_once('init.php'); 
-
+	 include_once('init.php'); 
+	 
 	if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
+		// Get employee data with post method
 		$fullname 	= $_POST['fullname'];
 		$password	= $_POST['password'];
 		$hashedPass	= sha1($password);
@@ -13,6 +14,8 @@
 		$email 		= $_POST['email'];
 		$phone		= $_POST['phone'];
 		$auth 		= $_POST['auth'];
+
+		// array to has form erros messages
 		$formError	= array();
 
 		// Upload Selected Photo To img folder
@@ -25,7 +28,8 @@
        
         // Valid file extensions
 		$extensions_arr = array("jpg","jpeg","png","gif");
-		
+
+		// Handle form errors
 		if(empty($fullname)){
 			$formError['fullname'] 	= 'Full Name Can not Be Empty';
 		}
@@ -57,6 +61,7 @@
 			$formError['auth'] 		= 'auth Can not Be Empty';
 		}
 
+		// Insert employee data into database if no errors found
 		if(empty($formError)) {
 			$stmt = $con -> prepare("INSERT INTO users (user_name, password, email, national_id, birthday, gender, phone, thumb, auth)
 												 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
