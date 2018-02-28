@@ -1,3 +1,9 @@
+ <?php
+ if (isset($_SESSION["ClientAccountId"]) && !empty($_SESSION["ClientAccountId"])){
+		
+		header("location:dashboard.php");
+		exit();
+	}?>
 <!-- New client form -->
 <section class="new-client-section">
     <div class="container">
