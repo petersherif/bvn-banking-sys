@@ -1,4 +1,10 @@
-<?php  include_once('init.php'); ?>
+<?php 
+	if (isset($_SESSION["ClientAccountId"]) && !empty($_SESSION["ClientAccountId"])){
+		
+		header("location:dashboard.php");
+		exit();
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 

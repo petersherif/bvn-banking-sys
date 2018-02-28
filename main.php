@@ -5,11 +5,11 @@
             <div class="col-xs-12">
 
                 <div class="light-box light-box--small form-box">
-                    <form action="" class="form-box__form">
+                    <form method="post" action="dashboard.php?newClient" class="form-box__form">
 
-                        <div class="form-group">
+                        <div  class="form-group">
                             <i class="fa fa-user"></i>
-                            <input type="text" placeholder="Enter client BVN or account number" id="username"
+                            <input type="text" placeholder="Enter client BVN or account number" name="accountNumber" id="username"
                                    class="form-control">
                         </div>
 
