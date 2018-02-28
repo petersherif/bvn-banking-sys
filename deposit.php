@@ -9,10 +9,10 @@
 
         <div class="row">
             <div class="col-xs-12">
-
+            
                 <div class="light-box form-box">
                     <form action="" class="form-box__form">
-
+                        <?php if (!isset($_SESSION["ClientAccountNum"]) && empty($_SESSION["ClientAccountNum"])){?>
                         <div class="form-group">
                             <i class="fa fa-user"></i>
                             <input type="text" placeholder="Enter the Client's Full Name" id="fullname"
@@ -30,7 +30,7 @@
                             <input type="text" placeholder="Enter the Reciever Account Number" id="rec-acc-num"
                                    class="form-control">
                         </div>
-
+                        <?php } ?>
                         <div class="form-group">
                             <i class="fa fa-money"></i>
                             <input type="text" placeholder="Enter the Amount to Send" id="deposit-amount"

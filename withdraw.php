@@ -1,4 +1,12 @@
-<?php include_once('init.php'); ?>
+<?php
+if (!isset($_SESSION["ClientAccountNum"]) || empty($_SESSION["ClientAccountNum"])){
+		
+    header("location:dashboard.php");
+    exit();
+}
+include_once('init.php'); 
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -73,11 +81,11 @@
 				<div class="col-xs-12">
 
 					<div class="light-box form-box">
-						<form action="" class="form-box__form">
+						<form method="post" action="dashboard.php?withdraw" class="form-box__form">
 						
 							<div class="form-group">
 								<i class="fa fa-money"></i>
-								<input type="text" placeholder="Enter the Amount to Withdraw" id="deposit-amount" class="form-control">
+								<input type="text" name="withdraw" placeholder="Enter the Amount to Withdraw" id="deposit-amount" class="form-control">
 							</div>
 
 							<div class="form-group">
