@@ -1,11 +1,6 @@
-<?php 
-	if (isset($_SESSION["ClientAccountId"]) && !empty($_SESSION["ClientAccountId"])){
-		
-		header("location:dashboard.php");
-		exit();
-	}
-	include_once('init.php');
-	
+<?php
+	 include_once('init.php'); 
+	 
 	if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 		// Get employee data with post method
