@@ -21,22 +21,16 @@ if (isset($_GET['new-client'])) {
     ?>
     <?php include('./new-client.php');
 } ?>
-<?php
-if (isset($_GET['add-employee'])) {
-    ?>
-    <?php include('./add-employee.php');
-} ?>
-
-<?php
-if (isset($_GET['dashboard.php'])) {
-    ?>
-    <?php include('./main.php');
-} ?>
 <?php 
 if(isset($_GET['done'])){
         
+
+}
+?>
+
+<?php
+if (isset($_GET['add-employee'])) {
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        session_start();
         // Get employee data with post method
         $fullname 	= $_POST['fullname'];
         $password	= $_POST['password'];
@@ -63,15 +57,25 @@ if(isset($_GET['done'])){
         // Valid file extensions
         $extensions_arr = array("jpg","jpeg","png","gif");
 
+        // Select these data from database
+        $count_username = retrieve_username($fullname,'users');
+        $count_nat_id = retrieve_nat_id($nat_id, 'users');
+        $count_email = retrieve_email($email, 'users');
+        $count_phone = retrieve_phone($phone, 'users');
+
         // Handle form errors
         if(empty($fullname)){
             $formError['fullname'] 	= 'Full Name Can not Be Empty';
+        } elseif ($count_username > 0) {
+            $formError['fullname'] 	= 'Username already exist';
         }
         if(empty($password)){
             $formError['password'] 	= 'Password Can not Be Empty';
         }
         if(empty($nat_id)) {
             $formError['nat_id'] 	= 'National ID Can not Be Empty';
+        } elseif($count_nat_id > 0) {
+            $formError['nat_id'] 	= 'National ID already exist';
         }
         if(empty($birthdate)) {
             $formError['birthdate'] = 'Birthdate Can not Be Empty';
@@ -84,28 +88,43 @@ if(isset($_GET['done'])){
         }
         if(empty($email)) {
             $formError['email'] 	= 'Email Can not Be Empty';
+        } elseif($count_email > 0) {
+            $formError['email'] 	= 'Email already exist';
         }
         if(empty($phone)) {
             $formError['phone'] 	= 'Phone Can not Be Empty';
+        } elseif($count_phone > 0) {
+            $formError['phone'] 	= 'Phone already exist';
         }
         if(empty($photoName)) {
             $formError['photoName'] = 'Picture Can not Be Empty'; 
         }
-        if(empty($phone)) {
+        if(empty($auth)) {
             $formError['auth'] 		= 'auth Can not Be Empty';
         }
 
-        // Insert employee data into database if no errors found
-        if(empty($formError)) {
-            $stmt = $con -> prepare("INSERT INTO users (user_name, password, email, national_id, birthday, gender, phone, thumb, auth)
-                                                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-            $stmt -> execute(array($fullname, $hashedPass, $email, $nat_id, $birthdate, $gender, $phone, $photoName, $auth));
-
-            // Upload Image
-            move_uploaded_file($_FILES['photo']['tmp_name'],$target_dir.$photoName);
-            
-        }
+        //if($count > 0){
+        //    echo '<script> alert("Dublicated entry please check again") </script>';
+        //}else{
+            // Insert employee data into database if no errors found
+            if(empty($formError)) {
+                $stmt = $con -> prepare("INSERT INTO users (user_name, password, email, national_id, birthday, gender, phone, thumb, auth)
+                                                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
+                $stmt -> execute(array($fullname, $hashedPass, $email, $nat_id, $birthdate, $gender, $phone, $photoName, $auth));
+    
+                // Upload Image
+                move_uploaded_file($_FILES['photo']['tmp_name'],$target_dir.$photoName);
+                
+            }
+        //}
         
     }
-}
-?>
+    ?>
+    <?php include('./add-employee.php');
+} ?>
+
+<?php
+if (isset($_GET['dashboard.php'])) {
+    ?>
+    <?php include('./main.php');
+} ?>

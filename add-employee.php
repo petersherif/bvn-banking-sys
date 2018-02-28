@@ -75,25 +75,25 @@
 						
 							<div class="form-group">
 								<i class="fa fa-user"></i>
-								<input type="text" name="fullname" placeholder="Enter the Employee's Full Name" id="fullname" class="form-control" required="required">
+								<input type="text" name="fullname" placeholder="Enter the Employee's Full Name" id="fullname" class="form-control" >
 							</div>
 							<?php if(isset($formError['fullname'])) echo $formError['fullname'] ?>
 
 							<div class="form-group">
 								<i class="fa fa-user"></i>
-								<input type="password" name="password" placeholder="Enter the Employee's password" id="password" class="form-control" required="required">
+								<input type="password" name="password" placeholder="Enter the Employee's password" id="password" class="form-control" >
 							</div>
 							<?php if(isset($formError['password'])) echo $formError['password'] ?>
 
 							<div class="form-group">
 								<i class="fa fa-barcode"></i>
-								<input type="text" name="nat_id" placeholder="Enter the Employee's Nationallity ID" id="nat-id" class="form-control" required="required">
+								<input type="text" name="nat_id" placeholder="Enter the Employee's Nationallity ID" id="nat-id" class="form-control" >
 							</div>
 							<?php if(isset($formError['nat_id'])) echo $formError['nat_id'] ?>
 							
 							<div class="form-group">
 								<i class="fa fa-birthday-cake"></i>
-								<input type="date" name="birthdate" placeholder="Enter the Employee's Birthdate" id="birthdate" class="form-control" required="required">
+								<input type="date" name="birthdate" placeholder="Enter the Employee's Birthdate" id="birthdate" class="form-control" >
 							</div>
 							<?php if(isset($formError['birthdate'])) echo $formError['birthdate'] ?>
 
@@ -109,25 +109,25 @@
 
 							<div class="form-group">
 								<i class="fa fa-map-marker"></i>
-								<input type="text" name="address" placeholder="Enter the Employee's Address" id="address" class="form-control" required="required">
+								<input type="text" name="address" placeholder="Enter the Employee's Address" id="address" class="form-control" >
 							</div>
 							<?php if(isset($formError['address'])) echo $formError['address'] ?>
 
 							<div class="form-group">
 								<i class="fa fa-envelope"></i>
-								<input type="email" name="email" placeholder="Enter the Employee's Email Address" id="email" class="form-control" required="required">
+								<input type="email" name="email" placeholder="Enter the Employee's Email Address" id="email" class="form-control" >
 							</div>
 							<?php if(isset($formError['email'])) echo $formError['email'] ?>
 
 							<div class="form-group">
 								<i class="fa fa-phone"></i>
-								<input type="text" name="phone" placeholder="Enter the Employee's Phone Number" id="phone-num" class="form-control" required="required">
+								<input type="text" name="phone" placeholder="Enter the Employee's Phone Number" id="phone-num" class="form-control" >
 							</div>
 							<?php if(isset($formError['phone'])) echo $formError['phone'] ?>
 
 							<div class="form-group">
 								<i class="fa fa-user-circle"></i>
-								<input type="file" name="photo" placeholder="Upload the Employee's Picture" id="photo" class="form-control" required="required">
+								<input type="file" name="photo" placeholder="Upload the Employee's Picture" id="photo" class="form-control" >
 							</div>
 							<?php if(isset($formError['photoName'])) echo $formError['photoName'] ?>
 
