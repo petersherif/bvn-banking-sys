@@ -1,5 +1,4 @@
 <?php
-    ob_start();
     session_start();
     include_once('init.php');
     if(isset($_SESSION['username'])){
@@ -51,10 +50,10 @@
 <body class="">
 
 <!-- Navbar -->
-<?php include($templates . 'navbar.php'); ?>
+<?php include_once($templates . 'navbar.php'); ?>
 
 
-<!-- Sidebar -->    
+<!-- Sidebar -->
 <?php
 
         $DashboardActive = 'active';
@@ -63,9 +62,6 @@
 ?>
 <?php
         if (str_replace('/bvn-banking-sys', '', $_SERVER['REQUEST_URI']) == '/' || str_replace('/bvn-banking-sys', '', $_SERVER['REQUEST_URI']) == '/dashboard.php' || str_replace('/bvn-banking-sys', '', $_SERVER['REQUEST_URI']) == '') {
-            if (isset($_SESSION["ClientAccountNum"]) && !empty($_SESSION["ClientAccountNum"]))
-            include('./client-profile.php');
-            else
             include('./main.php');
         } else {
             include_once($templates . 'content.php');
