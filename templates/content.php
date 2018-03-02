@@ -58,7 +58,71 @@ if (isset($_GET['withdraw'])) {
 
     include('./withdraw.php');
 } ?>
+<?php
+    if (isset($_GET['client']) == 'add') {
+        if($_SERVER['REQUEST_METHOD']== 'POST'){
+            $username   =$_POST['username'];
+            $nat_id     =$_POST['nat_id'];
+            $birthday   =$_POST['birthday'];
+            $gender     =$_POST['gender'];
+            $address    =$_POST['address'];
+            $email      =$_POST['email'];
+            $phone      =$_POST['phone'];
+            $fingerprint=$_POST['fingerprint'];
+            $photo      =$_POST['photo'];
+            
+            $count_username=retrieve_username($username,'users');
+            $count_nat_id=retrieve_nat_id($nat_id,'users');
+            $count_email=retrieve_email($email,'users');
+            $count_phone=retrieve_phone($phone,'users');
 
+            $formError= array();
+            if(empty($username)){
+                $formError['username']="Full Name Can not Be Empty";
+            }elseif($count_username > 0){
+                $formError['username']="Username already exist";
+            }
+            if(empty($nat_id)){
+                $formError['nat_id']="National ID Can not Be Empty";
+            }elseif($count_nat_id > 0){
+                $formError['nat_id']="National ID already exist";
+            }
+            if(empty($birthday)){
+                $formError['birthday']="Birthdate Can not Be Empty";
+            }
+            if(empty($gender)){
+                $formError['gender']="Gender Can not Be Empty";
+            }
+            if(empty($address)){
+                $formError['address']="Address Can not Be Empty";
+            }
+            if(empty($email)){
+                $formError['email']="Email Can not Be Empty";
+            }elseif($count_email > 0){
+                $formError['email']="Email already exist";
+            }
+            if(empty($phone)){
+                $formError['phone']="Phone Can not Be Empty";
+            }elseif($count_phone > 0){
+                $formError['phone']="Phone already exist";
+            }
+            if(empty($fingerprint)){
+                $formError['fingerprint']="Fingerprint Can not Be Empty";
+            }
+            if(empty($photo )){
+                $formError['photo']="Picture Can not Be Empty";
+            }
+            
+            if(empty($formError)){
+                $stmt=$con->prepare("INSERT INTO users(user_name,national_id,birthday,gender,address,email,phone,thumb,auth)                                  VALUE(?,?,?,?,?,?,?,?,0)");
+                $stmt->execute(array($username,$nat_id,$birthday,$gender,$address,$email,$phone,$photo));
+                echo '<script>alert("Client has been added");</script>';
+            }
+
+
+        } 
+    }
+?>
 <?php
 if (isset($_GET['new-client'])) {
     ?>
