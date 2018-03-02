@@ -62,9 +62,10 @@
                     <a href="search-employees.php">Search Employees</a>
                 </li>
 
-            <?php } }?>
-
-            <li class="list__item"><i class="fa fa-undo icon-red"></i><a href="end-process.php">End Process</a></li>
+            <?php } }
+                if (isset($_SESSION["ClientAccountNum"]) && !empty($_SESSION["ClientAccountNum"])){?>
+            <li class="list__item"><i class="fa fa-undo icon-red"></i><a href="logout.php?endProcess">End Process</a></li>
+                 <?php } ?>
             <li class="list__item"><i class="fa fa-sign-out icon-gray"></i><a href="logout.php">Log Out</a></li>
         </ul>
     </div>
