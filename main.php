@@ -6,7 +6,11 @@
 
                 <div class="light-box light-box--small form-box">
                     <form method="post" action="dashboard.php?newClient" class="form-box__form">
-
+                    <?php
+                            if(isset($_SESSION['error']) && !empty($_SESSION['error'])){ 
+                            echo $_SESSION['error']; //print error msg
+                            $_SESSION['error']='';}
+                            ?>
                         <div  class="form-group">
                             <i class="fa fa-user"></i>
                             <input type="text" placeholder="Enter client BVN or account number" name="accountNumber" id="username"
