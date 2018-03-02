@@ -18,7 +18,7 @@
             <div class="col-xs-12">
 
                 <div class="light-box form-box">
-                    <form action="dashboard.php?new-client&done" class="form-box__form"  method="post">
+                    <form action="dashboard.php?new-client&client=add" class="form-box__form"  method="post">
 
                         <div class="form-group">
                             <i class="fa fa-user"></i>

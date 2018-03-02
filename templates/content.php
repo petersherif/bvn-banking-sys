@@ -43,7 +43,7 @@ if (isset($_GET['withdraw'])) {
     include('./withdraw.php');
 } ?>
 <?php
-    if (isset($_GET['done'])) {
+    if (isset($_GET['client']) == 'add') {
         if($_SERVER['REQUEST_METHOD']== 'POST'){
             $username   =$_POST['username'];
             $nat_id     =$_POST['nat_id'];
