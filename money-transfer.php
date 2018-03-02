@@ -1,4 +1,10 @@
-<?php include_once('init.php'); ?>
+<?php
+if (!isset($_SESSION["ClientAccountNum"]) || empty($_SESSION["ClientAccountNum"])){
+		
+    header("location:dashboard.php");
+    exit();
+}
+include_once('init.php'); ?>
 <!-- Money Transfer form -->
 <section class="money-trans-section">
     <div class="container">
