@@ -48,7 +48,7 @@
     <![endif]-->
 </head>
 
-<body class="">
+<body class="loaded">
 
 <!-- Navbar -->
 <?php include($templates . 'navbar.php'); ?>

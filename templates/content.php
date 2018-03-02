@@ -16,24 +16,40 @@ if (isset($_GET['withdraw'])) {
     ?>
     <?php 
         if($_SERVER['REQUEST_METHOD']=="POST"&&isset($_POST["withdraw"]) ){
+            if($_POST["withdraw"]==""){
+                $_SESSION['error']='Amount can not be empty';  
+                header("refresh:0;url=dashboard.php?withdraw");
+                exit();
+            }
+            
             
             $value=$_POST['withdraw'];
             $stmt = $con -> prepare("SELECT id , balance FROM accounts WHERE acc_num = ?");
             $stmt -> execute(array($_SESSION['ClientAccountNum']));
             $row = $stmt -> fetch();
             $balance=$row['balance'];
+            if($balance==0||$balance==1){
+                $_SESSION['error']='Empty balance ';  
+                header("refresh:0;url=dashboard.php?withdraw");
+                exit();
+            }
             $newBalance=$balance - $value;
-            if($balance > $value){
+            if($_POST["withdraw"]==0 ){
+                $_SESSION['error']='Please enter number between 1 and '.$balance;  
+                header("refresh:0;url=dashboard.php?withdraw");
+                exit();
+            }
+            if($balance >= $value){
                 $stmt = $con -> prepare("INSERT INTO transaction( amount, type, acc_id) VALUES (?,1,?)");
                 $stmt -> execute(array($value,$row['id']));
                 $stmt = $con -> prepare("UPDATE accounts set balance= $newBalance  WHERE acc_num = ?");
                 $stmt -> execute(array($_SESSION['ClientAccountNum']));
-                echo '<script> alert( "Successful process Your balance = '.$newBalance.'" )</script>';
-                header("refresh:0;url=dashboard.php");
+                $_SESSION['success']="Successful process Your balance = ".$newBalance;
+                header("refresh:0;url=dashboard.php?withdraw");
                 exit();}
                     else {
-                echo '<script> alert( "Enter number between 0 and '. $row['balance'] .'" )</script>';   
-                header("refresh:0;url=dashboard.php");
+                $_SESSION['error']= "Enter number between 1 and ". $row['balance'];
+                header("refresh:0;url=dashboard.php?withdraw");
                 exit();
 
         } 
@@ -164,17 +180,22 @@ if(isset($_GET['newClient']))  {
 
     if($_SERVER['REQUEST_METHOD']=="POST"&&isset($_POST["accountNumber"]) ){
         $accountNumber=$_POST['accountNumber'];
+        if(empty($accountNumber)){
+            $_SESSION['error']='Account number can not be empty';  
+            header("refresh:0;url=dashboard.php");
+            exit();
+        }
         $stmt = $con -> prepare("SELECT * FROM accounts WHERE acc_num = ?");
 		$stmt -> execute(array($accountNumber));
 		$row = $stmt -> fetch();
 		$count = $stmt -> rowCount();
 		if($count > 0){
 			$_SESSION['ClientAccountNum'] 	= $accountNumber; // Add Session ClientAccountNum
-            echo '<script> alert( "you are in client page" )</script>';
+
             header("refresh:0;url=dashboard.php");
             exit();}
                 else {
-            echo '<script> alert( "Invalid account number" )</script>';   
+            $_SESSION['error']='Invalid account number';  
             header("refresh:0;url=dashboard.php");
             exit();
     

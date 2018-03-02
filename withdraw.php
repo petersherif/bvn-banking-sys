@@ -70,7 +70,7 @@ include_once('init.php');
 	<!-- Withdraw form -->
 	<section class="withdraw-section">
 		<div class="container">
-
+		
 			<div class="row">
 				<div class="col-xs-12 text-center">
 					<h2 class="section__heading text-center color-text">Withdraw</h2>
@@ -83,7 +83,16 @@ include_once('init.php');
 					<div class="light-box form-box">
 						<form method="post" action="dashboard.php?withdraw" class="form-box__form">
 						
-							<div class="form-group">
+							
+									<?php
+										if(isset($_SESSION['error']) && !empty($_SESSION['error'])){ 
+											echo $_SESSION['error']; //print error msg
+											$_SESSION['error']='';}
+										if(isset($_SESSION['success']) && !empty($_SESSION['success'])){ 
+											echo $_SESSION['success']; //print success msg
+											$_SESSION['success']='';}
+									?>
+								<div class="form-group">
 								<i class="fa fa-money"></i>
 								<input type="text" name="withdraw" placeholder="Enter the Amount to Withdraw" id="deposit-amount" class="form-control">
 							</div>
