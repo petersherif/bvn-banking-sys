@@ -4,83 +4,7 @@
 		header("location:dashboard.php");
 		exit();
 	}
-	include_once('init.php');
-	
-	if($_SERVER['REQUEST_METHOD'] == 'POST'){
-
-		// Get employee data with post method
-		$fullname 	= $_POST['fullname'];
-		$password	= $_POST['password'];
-		$hashedPass	= sha1($password);
-		$nat_id 	= $_POST['nat_id'];
-		$birthdate 	= $_POST['birthdate'];
-		$gender 	= $_POST['gender'];
-		$address 	= $_POST['address'];
-		$email 		= $_POST['email'];
-		$phone		= $_POST['phone'];
-		$auth 		= $_POST['auth'];
-
-		// array to has form erros messages
-		$formError	= array();
-
-		// Upload Selected Photo To img folder
-		$photoName 	= $_FILES['photo']['name'];
-		$target_dir = 'img/';
-        $target_file = $target_dir . basename($_FILES["photo"]["name"]);
-       
-        // Select file type
-        $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-       
-        // Valid file extensions
-		$extensions_arr = array("jpg","jpeg","png","gif");
-
-		// Handle form errors
-		if(empty($fullname)){
-			$formError['fullname'] 	= 'Full Name Can not Be Empty';
-		}
-		if(empty($password)){
-			$formError['password'] 	= 'Password Can not Be Empty';
-		}
-		if(empty($nat_id)) {
-			$formError['nat_id'] 	= 'National ID Can not Be Empty';
-		}
-		if(empty($birthdate)) {
-			$formError['birthdate'] = 'Birthdate Can not Be Empty';
-		}
-		if(empty($gender)) {
-			$formError['gender'] 	= 'Gender Can not Be Empty';
-		}
-		if(empty($address)) {
-			$formError['address'] 	= 'Address Can not Be Empty';
-		}
-		if(empty($email)) {
-			$formError['email'] 	= 'Email Can not Be Empty';
-		}
-		if(empty($phone)) {
-			$formError['phone'] 	= 'Phone Can not Be Empty';
-		}
- 		if(empty($photoName)) {
-			$formError['photoName'] = 'Picture Can not Be Empty'; 
-		}
-		if(empty($phone)) {
-			$formError['auth'] 		= 'auth Can not Be Empty';
-		}
-
-		// Insert employee data into database if no errors found
-		if(empty($formError)) {
-			$stmt = $con -> prepare("INSERT INTO users (user_name, password, email, national_id, birthday, gender, phone, thumb, auth)
-												 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-			$stmt -> execute(array($fullname, $hashedPass, $email, $nat_id, $birthdate, $gender, $phone, $photoName, $auth));
-
-			// Upload Image
-			move_uploaded_file($_FILES['photo']['tmp_name'],$target_dir.$photoName);
-			
-		}
-		
-	}
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -153,29 +77,29 @@
 				<div class="col-xs-12">
 
 					<div class="light-box form-box">
-						<form action="add-employee.php" class="form-box__form" method="POST" enctype='multipart/form-data'>
+						<form action="dashboard.php?add-employee&done" class="form-box__form" method="POST" enctype='multipart/form-data'>
 						
 							<div class="form-group">
 								<i class="fa fa-user"></i>
-								<input type="text" name="fullname" placeholder="Enter the Employee's Full Name" id="fullname" class="form-control" required="required">
+								<input type="text" name="fullname" placeholder="Enter the Employee's Full Name" id="fullname" class="form-control" >
 							</div>
 							<?php if(isset($formError['fullname'])) echo $formError['fullname'] ?>
 
 							<div class="form-group">
 								<i class="fa fa-user"></i>
-								<input type="password" name="password" placeholder="Enter the Employee's password" id="password" class="form-control" required="required">
+								<input type="password" name="password" placeholder="Enter the Employee's password" id="password" class="form-control" >
 							</div>
 							<?php if(isset($formError['password'])) echo $formError['password'] ?>
 
 							<div class="form-group">
 								<i class="fa fa-barcode"></i>
-								<input type="text" name="nat_id" placeholder="Enter the Employee's Nationallity ID" id="nat-id" class="form-control" required="required">
+								<input type="text" name="nat_id" placeholder="Enter the Employee's Nationallity ID" id="nat-id" class="form-control" >
 							</div>
 							<?php if(isset($formError['nat_id'])) echo $formError['nat_id'] ?>
 							
 							<div class="form-group">
 								<i class="fa fa-birthday-cake"></i>
-								<input type="date" name="birthdate" placeholder="Enter the Employee's Birthdate" id="birthdate" class="form-control" required="required">
+								<input type="date" name="birthdate" placeholder="Enter the Employee's Birthdate" id="birthdate" class="form-control" >
 							</div>
 							<?php if(isset($formError['birthdate'])) echo $formError['birthdate'] ?>
 
@@ -191,25 +115,25 @@
 
 							<div class="form-group">
 								<i class="fa fa-map-marker"></i>
-								<input type="text" name="address" placeholder="Enter the Employee's Address" id="address" class="form-control" required="required">
+								<input type="text" name="address" placeholder="Enter the Employee's Address" id="address" class="form-control" >
 							</div>
 							<?php if(isset($formError['address'])) echo $formError['address'] ?>
 
 							<div class="form-group">
 								<i class="fa fa-envelope"></i>
-								<input type="email" name="email" placeholder="Enter the Employee's Email Address" id="email" class="form-control" required="required">
+								<input type="email" name="email" placeholder="Enter the Employee's Email Address" id="email" class="form-control" >
 							</div>
 							<?php if(isset($formError['email'])) echo $formError['email'] ?>
 
 							<div class="form-group">
 								<i class="fa fa-phone"></i>
-								<input type="text" name="phone" placeholder="Enter the Employee's Phone Number" id="phone-num" class="form-control" required="required">
+								<input type="text" name="phone" placeholder="Enter the Employee's Phone Number" id="phone-num" class="form-control" >
 							</div>
 							<?php if(isset($formError['phone'])) echo $formError['phone'] ?>
 
 							<div class="form-group">
 								<i class="fa fa-user-circle"></i>
-								<input type="file" name="photo" placeholder="Upload the Employee's Picture" id="photo" class="form-control" required="required">
+								<input type="file" name="photo" placeholder="Upload the Employee's Picture" id="photo" class="form-control" >
 							</div>
 							<?php if(isset($formError['photoName'])) echo $formError['photoName'] ?>
 
