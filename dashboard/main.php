@@ -1,32 +1,40 @@
+<?php
+
+include "./controller/MainController.php"
+?>
 <!-- BVN login form -->
-<section class="login-section">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
+<?php if (!isset($_SESSION['loggedbvn'])) { ?>
 
-                <div class="light-box light-box--small form-box">
-                    <form method="post" action="dashboard.php?newClient" class="form-box__form">
-                    <?php
-                            if(isset($_SESSION['error']) && !empty($_SESSION['error'])){ 
-                            echo $_SESSION['error']; //print error msg
-                            $_SESSION['error']='';}
-                            ?>
-                        <div  class="form-group">
-                            <i class="fa fa-user"></i>
-                            <input type="text" placeholder="Enter client BVN or account number" name="accountNumber" id="username"
-                                   class="form-control">
-                        </div>
+    <section class="login-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="light-box light-box--small form-box">
+                        <form method="post" class="form-box__form">
 
-                        <div class="form-group">
-                            <input type="submit" value="enter" class="submit form-control btn btn-block btn-primary">
-                        </div>
+                            <div class="alert alert-danger hidden">
+                                <button class="close" data-close="alert"></button>
+                                <span>
+     Dear Emp, Enter client BVN or account number   </span>
+                            </div>
+                            <div class="form-group">
+                                <i class="fa fa-user"></i>
+                                <input type="text" placeholder="Enter client BVN or account number" name="bvn"
+                                       class="form-control account_number">
+                            </div>
 
-                    </form>
-                </div>
-            </div> <!-- BVN login Form -->
-        </div> <!-- Row -->
-    </div> <!-- Container -->
-</section>
+                            <div class="form-group">
+                                <input type="submit" name="submit" value="enter"
+                                       class="submit form-control btn btn-block btn-primary">
+                            </div>
+
+                        </form>
+                    </div>
+                </div> <!-- BVN login Form -->
+            </div> <!-- Row -->
+        </div> <!-- Container -->
+    </section>
+<?php } ?>
 
 <!-- Date and Time box, Currency Rate Graph and Table -->
 <section class="dashboard-components">
