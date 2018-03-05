@@ -14,5 +14,8 @@ if (isset($_GET['new-client'])) {
 }
 if (isset($_GET['add-employee'])) {
     include('./dashboard/add-employee.php');
+}
+if (isset($_GET['search-clients'])) {
+    include('./dashboard/search-clients.php');
 } ?>
 

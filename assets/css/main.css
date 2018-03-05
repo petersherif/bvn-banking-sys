@@ -8,7 +8,7 @@ body {
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #364347;
   background: #F9FAFB;
-  padding-top: 50px;
+  padding-top: calc(50px + 40px);
   padding-bottom: 50px;
   min-height: 100vh;
   overflow: hidden; }
@@ -132,11 +132,50 @@ input[type=checkbox]:checked + label:before {
   body {
     font-size: 12px; } }
 /*****************************************  
+[Table Box]
+*****************************************/
+.table-box {
+  padding: 7px 0;
+  margin-top: 7.5px; }
+  .table-box .table__heading {
+    color: #FFFFFF;
+    background: #02BAF2;
+    margin: 0;
+    padding: 3px 15px 10px;
+    font-size: 1.4em; }
+  .table-box .table__rows {
+    font-size: 1.3em; }
+    .table-box .table__rows .table__row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #ACACAC; }
+      .table-box .table__rows .table__row:last-child {
+        border-bottom: 0;
+        padding-bottom: 3px; }
+      .table-box .table__rows .table__row:nth-child(even) {
+        background: #e6f8fe; }
+    .table-box .table__rows .row__cell {
+      display: block;
+      text-align: center; }
+      .table-box .table__rows .row__cell.row__cell--heading {
+        text-transform: uppercase;
+        font-weight: 700; }
+      .table-box .table__rows .row__cell:not(:last-child) {
+        border-right: 1px solid #ACACAC; }
+
+@media (max-width: 767px) {
+  .table-box {
+    margin-bottom: 7.5px;
+    float: none;
+    clear: both; } }
+/*****************************************  
 [Form Box]
 *****************************************/
 .form-box {
   max-width: 390px;
-  margin: 60px auto; }
+  margin: 0 auto 60px; }
   .form-box .form-group {
     margin-bottom: 3px;
     color: #ACACAC;
@@ -199,45 +238,9 @@ input[type=checkbox]:checked + label:before {
 /*****************************************  
 [Currency Rate Box]
 *****************************************/
-.cur-rate-box {
-  padding: 7px 0;
-  margin-top: 7.5px; }
-  .cur-rate-box .cur-rate__heading {
-    color: #FFFFFF;
-    background: #02BAF2;
-    margin: 0;
-    padding: 3px 15px 10px;
-    font-size: 1.4em; }
-  .cur-rate-box .cur-rate__table {
-    font-size: 1.3em;
-    min-height: 1px;
-    overflow: hidden; }
-    .cur-rate-box .cur-rate__table .table__row {
-      padding: 10px 0;
-      border-bottom: 1px solid #ACACAC;
-      min-height: 1px;
-      overflow: hidden; }
-      .cur-rate-box .cur-rate__table .table__row:last-child {
-        border-bottom: 0;
-        padding-bottom: 3px; }
-      .cur-rate-box .cur-rate__table .table__row:nth-child(even) {
-        background: #e6f8fe; }
-    .cur-rate-box .cur-rate__table .row__cell {
-      display: block;
-      width: 33.3333333333%;
-      float: left;
-      text-align: center; }
-      .cur-rate-box .cur-rate__table .row__cell.row__cell--heading {
-        text-transform: uppercase;
-        font-weight: 700; }
-      .cur-rate-box .cur-rate__table .row__cell:not(:last-child) {
-        border-right: 1px solid #ACACAC; }
+.cur-rate-box .table__rows .table__row .row__cell {
+  width: 33.3333333333%; }
 
-@media (max-width: 767px) {
-  .cur-rate-box {
-    margin-bottom: 7.5px;
-    float: none;
-    clear: both; } }
 /*****************************************  
 [Currency Rate Graph Box]
 *****************************************/
@@ -246,6 +249,46 @@ input[type=checkbox]:checked + label:before {
     margin-top: 7.5px;
     float: none;
     clear: both; } }
+/*****************************************  
+[All Clients Box]
+*****************************************/
+.all-clients-box .table__rows {
+  font-size: 1em;
+  overflow-y: auto; }
+  .all-clients-box .table__rows .table__row {
+    justify-content: start;
+    min-width: 700px; }
+    .all-clients-box .table__rows .table__row .row__cell {
+      width: calc(60% / 3);
+      max-width: 26.6666666667%;
+      padding: 0 10px;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+      .all-clients-box .table__rows .table__row .row__cell:first-child {
+        width: 20%; }
+      .all-clients-box .table__rows .table__row .row__cell:nth-child(2) {
+        width: 30%; }
+
+@media (min-width: 768px) {
+  .all-clients-box .table__rows .table__row .row__cell {
+    min-width: 80px; } }
+@media (max-width: 767px) {
+  .table-box {
+    width: 100%; }
+    .table-box .table__rows .table__row {
+      padding: 5px 0; } }
+::-webkit-scrollbar-track {
+  background-color: #FFFFFF; }
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 6px;
+  background-color: #FFFFFF; }
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #02BAF2; }
+
 .navbar-custom {
   background: #FFFFFF;
   box-shadow: 0 0 6px rgba(57, 73, 76, 0.35);
@@ -431,5 +474,17 @@ input[type=checkbox]:checked + label:before {
 *****************************************/
 .color-border {
   color: #ACACAC; }
+
+/*****************************************  
+[Buttons Colors]
+*****************************************/
+.btn-primary {
+  color: #FFFFFF;
+  background-color: #02BAF2;
+  border-color: #029ece; }
+  .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    color: #FFFFFF;
+    background-color: #029ece;
+    border-color: #028eb9; }
 
 /*# sourceMappingURL=main.css.map */
