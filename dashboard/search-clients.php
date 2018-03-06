@@ -20,40 +20,40 @@
 							<span class="row__cell row__cell--heading">Actions</span>
 						</li>
 						<li class="table__row">
-							<span class="row__cell">Peter Sherif</span>
+							<span class="row__cell" title="Peter Sherif">Peter Sherif</span>
 							<span class="row__cell" title="2383333282800908">2383333282800908</span>
 							<span class="row__cell" title="2931231121221">2931231121221</span>
-							<span class="row__cell">11,000,000</span>
+							<span class="row__cell" title="11,000,000">11,000,000</span>
 							<span class="row__cell">
 								<a href="#" class="btn btn-primary--custom btn-sm mh2 mv1">View</a>
 								<a href="#" class="btn btn-danger--custom btn-sm mh2 mv1">Delete</a>
 							</span>
 						</li>
 						<li class="table__row">
-							<span class="row__cell">Peter Sherif</span>
+							<span class="row__cell" title="Peter Sherif">Peter Sherif</span>
 							<span class="row__cell" title="2383333282800908">2383333282800908</span>
 							<span class="row__cell" title="2931231121221">2931231121221</span>
-							<span class="row__cell">11,000,000</span>
+							<span class="row__cell" title="11,000,000">11,000,000</span>
 							<span class="row__cell">
 								<a href="#" class="btn btn-primary--custom btn-sm mh2 mv1">View</a>
 								<a href="#" class="btn btn-danger--custom btn-sm mh2 mv1">Delete</a>
 							</span>
 						</li>
 						<li class="table__row">
-							<span class="row__cell">Peter Sherif</span>
+							<span class="row__cell" title="Peter Sherif">Peter Sherif</span>
 							<span class="row__cell" title="2383333282800908">2383333282800908</span>
 							<span class="row__cell" title="2931231121221">2931231121221</span>
-							<span class="row__cell">11,000,000</span>
+							<span class="row__cell" title="11,000,000">11,000,000</span>
 							<span class="row__cell">
 								<a href="#" class="btn btn-primary--custom btn-sm mh2 mv1">View</a>
 								<a href="#" class="btn btn-danger--custom btn-sm mh2 mv1">Delete</a>
 							</span>
 						</li>
 						<li class="table__row">
-							<span class="row__cell">Peter Sherif</span>
+							<span class="row__cell" title="Peter Sherif">Peter Sherif</span>
 							<span class="row__cell" title="2383333282800908">2383333282800908</span>
 							<span class="row__cell" title="2931231121221">2931231121221</span>
-							<span class="row__cell">11,000,000</span>
+							<span class="row__cell" title="11,000,000">11,000,000</span>
 							<span class="row__cell">
 								<a href="#" class="btn btn-primary--custom btn-sm mh2 mv1">View</a>
 								<a href="#" class="btn btn-danger--custom btn-sm mh2 mv1">Delete</a>
