@@ -2,6 +2,12 @@
 [All Clients Box]
 *****************************************/
 .all-clients-box {
+	
+	max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+	padding: 7px 0 3px;
+	
 	.table__rows {
 
 		font-size: 1em;
@@ -10,11 +16,11 @@
 		.table__row {
 			justify-content: start;
 			min-width: 700px;
+			padding: 5px 0;
 
 			.row__cell {
 
 				width: calc(60% / 3);
-				max-width: (80% / 3);
 				padding: 0 10px;
 				overflow: hidden;
 				text-overflow: ellipsis;
@@ -26,6 +32,15 @@
 				&:nth-child(2) {
 					width: 30%;
 				}
+
+				&:last-child {
+					display: flex;
+					justify-content: center
+				}
+
+				&--heading {
+					padding: 5px 10px;
+				}
 			}
 		}
 	}
@@ -36,8 +51,9 @@
 	.all-clients-box {
 		.table__rows {
 			.table__row {
+
 				.row__cell {
-					min-width: 80px;
+					// min-width: 80px;
 				}
 			}
 		}
@@ -45,31 +61,12 @@
 }
 
 @media(max-width: 767px) {
-	.table-box {
+	.all-clients-box {
 		width: 100%;
 
 		.table__rows {
 			.table__row {
-				padding: 5px 0;
 			}
 		}
 	}
-}
-
-::-webkit-scrollbar-track
-{
-	background-color: $color-bg-white;
-}
-
-::-webkit-scrollbar
-{
-	width: 2px;
-	height: 6px;
-	background-color: $color-bg-white;
-}
-
-::-webkit-scrollbar-thumb
-{
-	border-radius: 5px;
-	background-color: $color-primary;
 }

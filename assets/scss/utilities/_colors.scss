@@ -43,22 +43,3 @@
 [Border Colors]
 *****************************************/
 .color-border { color: $color-border; }
-
-/*****************************************  
-[Buttons Colors]
-*****************************************/
-.btn {
-	&-primary {
-		color: $color-text-invert;
-    background-color: $color-bg-invert;
-    border-color: $color-bg-invert-hover;
-
-    &:hover,
-    &:focus,
-    &:active {
-    	color: $color-text-invert;
-	    background-color: $color-bg-invert-hover;
-	    border-color: mix($black, $color-bg-invert-hover, 10%);
-    }
-	}
-}

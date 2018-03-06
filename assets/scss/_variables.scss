@@ -27,6 +27,8 @@ $color-bg-white:						$white;
 $color-bg-white-hover:			mix($black, $color-bg-white, 15%);
 $color-bg-invert:						$color-primary;
 $color-bg-invert-hover:			$color-primary-hover;
+$color-bg-danger:						$color-accent;
+$color-bg-danger-hover:			$color-accent-hover;
 $color-text:								$limed-spruce;
 $color-text-weak:						$silver-chalice;
 $color-text-strong:					mix($black, $lean-blue, 80%);

@@ -9,8 +9,8 @@
 		</div> <!-- Heading Row -->
 
 		<div class="row">
-			<div class="col-xs-12 col-md-10 col-md-offset-1 flex justify-center">
-				<div class="light-box light-box--small table-box all-clients-box dib">
+			<div class="col-xs-12 col-md-10 col-md-offset-1">
+				<div class="light-box table-box all-clients-box">
 					<ul class="table__rows">
 						<li class="table__row">
 							<span class="row__cell row__cell--heading">Name</span>
@@ -21,31 +21,43 @@
 						</li>
 						<li class="table__row">
 							<span class="row__cell">Peter Sherif</span>
-							<span class="row__cell" title="petershreif@gmail.com">petershreif@gmail.com</span>
+							<span class="row__cell" title="2383333282800908">2383333282800908</span>
 							<span class="row__cell" title="2931231121221">2931231121221</span>
 							<span class="row__cell">11,000,000</span>
-							<span class="row__cell"><a href="#" class="btn btn-primary">View</a></span>
+							<span class="row__cell">
+								<a href="#" class="btn btn-primary--custom btn-sm mh2 mv1">View</a>
+								<a href="#" class="btn btn-danger--custom btn-sm mh2 mv1">Delete</a>
+							</span>
 						</li>
 						<li class="table__row">
 							<span class="row__cell">Peter Sherif</span>
-							<span class="row__cell" title="petershreif@gmail.com">petershreif@gmail.com</span>
+							<span class="row__cell" title="2383333282800908">2383333282800908</span>
 							<span class="row__cell" title="2931231121221">2931231121221</span>
 							<span class="row__cell">11,000,000</span>
-							<span class="row__cell"><a href="#" class="btn btn-primary">View</a></span>
+							<span class="row__cell">
+								<a href="#" class="btn btn-primary--custom btn-sm mh2 mv1">View</a>
+								<a href="#" class="btn btn-danger--custom btn-sm mh2 mv1">Delete</a>
+							</span>
 						</li>
 						<li class="table__row">
 							<span class="row__cell">Peter Sherif</span>
-							<span class="row__cell" title="petershreif@gmail.com">petershreif@gmail.com</span>
+							<span class="row__cell" title="2383333282800908">2383333282800908</span>
 							<span class="row__cell" title="2931231121221">2931231121221</span>
 							<span class="row__cell">11,000,000</span>
-							<span class="row__cell"><a href="#" class="btn btn-primary">View</a></span>
+							<span class="row__cell">
+								<a href="#" class="btn btn-primary--custom btn-sm mh2 mv1">View</a>
+								<a href="#" class="btn btn-danger--custom btn-sm mh2 mv1">Delete</a>
+							</span>
 						</li>
 						<li class="table__row">
 							<span class="row__cell">Peter Sherif</span>
-							<span class="row__cell" title="petershreif@gmail.com">petershreif@gmail.com</span>
+							<span class="row__cell" title="2383333282800908">2383333282800908</span>
 							<span class="row__cell" title="2931231121221">2931231121221</span>
 							<span class="row__cell">11,000,000</span>
-							<span class="row__cell"><a href="#" class="btn btn-primary">View</a></span>
+							<span class="row__cell">
+								<a href="#" class="btn btn-primary--custom btn-sm mh2 mv1">View</a>
+								<a href="#" class="btn btn-danger--custom btn-sm mh2 mv1">Delete</a>
+							</span>
 						</li>
 					</ul>
 				</div>

@@ -1,0 +1,36 @@
+/*****************************************  
+[Buttons]
+*****************************************/
+.btn {
+	&-primary--custom {
+		color: $color-text-invert;
+    background-color: $color-bg-invert;
+    border-color: $color-bg-invert-hover;
+
+    &:hover,
+    &:focus,
+    &:active {
+    	color: $color-text-invert;
+	    background-color: $color-bg-invert-hover;
+	    border-color: mix($black, $color-bg-invert-hover, 10%);
+    }
+	}
+
+  &-danger--custom {
+    color: $color-text-invert;
+    background-color: $color-bg-danger;
+    border-color: $color-bg-danger-hover;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $color-text-invert;
+      background-color: $color-bg-danger-hover;
+      border-color: mix($black, $color-bg-danger-hover, 10%);
+    }
+  }  
+
+  &-sm {
+  	padding: 1px 12px;
+  }
+}
