@@ -10,7 +10,7 @@ global $message;
 
 if (isset($_POST['login'])) {
     $username = $_POST['user_name'];
-    $password = md5($_POST['password']);
+    $password = sha1($_POST['password']);
 
 
     if ($username && $password) {
