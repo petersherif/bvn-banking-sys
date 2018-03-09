@@ -5,7 +5,7 @@ if (isset($_POST['submit'])) {
     $bvn = $_POST['bvn'];
     if ($bvn) {
 
-        $sql = "SELECT * FROM bvn JOIN accounts WHERE bvn.bvn_num='$bvn'OR accounts.acc_num='$bvn'";
+        $sql = "SELECT * FROM accounts WHERE acc_num = $bvn";
         $query = connect()->query($sql);
         if ($query->num_rows != 0) {
             while ($row = $query->fetch_assoc()) {

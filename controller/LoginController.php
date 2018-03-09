@@ -10,7 +10,7 @@ global $message;
 
 if (isset($_POST['login'])) {
     $username = $_POST['user_name'];
-    $password = sha1($_POST['password']);
+    $password = md5($_POST['password']);
 
 
     if ($username && $password) {
@@ -22,9 +22,11 @@ if (isset($_POST['login'])) {
                 $id = $row['id'];
                 $username = $row['user_name'];
                 $password = $row['password'];
+                $bank_id=$row['bank_id'];
                 $_SESSION['loggedin'] = "yes";
                 $_SESSION['id'] = $id;
                 $_SESSION['user_name'] = $username;
+                $_SESSION['bank_id'] = $bank_id;
                 $url = "location: home.php";
                 header($url);
                 exit;

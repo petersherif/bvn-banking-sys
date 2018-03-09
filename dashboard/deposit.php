@@ -24,13 +24,27 @@ if (isset($_SESSION['loggedbvn'])) {
                     <div class="alert alert-danger hidden">
                         <strong>Error!</strong> Dear Emp,The lowest value is 50 !
                     </div>
-                    <form class="form-box__form" id="depositForm">
+                    <form id="depositForm" class="form-box__form">
                         <?php if (!isset($_SESSION['loggedbvn'])) { ?>
                             <div class="form-group">
                                 <i class="fa fa-inbox"></i>
                                 <input type="text" name="acc_num"
                                        placeholder="Enter the Reciever Account Number"
                                        id="acc_num"
+                                       class="form-control account_number">
+                            </div>
+                            <div class="form-group">
+                                <i class="fa fa-inbox"></i>
+                                <input type="text" name="sender_name"
+                                       placeholder="Enter the Fullname"
+                                       id="sender_name"
+                                       class="form-control ">
+                            </div>
+                            <div class="form-group">
+                                <i class="fa fa-inbox"></i>
+                                <input type="text" name="nat_id"
+                                       placeholder="Enter the National ID"
+                                       id="nat_id"
                                        class="form-control account_number">
                             </div>
                         <?php } ?>

@@ -25,6 +25,12 @@ include "./controller/EmployeeController.php";
 
                         <div class="form-group">
                             <i class="fa fa-user"></i>
+                            <input type="text" name="full_name" placeholder="Enter the Employee's Fullname"
+                                   id="full_name" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <i class="fa fa-user"></i>
                             <input type="text" name="user_name" placeholder="Enter the Employee's username"
                                    id="user_name" class="form-control">
                         </div>

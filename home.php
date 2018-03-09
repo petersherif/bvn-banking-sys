@@ -78,7 +78,7 @@ if (isset($_SESSION['loggedin'])){
 <?php include('includes/navbar.php'); ?>
 <!-- Content -->
 <?php
-if (str_replace('/bank', '', $_SERVER['REQUEST_URI']) == '/' || str_replace('/bank', '', $_SERVER['REQUEST_URI']) == '/home.php' || str_replace('/bank', '', $_SERVER['REQUEST_URI']) == '') {
+if (str_replace('/bvn-banking-sys', '', $_SERVER['REQUEST_URI']) == '/' || str_replace('/bvn-banking-sys', '', $_SERVER['REQUEST_URI']) == '/home.php' || str_replace('/babvn-banking-sys', '', $_SERVER['REQUEST_URI']) == '') {
     include('dashboard/main.php');
 } else {
     include('includes/content.php');
