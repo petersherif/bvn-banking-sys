@@ -5,7 +5,7 @@ if (isset($_SESSION['loggedbvn'])) {
     include "./controller/UnAuthDepositController.php";
 
 } ?>
-<section class="new-client-section">
+<section class="deposit-section">
     <div class="container">
 
         <div class="row">

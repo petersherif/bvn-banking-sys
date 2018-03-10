@@ -317,6 +317,24 @@ input[type=checkbox]:checked + label:before {
 .btn-sm {
   padding: 1px 12px; }
 
+/*****************************************  
+[Profile Box]
+*****************************************/
+.profile-box .profile__avatar {
+  max-height: 250px;
+  max-width: 250px;
+  margin: auto;
+  overflow: hidden;
+  box-shadow: 0 0 6px rgba(57, 73, 76, 0.35); }
+.profile-box .profile__basic-info .basic-info__text {
+  font-size: 16px;
+  font-weight: bold; }
+.profile-box .profile__info {
+  font-size: 16px; }
+  .profile-box .profile__info .info__title {
+    min-width: 90px;
+    display: inline-block; }
+
 .navbar-custom {
   background: #FFFFFF;
   box-shadow: 0 0 6px rgba(57, 73, 76, 0.35);
