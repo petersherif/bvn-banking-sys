@@ -8,9 +8,10 @@
 						   <?php } ?>"><a href="home.php"><i class="fa fa-home icon-primary"></i> Dashboard</a></li>
 			<li class="list__item <?php if (isset($_GET['new-client'])) { ?> active
 						   <?php } ?>"><a
+						   <?php if(!isset($_SESSION['loggedbvn'])) {?>
 						href="home.php?new-client"><i class="fa fa-user-plus icon-brown"></i> New Client</a></li>
 			<li class="list__item <?php if (isset($_GET['deposit'])) { ?> active
-						   <?php } ?>"><a
+						   <?php } }?>"><a
 						href="home.php?deposit"><i
 							class="fa fa-money icon-green "></i> Deposit</a></li>
 			<?php if (isset($_SESSION['loggedbvn'])) { ?>
@@ -25,20 +26,26 @@
 						   <?php } ?>"><a
 							href="home.php?money-transfer"><i class="fa fa-exchange icon-blue"></i> Money Transfer</a>
 				</li>
+				<?php if(!isset($_SESSION['loggedbvn'])) {?>
 				<li class="list__item <?php if (isset($_GET['all-transactions'])) { ?> active
 						   <?php } ?>"><a
+						   
 							href="home.php?all-transactions"><i class="fa fa-list icon-blue"></i> All Transactions</a>
 				</li>
+							<?php } } ?>
+							<?php if(isset($_SESSION['loggedbvn'])) {?>
 				<li class="list__item <?php if (isset($_GET['client-profile'])) { ?> active
 						   <?php } ?>"><a
 							href="home.php?client-profile"><i class="fa fa-user-circle icon-blue"></i> Client Profile</a>
 				</li>
+				<?php } ?>
+				<?php if(isset($_SESSION['loggedbvn'])) {?>
 				<li class="list__item<?php if (isset($_GET['end-process'])) { ?> active
 							   <?php } ?> "><i
-							class="fa fa-undo icon-red"></i><a href="home.php?search-employees">End Process</a>
+							class="fa fa-undo icon-red"></i><a href="home.php?logout&endProcess">End Process</a>
 				</li>
 			<?php } ?>
-
+	        <?php if(!isset($_SESSION['loggedbvn'])) {?>
 			<li class="list__item<?php if (isset($_GET['add-employee'])) { ?> active
 						   <?php } ?>"><i
 						class="fa fa-user-secret icon-black"></i><a href="home.php?add-employee">Add Employee</a></li>
@@ -49,10 +56,11 @@
 			<li class="list__item<?php if (isset($_GET['search-employees'])) { ?> active
 						   <?php } ?> "><i
 						class="fa fa-users icon-black"></i><a href="home.php?search-employees">Search Employees</a>
-			</li>
+			</li> 	
+			<?php } ?>
 
 
 			<li class="list__item"><i class="fa fa-sign-out icon-gray"></i><a href="home.php?logout">Log Out</a></li>
 		</ul>
 	</div>
-</aside>
+</side>

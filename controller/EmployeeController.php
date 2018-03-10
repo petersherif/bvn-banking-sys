@@ -22,7 +22,7 @@ if (isset($_POST['email'])) {
     $sql = "insert into users (`user_name`,`full_name`,`email`,`password`,`national_id`,`birthday`,`gender`,`address`,`phone`,`thumb`,`auth`,bank_id)VALUES ($values)";
     $query = connect()->query($sql);
     $message = 'success';
-    echo mysqli_insert_id($query) ;
+    
 
 
 }
