@@ -120,4 +120,33 @@ $(document).ready(function () {
         }
     }
 	});
+
+
+	// Search Clients & Search Employees pages: search feature
+  $(".search-bar__input").on('keyup', function () {
+    var searchVal = $(this).val().toString().toLowerCase();
+
+    $(".data-row").each(function(index, element) {
+        var dataCellVal =  $(this).data('search').toString().toLowerCase();       
+
+        if(dataCellVal.indexOf(searchVal) != -1) {
+          $(this).show('3000');
+        } else if(searchVal === '') {
+          // If text input is empty show all
+          $(this).show('3000');
+
+        } else {
+          $(this).hide('3000');
+        }
+
+        // if(dataCellVal.indexOf(text_filter_value) != -1) {
+        //     $(this).show('slow');
+        // } else if(text_filter_value === '') {
+        //     // If text input is empty show all
+        //     $(this).show('slow');
+        // } else {
+        //     $(this).hide('slow');
+        // }
+    });
+  });
 });
