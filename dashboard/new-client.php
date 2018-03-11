@@ -1,4 +1,6 @@
-<?php include "./controller/addClientController.php"; ?>
+<?php include "./controller/addClientController.php";
+global $message;
+?>
 
 
 <section class="new-client-section">
@@ -14,13 +16,27 @@
             <div class="col-xs-12">
 
                 <div class="light-box form-box">
-                    <div class="alert alert-success hidden">
-                        <strong>Success!</strong> Mission successfully.
-                    </div>
-                    <div class="alert alert-danger hidden">
-                        <strong>Error!</strong> Dear Emp,Please enter the full information !
-                    </div>
-                    <form id="clientForm" class="form-box__form">
+                    <?php
+                    if ($message == "success") {
+                        ?>
+                        <div class="alert alert-success">
+                            <strong>Success!</strong> user successfully added.
+                        </div>
+                        <?php
+                    } else if ($message == "error") {
+                        ?>
+                        <div class="alert alert-danger">
+                            <strong>Error!</strong> Please, insert full information.
+                        </div>
+                        <?php
+                    } else if ($message == "exist") {
+                        ?>
+                        <div class="alert alert-danger">
+                            <strong>Error!</strong> user already exist.
+                        </div>
+
+                    <?php } ?>
+                    <form method="post" class="form-box__form">
 
                         <div class="form-group">
                             <i class="fa fa-user"></i>
@@ -74,7 +90,7 @@
                         </div>
 
                         <div class="form-group">
-                            <input type="submit" name="client" id="client" value="add new client"
+                            <input type="submit" name="submit" value="add new client"
                                    class="submit form-control btn btn-block btn-primary">
                         </div>
 

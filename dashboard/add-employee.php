@@ -1,5 +1,7 @@
 <?php
 include "./controller/EmployeeController.php";
+global $message;
+
 ?>
 <!-- New Employee form -->
 <section class="new-employee-section">
@@ -15,13 +17,31 @@ include "./controller/EmployeeController.php";
             <div class="col-xs-12">
 
                 <div class="light-box form-box">
-                    <div class="alert alert-success hidden">
-                        <strong>Success!</strong> Mission successfully.
-                    </div>
+                    <?php
+                    if ($message == "success") {
+                        ?>
+                        <div class="alert alert-success">
+                            <strong>Success!</strong> user successfully added.
+                        </div>
+                        <?php
+                    } else if ($message == "error") {
+                        ?>
+                        <div class="alert alert-danger">
+                            <strong>Error!</strong> Please, insert full information.
+                        </div>
+                        <?php
+                    } else if ($message == "exist") {
+                        ?>
+                        <div class="alert alert-danger">
+                            <strong>Error!</strong> user already exist.
+                        </div>
+
+                    <?php } ?>
+
                     <div class="alert alert-danger hidden">
                         <strong>Error!</strong> Dear Emp,Please enter the full information !
                     </div>
-                    <form class="form-box__form" id="empForm" enctype='multipart/form-data'>
+                    <form class="form-box__form" method="post" enctype='multipart/form-data'>
 
                         <div class="form-group">
                             <i class="fa fa-user"></i>
@@ -96,7 +116,7 @@ include "./controller/EmployeeController.php";
                         </div>
 
                         <div class="form-group">
-                            <input type="submit" name="emp" id="emp" value="add new Employee"
+                            <input type="submit" name="submit" value="add new Employee"
                                    class="submit form-control btn btn-block btn-primary">
                         </div>
 

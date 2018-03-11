@@ -3,7 +3,7 @@ if (isset($_SESSION['loggedbvn'])) {
     include "./controller/DepositController.php";
 } else {
     include "./controller/UnAuthDepositController.php";
-
+    global $message;
 } ?>
 <section class="deposit-section">
     <div class="container">
@@ -24,11 +24,28 @@ if (isset($_SESSION['loggedbvn'])) {
                     <div class="alert alert-danger hidden">
                         <strong>Error!</strong> Dear Emp,The lowest value is 50 !
                     </div>
-                    <div class="alert alert-danger hidden">
-                        <strong>Error!</strong> Dear Emp,Please enter the full information !
-                    </div>
-                    <form id="depositForm" class="form-box__form">
-                        <?php if (!isset($_SESSION['loggedbvn'])) { ?>
+                    <?php if (!isset($_SESSION['loggedbvn'])) { ?>
+                        <?php
+                        if ($message == "success") {
+                            ?>
+                            <div class="alert alert-success">
+                                <strong>Success!</strong> user successfully added.
+                            </div>
+                            <?php
+                        } else if ($message == "error") {
+                            ?>
+                            <div class="alert alert-danger">
+                                <strong>Error!</strong> Please, insert full information.
+                            </div>
+                            <?php
+                        } else if ($message == "exist") {
+                            ?>
+                            <div class="alert alert-danger">
+                                <strong>Error!</strong> account number doesn't exist.
+                            </div>
+
+                        <?php } ?>
+                        <form method="post" class="form-box__form">
                             <div class="form-group">
                                 <i class="fa fa-inbox"></i>
                                 <input type="text" name="acc_num"
@@ -49,20 +66,34 @@ if (isset($_SESSION['loggedbvn'])) {
                                        placeholder="Enter the National ID"
                                        id="nat_id"
                                        class="form-control account_number">
+                                <div class="form-group">
+                                    <i class="fa fa-money"></i>
+                                    <input type="text" name="amount" placeholder="Enter the Amount to Send" id="amount"
+                                           class="form-control quantity">
+                                </div>
+
+                                <div class="form-group">
+                                    <input type="submit" name="submit" value="Deposit"
+                                           class="submit form-control btn btn-block btn-primary">
+                                </div>
                             </div>
-                        <?php } ?>
-                        <div class="form-group">
-                            <i class="fa fa-money"></i>
-                            <input type="text" name="amount" placeholder="Enter the Amount to Send" id="amount"
-                                   class="form-control quantity">
-                        </div>
+                        </form>
+                    <?php } else { ?>
+                        <form id="depositForm" class="form-box__form">
+                            <div class="form-group">
+                                <i class="fa fa-money"></i>
+                                <input type="text" name="amount" placeholder="Enter the Amount to Send" id="amount"
+                                       class="form-control quantity">
+                            </div>
 
-                        <div class="form-group">
-                            <input type="submit" id="deposit" name="deposit" value="Deposit"
-                                   class="submit form-control btn btn-block btn-primary">
-                        </div>
+                            <div class="form-group">
+                                <input type="submit" id="deposit" name="deposit" value="Deposit"
+                                       class="submit form-control btn btn-block btn-primary">
+                            </div>
+                        </form>
+                    <?php } ?>
 
-                    </form>
+
                 </div>
             </div> <!-- New client Form -->
         </div> <!-- Row -->

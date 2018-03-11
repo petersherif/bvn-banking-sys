@@ -1,5 +1,6 @@
 <?php
-include "./controller/TransferController.php"
+include "./controller/TransferController.php";
+global $message;
 ?>
 <section class="money-trans-section">
     <div class="container">
@@ -19,10 +20,29 @@ include "./controller/TransferController.php"
                     <div class="alert alert-danger hidden">
                         <strong>Error!</strong> Dear Emp,The lowest value is 50 !
                     </div>
-                    <div class="alert alert-danger length hidden">
-                        <strong>Error!</strong> Dear Emp,The length of the account number must be 11 !
-                    </div>
-                    <form id="transferForm" class="form-box__form">
+                    <?php
+                    if ($message == "success") {
+                        ?>
+                        <div class="alert alert-success">
+                            <strong>Success!</strong> user successfully added.
+                        </div>
+                        <?php
+                    } else if ($message == "error") {
+                        ?>
+                        <div class="alert alert-danger">
+                            <strong>Error!</strong> Please, insert full information.
+                        </div>
+                        <?php
+                    } else if ($message == "exist") {
+                        ?>
+                        <div class="alert alert-danger">
+                            <strong>Error!</strong> account number doesn't exist.
+                        </div>
+
+                    <?php } ?>
+
+
+                    <form method="post" class="form-box__form">
 
                         <div class="form-group">
                             <i class="fa fa-inbox"></i>
@@ -41,7 +61,7 @@ include "./controller/TransferController.php"
                         </div>
 
                         <div class="form-group">
-                            <input type="submit" name="transfer" id="transfer" value="Transfer"
+                            <input type="submit" name="submit" value="Transfer"
                                    class="submit form-control btn btn-block btn-primary">
                         </div>
 
