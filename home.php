@@ -5,14 +5,15 @@ include_once('includes/connect.php');
 if (isset($_GET['logout'])) {
     if (isset($_GET['endProcess'])) {
         unset($_SESSION['loggedbvn']);
-    }
-    else{
-    unset($_SESSION['loggedin']);
-    unset($_SESSION['loggedbvn']);
-    unset($_SESSION['id']);
-    unset($_SESSION['username']);
-    unset($_SESSION['acc_id']);
-    unset($_SESSION['id']);
+        $URL = "Location: home.php";
+        header($URL);
+    } else {
+        unset($_SESSION['loggedin']);
+        unset($_SESSION['loggedbvn']);
+        unset($_SESSION['id']);
+        unset($_SESSION['username']);
+        unset($_SESSION['acc_id']);
+        unset($_SESSION['id']);
     }
 }
 
