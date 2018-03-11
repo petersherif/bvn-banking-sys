@@ -36,6 +36,7 @@
 		.row__cell {
 			display: block;
 			text-align: center;
+			min-height: 20px;
 			
 			&.row__cell--heading {
 				text-transform: uppercase;

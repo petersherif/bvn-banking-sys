@@ -171,7 +171,8 @@ input[type=checkbox]:checked + label:before {
         background: #e6f8fe; }
     .table-box .table__rows .row__cell {
       display: block;
-      text-align: center; }
+      text-align: center;
+      min-height: 20px; }
       .table-box .table__rows .row__cell.row__cell--heading {
         text-transform: uppercase;
         font-weight: 700; }
@@ -263,33 +264,37 @@ input[type=checkbox]:checked + label:before {
     float: none;
     clear: both; } }
 /*****************************************  
-[All Clients Box]
+[All Members Box]
 *****************************************/
-.all-clients-box {
+.all-members-box {
   max-width: 1000px;
   margin-right: auto;
   margin-left: auto;
   padding: 7px 0 3px; }
-  .all-clients-box .table__rows {
+  .all-members-box .table__rows {
     font-size: 1em;
     overflow-y: auto; }
-    .all-clients-box .table__rows .table__row {
+    .all-members-box .table__rows .table__row {
       justify-content: start;
       min-width: 700px;
       padding: 5px 0; }
-      .all-clients-box .table__rows .table__row .row__cell {
+      .all-members-box .table__rows .table__row:first-child {
+        border-top: 1px solid #ACACAC; }
+      .all-members-box .table__rows .table__row:not(:first-child) .row__cell:first-child {
+        text-transform: capitalize; }
+      .all-members-box .table__rows .table__row .row__cell {
         width: calc(60% / 3);
         padding: 0 10px;
         overflow: hidden;
         text-overflow: ellipsis; }
-        .all-clients-box .table__rows .table__row .row__cell:first-child {
+        .all-members-box .table__rows .table__row .row__cell:first-child {
           width: 20%; }
-        .all-clients-box .table__rows .table__row .row__cell:nth-child(2) {
+        .all-members-box .table__rows .table__row .row__cell:nth-child(2) {
           width: 30%; }
-        .all-clients-box .table__rows .table__row .row__cell:last-child {
+        .all-members-box .table__rows .table__row .row__cell:last-child {
           display: flex;
           justify-content: center; }
-        .all-clients-box .table__rows .table__row .row__cell--heading {
+        .all-members-box .table__rows .table__row .row__cell--heading {
           padding: 5px 10px; }
 
 @media (max-width: 767px) {

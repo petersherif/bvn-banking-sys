@@ -1,7 +1,7 @@
 /*****************************************  
-[All Clients Box]
+[All Members Box]
 *****************************************/
-.all-clients-box {
+.all-members-box {
 	
 	max-width: 1000px;
   margin-right: auto;
@@ -17,6 +17,20 @@
 			justify-content: start;
 			min-width: 700px;
 			padding: 5px 0;
+
+			&:first-child {
+				border-top: 1px solid $color-border;
+
+			}
+
+			&:not(:first-child) {
+				.row__cell {
+					
+					&:first-child {
+						text-transform: capitalize;
+					}
+				}
+			}
 
 			.row__cell {
 
