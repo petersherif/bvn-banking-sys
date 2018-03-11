@@ -32,8 +32,8 @@
 									<span class="row__cell row__cell--heading">Actions</span>
 								</li>
 								<?php $i=0; foreach($row as $record) { ?>
-								<li class="table__row data-row" data-search="<?php echo $row[$i]["user_name"] ?><?php echo $row[$i]["acc_num"] ?><?php echo $row[$i]["national_id"] ?><?php echo $row[$i]["balance"] ?>">
-									<span class="row__cell" title="<?php echo $row[$i]["user_name"] ?>"><?php echo $row[$i]["full_name"] ?></span>
+								<li class="table__row data-row" data-search="<?php echo $row[$i]["full_name"] ?><?php echo $row[$i]["acc_num"] ?><?php echo $row[$i]["national_id"] ?><?php echo $row[$i]["balance"] ?>">
+									<span class="row__cell" title="<?php echo $row[$i]["full_name"] ?>"><?php echo $row[$i]["full_name"] ?></span>
 									<span class="row__cell" title="<?php echo $row[$i]["acc_num"] ?>"><?php echo $row[$i]["acc_num"] ?></span>
 									<span class="row__cell" title="<?php echo $row[$i]["national_id"] ?>"><?php echo $row[$i]["national_id"] ?></span>
 									<span class="row__cell" title="<?php echo $row[$i]["balance"] ?>"><?php echo $row[$i]["balance"] ?></span>
