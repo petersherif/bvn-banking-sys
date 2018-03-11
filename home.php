@@ -77,7 +77,7 @@ if (isset($_SESSION['loggedin'])){
     <![endif]-->
 </head>
 
-<body class="">
+<body class="loaded">
 
 <!-- Navbar -->
 <?php include('includes/navbar.php'); ?>
