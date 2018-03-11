@@ -14,7 +14,13 @@
             <div class="col-xs-12">
 
                 <div class="light-box form-box">
-                    <form method="post" class="form-box__form">
+                    <div class="alert alert-success hidden">
+                        <strong>Success!</strong> Mission successfully.
+                    </div>
+                    <div class="alert alert-danger hidden">
+                        <strong>Error!</strong> Dear Emp,Please enter the full information !
+                    </div>
+                    <form id="clientForm" class="form-box__form">
 
                         <div class="form-group">
                             <i class="fa fa-user"></i>
@@ -68,7 +74,7 @@
                         </div>
 
                         <div class="form-group">
-                            <input type="submit" name="submit" value="add new client"
+                            <input type="submit" name="client" id="client" value="add new client"
                                    class="submit form-control btn btn-block btn-primary">
                         </div>
 

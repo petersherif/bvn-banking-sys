@@ -50,13 +50,13 @@ $('.account_number').on('keyup', function (e) {
             $('.alert-danger').removeClass('hidden');
             setTimeout(function () {
                 $('.alert-danger').addClass('hidden');
-            }, 3000);
+            }, 5000);
 
         } else if ($(this).val().length > 11) {
             $('.length').removeClass('hidden');
             setTimeout(function () {
                 $('.length').addClass('hidden');
-            }, 3000);
+            }, 5000);
         }
     }
     else {
@@ -64,8 +64,8 @@ $('.account_number').on('keyup', function (e) {
         $('.alert-success').addClass('hidden');
         setTimeout(function () {
             $('.alert-danger').addClass('hidden');
-        }, 3000);
-        $(this).val(12345678910);
+        }, 5000);
+        $(this).val(123456789101);
     }
 });
 $('#deposit').on('click', function (event) {
@@ -81,16 +81,16 @@ $('#deposit').on('click', function (event) {
                 $('.alert-success').addClass('hidden');
                 setTimeout(function () {
                     $('.alert-danger').addClass('hidden');
-                }, 3000);
+                }, 5000);
                 setTimeout(function () {
                     $('.alert-danger').addClass('hidden');
-                }, 3000);
+                }, 5000);
             } else {
                 $('.alert-danger').addClass('hidden');
                 $('.alert-success').removeClass('hidden');
                 setTimeout(function () {
                     $('.alert-success').addClass('hidden');
-                }, 3000);
+                }, 5000);
             }
         }
     });
@@ -108,14 +108,14 @@ $('#withdraw').on('click', function (event) {
                 $('.alert-success').addClass('hidden');
                 setTimeout(function () {
                     $('.alert-danger').addClass('hidden');
-                }, 3000);
+                }, 5000);
 
             } else {
                 $('.alert-danger').addClass('hidden');
                 $('.alert-success').removeClass('hidden');
                 setTimeout(function () {
                     $('.alert-success').addClass('hidden');
-                }, 3000);
+                }, 5000);
             }
 
         }
@@ -134,13 +134,13 @@ $('#transfer').on('click', function (event) {
                 $('.alert-success').addClass('hidden');
                 setTimeout(function () {
                     $('.alert-danger').addClass('hidden');
-                }, 3000);
+                }, 5000);
             } else {
                 $('.alert-danger').addClass('hidden');
                 $('.alert-success').removeClass('hidden');
                 setTimeout(function () {
                     $('.alert-success').addClass('hidden');
-                }, 3000);
+                }, 5000);
             }
 
         }
@@ -159,13 +159,38 @@ $('#emp').on('click', function (event) {
                 $('.alert-success').addClass('hidden');
                 setTimeout(function () {
                     $('.alert-danger').addClass('hidden');
-                }, 3000);
+                }, 5000);
             } else {
                 $('.alert-danger').addClass('hidden');
                 $('.alert-success').removeClass('hidden');
                 setTimeout(function () {
                     $('.alert-success').addClass('hidden');
-                }, 3000);
+                }, 5000);
+            }
+
+        }
+    });
+});
+$('#client').on('click', function (event) {
+    event.preventDefault();
+    $.ajax({
+        url: 'home.php?new-client',
+        method: 'post',
+        data: $('#clientForm').serialize(),
+        dataType: 'text',
+        success: function (data) {
+            if ($('#full_name').val() === ""|| $('#national_id').val() === "" || $('#birthday').val() === "" || $('#address').val() === "" || $('#gender').val() === "" || $('#phone').val() === "" || $('#email').val() === "" || $('#thumb').val() === "") {
+                $('.alert-danger').removeClass('hidden');
+                $('.alert-success').addClass('hidden');
+                setTimeout(function () {
+                    $('.alert-danger').addClass('hidden');
+                }, 5000);
+            } else {
+                $('.alert-danger').addClass('hidden');
+                $('.alert-success').removeClass('hidden');
+                setTimeout(function () {
+                    $('.alert-success').addClass('hidden');
+                }, 5000);
             }
 
         }

@@ -5,7 +5,7 @@ if (isset($account)) {
     if (isset($_POST['amount'])) {
         $amount = $_POST['amount'];
         $receiver_id = $_POST['receiver_id'];
-        $sql = "SELECT * FROM bvn JOIN accounts WHERE  accounts.acc_num='$receiver_id'";
+        $sql = "SELECT * FROM accounts WHERE acc_num='$receiver_id'";
         $query = connect()->query($sql);
         if ($query->num_rows > 0) {
             while ($row = $query->fetch_assoc()) {

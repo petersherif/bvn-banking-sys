@@ -24,6 +24,9 @@ if (isset($_SESSION['loggedbvn'])) {
                     <div class="alert alert-danger hidden">
                         <strong>Error!</strong> Dear Emp,The lowest value is 50 !
                     </div>
+                    <div class="alert alert-danger hidden">
+                        <strong>Error!</strong> Dear Emp,Please enter the full information !
+                    </div>
                     <form id="depositForm" class="form-box__form">
                         <?php if (!isset($_SESSION['loggedbvn'])) { ?>
                             <div class="form-group">
