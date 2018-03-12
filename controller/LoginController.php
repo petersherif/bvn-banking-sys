@@ -22,10 +22,13 @@ if (isset($_POST['login'])) {
                 $id = $row['id'];
                 $username = $row['user_name'];
                 $password = $row['password'];
+                $auth = $row['auth'];
+
                 $bank_id=$row['bank_id'];
                 $_SESSION['loggedin'] = "yes";
                 $_SESSION['id'] = $id;
                 $_SESSION['user_name'] = $username;
+                $_SESSION['auth']=$auth;
                 $_SESSION['bank_id'] = $bank_id;
                 $url = "location: home.php";
                 header($url);
@@ -39,4 +42,6 @@ if (isset($_POST['login'])) {
         $message = "Please, Enter Valid Username OR Password";
     }
 }
+
+
 ?>

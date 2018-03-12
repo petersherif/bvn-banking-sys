@@ -56,18 +56,28 @@
                 </li>
             <?php } ?>
             <?php if (!isset($_SESSION['loggedbvn'])) { ?>
-                <li class="list__item<?php if (isset($_GET['add-employee'])) { ?> active
+            
+
+            <?php
+            if(isset($_SESSION['auth']) && $_SESSION['auth']==2){
+            ?>
+               <li class="list__item<?php if (isset($_GET['add-employee'])) { ?> active
 						   <?php } ?>"><i
                             class="fa fa-user-secret icon-black"></i><a href="home.php?add-employee">Add Employee</a>
                 </li>
+                <?php }?>
+
+
                 <li class="list__item <?php if (isset($_GET['search-clients'])) { ?> active
 						   <?php } ?>"><i
-                            class="fa fa-users icon-black"></i><a href="home.php?search-clients">Search Clients</a>
+                            class="fa fa-users icon-black"></i><a href="home.php?search-clients">Search Clients  </a>
                 </li>
                 <li class="list__item<?php if (isset($_GET['search-employees'])) { ?> active
 						   <?php } ?> "><i
                             class="fa fa-users icon-black"></i><a href="home.php?search-employees">Search Employees</a>
                 </li>
+
+                <br>
             <?php } ?>
 
 
