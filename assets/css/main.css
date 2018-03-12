@@ -331,14 +331,6 @@ input[type=checkbox]:checked + label:before {
   margin: auto;
   overflow: hidden;
   box-shadow: 0 0 6px rgba(57, 73, 76, 0.35); }
-.profile-box .profile__basic-info .basic-info__text {
-  font-size: 16px;
-  font-weight: bold; }
-.profile-box .profile__info {
-  font-size: 16px; }
-  .profile-box .profile__info .info__title {
-    min-width: 90px;
-    display: inline-block; }
 
 .navbar-custom {
   background: #FFFFFF;

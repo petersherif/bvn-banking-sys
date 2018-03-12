@@ -45,16 +45,17 @@ include "./controller/MainController.php";
         </div> <!-- Container -->
     </section>
 <?php } else { ?>
-    <section class="login-section">
-        <div class="container">
+    <section class="">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-xs-12">
-                    <div class="light-box--small form-box">
-                        <div class="col-xs-12">
-                            <div class="light-box light-box--small date-time-box">
-                                <p class="time">
-                                    welcome
-                                    <br>
+                <div class="col-xs-12 col-sm-6 col-sm-offset-1 col-md-4 col-lg-3 mb4">
+                    <div class="light-box light-box--small">
+                        <div class="row">
+                            <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-0 col-md-8 col-md-offset-2 mb3">
+                                <img src="assets/img/avatar-placeholder.png" alt="" class="mw-100" />
+                            </div>
+                            <div class="col-xs-12 col-sm-8 col-md-12">
+                                <h6 class="f4 f3-ns b ttc">
                                     <?php
                                     $user_id = $_SESSION['user_id'];
                                     $sql = "SELECT full_name From users WHERE id='$user_id'";
@@ -63,12 +64,44 @@ include "./controller/MainController.php";
                                         ?>
                                         <?php echo $row->full_name ?>
                                     <?php } ?>
+                                </h6>
+                                <p class="mb0">
+                                    <span class="w4 dib">Acc No.:</span>
+                                    <?php
+                                    $user_id = $_SESSION['user_id'];
+                                    $sql = "SELECT acc_num From accounts WHERE user_id='$user_id'";
+                                    $query = connect()->query($sql);
+                                    while ($row = $query->fetch_object()) {
+                                        ?>
+                                        <?php echo $row->acc_num ?>
+                                    <?php } ?>
+                                </p>
+                                
+                                <p class="">
+                                    <span class="w4 dib">Balance:</span>
+                                    <?php
+                                    $user_id = $_SESSION['user_id'];
+                                    $sql = "SELECT balance From accounts WHERE user_id='$user_id'";
+                                    $query = connect()->query($sql);
+                                    while ($row = $query->fetch_object()) {
+                                        ?>
+                                        <?php echo $row->balance ?>
+                                    <?php } ?>
                                 </p>
                             </div>
-                        </div> <!-- Date and Time Box -->
+                        </div>
 
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <a href="home.php?client-profile" class="btn btn-block btn-primary--custom">View</a>
+                            </div>
+                        </div>
                     </div>
-                </div> <!-- BVN login Form -->
+                </div> <!-- Brief Client Info -->
+
+                <div class="col-xs-12 col-sm-4 col-md-6 col-lg-7 mb4">
+                    <div class="light-box light-box--small"></div>
+                </div>
             </div> <!-- Row -->
         </div> <!-- Container -->
     </section>

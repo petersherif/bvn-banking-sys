@@ -33,15 +33,14 @@
 						   <?php } ?>"><a
                             href="home.php?money-transfer"><i class="fa fa-exchange icon-blue"></i> Money Transfer</a>
                 </li>
-                <?php if (!isset($_SESSION['loggedbvn'])) { ?>
-                    <li class="list__item <?php if (isset($_GET['all-transactions'])) { ?> active
-						   <?php } ?>"><a
+                
+                <li class="list__item <?php if (isset($_GET['all-transactions'])) { ?> active
+					   <?php } ?>"><a
 
-                                href="home.php?all-transactions"><i class="fa fa-list icon-blue"></i> All
-                            Transactions</a>
-                    </li>
-                <?php }
-            } ?>
+                            href="home.php?all-transactions"><i class="fa fa-list icon-blue"></i> All
+                        Transactions</a>
+                </li>
+            <?php } ?>
             <?php if (isset($_SESSION['loggedbvn'])) { ?>
                 <li class="list__item <?php if (isset($_GET['client-profile'])) { ?> active
 						   <?php } ?>"><a
@@ -58,13 +57,13 @@
             <?php if (!isset($_SESSION['loggedbvn'])) { ?>
             
 
-            <?php
-            if(isset($_SESSION['auth']) && $_SESSION['auth']==2){
-            ?>
-               <li class="list__item<?php if (isset($_GET['add-employee'])) { ?> active
-						   <?php } ?>"><i
-                            class="fa fa-user-secret icon-black"></i><a href="home.php?add-employee">Add Employee</a>
-                </li>
+                <?php
+                if(isset($_SESSION['auth']) && $_SESSION['auth']==2){
+                ?>
+                    <li class="list__item<?php if (isset($_GET['add-employee'])) { ?> active
+    						   <?php } ?>"><i
+                                class="fa fa-user-secret icon-black"></i><a href="home.php?add-employee">Add Employee</a>
+                    </li>
                 <?php }?>
 
 
@@ -72,10 +71,15 @@
 						   <?php } ?>"><i
                             class="fa fa-users icon-black"></i><a href="home.php?search-clients">Search Clients  </a>
                 </li>
+
+                <?php
+                if(isset($_SESSION['auth']) && $_SESSION['auth']==2){
+                ?>
                 <li class="list__item<?php if (isset($_GET['search-employees'])) { ?> active
 						   <?php } ?> "><i
                             class="fa fa-users icon-black"></i><a href="home.php?search-employees">Search Employees</a>
                 </li>
+                <?php }?>
 
                 <br>
             <?php } ?>
