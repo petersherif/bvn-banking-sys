@@ -20,10 +20,10 @@ if (isset($account)) {
                     $balance = $row['balance'];
 
                 }
-                if ($balance <= 0) {
-                    $message = 'empty';
-                } elseif ($receiver_id == $sender_id) {
+                if ($receiver_id == $sender_id) {
                     $message = 'can';
+                } elseif ($balance <0) {
+                    $message = 'empty';
                 } else {
 
                     $sql = "INSERT INTO `transfer`(`amount`,`sender_id`,`reciever_id`)VALUE ($amount,$sender_id,$receiver_id)";
