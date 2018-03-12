@@ -1,7 +1,6 @@
 <?php
 include "./controller/EmployeeController.php";
 global $message;
-
 ?>
 <!-- New Employee form -->
 <section class="new-employee-section">

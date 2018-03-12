@@ -3,14 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="cf92bec3-199f-43f9-9e2c-475ca9b8714d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/controller/EmployeeController.php" afterPath="$PROJECT_DIR$/controller/EmployeeController.php" />
+      <change beforePath="$PROJECT_DIR$/controller/DepositController.php" afterPath="$PROJECT_DIR$/controller/DepositController.php" />
       <change beforePath="$PROJECT_DIR$/controller/TransferController.php" afterPath="$PROJECT_DIR$/controller/TransferController.php" />
-      <change beforePath="$PROJECT_DIR$/controller/UnAuthDepositController.php" afterPath="$PROJECT_DIR$/controller/UnAuthDepositController.php" />
-      <change beforePath="$PROJECT_DIR$/controller/addClientController.php" afterPath="$PROJECT_DIR$/controller/addClientController.php" />
+      <change beforePath="$PROJECT_DIR$/controller/WithdrawController.php" afterPath="$PROJECT_DIR$/controller/WithdrawController.php" />
       <change beforePath="$PROJECT_DIR$/dashboard/add-employee.php" afterPath="$PROJECT_DIR$/dashboard/add-employee.php" />
-      <change beforePath="$PROJECT_DIR$/dashboard/deposit.php" afterPath="$PROJECT_DIR$/dashboard/deposit.php" />
       <change beforePath="$PROJECT_DIR$/dashboard/money-transfer.php" afterPath="$PROJECT_DIR$/dashboard/money-transfer.php" />
-      <change beforePath="$PROJECT_DIR$/dashboard/new-client.php" afterPath="$PROJECT_DIR$/dashboard/new-client.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,58 +18,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dashboard/main.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding>
-                <marker date="1520806461251" expanded="true" signature="2494:2541" ph="SELECT full_... users" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TransferController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TransferController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/TransferController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="24" column="7" lean-forward="false" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+            <state relative-caret-position="170">
+              <caret line="24" column="52" lean-forward="false" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="52" />
               <folding>
-                <marker date="1520810404355" expanded="true" signature="421:472" ph="SELECT * FRO... accounts" />
-                <marker date="1520810404355" expanded="true" signature="752:849" ph="INSERT INTO `transfer`... " />
-                <marker date="1520810404355" expanded="true" signature="986:1057" ph="UPDATE `accounts`... " />
-                <marker date="1520810404355" expanded="true" signature="1193:1265" ph="UPDATE `accounts`... " />
+                <marker date="1520814909339" expanded="true" signature="421:472" ph="SELECT * FRO... accounts" />
+                <marker date="1520814909339" expanded="true" signature="954:1051" ph="INSERT INTO `transfer`... " />
+                <marker date="1520814909339" expanded="true" signature="1136:1180" ph="SELECT * FRO... accounts" />
+                <marker date="1520814909339" expanded="true" signature="1529:1600" ph="UPDATE `accounts`... " />
+                <marker date="1520814909339" expanded="true" signature="1738:1784" ph="SELECT * FRO... accounts" />
+                <marker date="1520814909339" expanded="true" signature="2155:2222" ph="UPDATE `accounts`... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="money-transfer.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DepositController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/DepositController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+              <folding>
+                <marker date="1520812222377" expanded="true" signature="116:196" ph="INSERT INTO `transaction`... " />
+                <marker date="1520812222377" expanded="true" signature="260:305" ph="SELECT * FRO... bvn" />
+                <marker date="1520812222377" expanded="true" signature="532:598" ph="UPDATE `accounts`... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="money-transfer.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dashboard/money-transfer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="549">
-              <caret line="38" column="75" lean-forward="false" selection-start-line="38" selection-start-column="75" selection-end-line="38" selection-end-column="75" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="deposit.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dashboard/deposit.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="40" column="33" lean-forward="false" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add-employee.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dashboard/add-employee.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="39" column="0" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="39" selection-end-column="0" />
+            <state relative-caret-position="187">
+              <caret line="54" column="0" lean-forward="true" selection-start-line="22" selection-start-column="19" selection-end-line="54" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -104,10 +85,8 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/includes/sidebar.php" />
         <option value="E:/Courses/Works/laravel/MyApp/resources/views/tasks/index.blade.php" />
-        <option value="$PROJECT_DIR$/controller/WithdrawController.php" />
         <option value="$PROJECT_DIR$/controller/ss.php" />
         <option value="$PROJECT_DIR$/dashboard/withdraw.php" />
-        <option value="$PROJECT_DIR$/controller/DepositController.php" />
         <option value="$PROJECT_DIR$/controller/sss.php" />
         <option value="$PROJECT_DIR$/../cool/front/addToCart.php" />
         <option value="$PROJECT_DIR$/controller/LogoutController.php" />
@@ -120,12 +99,14 @@
         <option value="$PROJECT_DIR$/../cool/admin/admin/add_admin.php" />
         <option value="$PROJECT_DIR$/controller/EmployeeController.php" />
         <option value="$PROJECT_DIR$/controller/addClientController.php" />
-        <option value="$PROJECT_DIR$/dashboard/add-employee.php" />
         <option value="$PROJECT_DIR$/dashboard/new-client.php" />
         <option value="$PROJECT_DIR$/controller/UnAuthDepositController.php" />
         <option value="$PROJECT_DIR$/dashboard/deposit.php" />
-        <option value="$PROJECT_DIR$/dashboard/money-transfer.php" />
+        <option value="$PROJECT_DIR$/controller/DepositController.php" />
         <option value="$PROJECT_DIR$/controller/TransferController.php" />
+        <option value="$PROJECT_DIR$/dashboard/money-transfer.php" />
+        <option value="$PROJECT_DIR$/controller/WithdrawController.php" />
+        <option value="$PROJECT_DIR$/dashboard/add-employee.php" />
       </list>
     </option>
   </component>
@@ -222,17 +203,17 @@
       <workItem from="1520236137695" duration="10230000" />
       <workItem from="1520248624724" duration="9000" />
       <workItem from="1520265104745" duration="4413000" />
-      <workItem from="1520806583029" duration="4076000" />
+      <workItem from="1520806583029" duration="9344000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126873000" />
+    <option name="totallyTimeSpent" value="132141000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30257186" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30257186" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -240,7 +221,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287037" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -382,7 +363,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/WithdrawController.php" />
     <entry file="file://E:/Courses/Works/laravel/MyApp/resources/views/tasks/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2754">
@@ -451,28 +431,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding>
-            <marker date="1520806461251" expanded="true" signature="2494:2541" ph="SELECT full_... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/DepositController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1520806461159" expanded="true" signature="116:196" ph="INSERT INTO `transaction`... " />
-            <marker date="1520806461159" expanded="true" signature="260:324" ph="SELECT * FRO... bvn" />
-            <marker date="1520806461159" expanded="true" signature="553:619" ph="UPDATE `accounts`... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controller/UnAuthDepositController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -521,38 +479,74 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/deposit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
+        <state relative-caret-position="68">
           <caret line="40" column="33" lean-forward="false" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <marker date="1520806461251" expanded="true" signature="2494:2541" ph="SELECT full_... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/TransferController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="24" column="52" lean-forward="false" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="52" />
+          <folding>
+            <marker date="1520814909339" expanded="true" signature="421:472" ph="SELECT * FRO... accounts" />
+            <marker date="1520814909339" expanded="true" signature="954:1051" ph="INSERT INTO `transfer`... " />
+            <marker date="1520814909339" expanded="true" signature="1136:1180" ph="SELECT * FRO... accounts" />
+            <marker date="1520814909339" expanded="true" signature="1529:1600" ph="UPDATE `accounts`... " />
+            <marker date="1520814909339" expanded="true" signature="1738:1784" ph="SELECT * FRO... accounts" />
+            <marker date="1520814909339" expanded="true" signature="2155:2222" ph="UPDATE `accounts`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/DepositController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding>
+            <marker date="1520812222377" expanded="true" signature="116:196" ph="INSERT INTO `transaction`... " />
+            <marker date="1520812222377" expanded="true" signature="260:305" ph="SELECT * FRO... bvn" />
+            <marker date="1520812222377" expanded="true" signature="532:598" ph="UPDATE `accounts`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/WithdrawController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="44" lean-forward="false" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
+          <folding>
+            <marker date="1520815676353" expanded="true" signature="149:229" ph="INSERT INTO `transaction`... " />
+            <marker date="1520815676353" expanded="true" signature="293:338" ph="SELECT * FRO... bvn" />
+            <marker date="1520815676353" expanded="true" signature="565:631" ph="UPDATE `accounts`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/add-employee.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="68">
+          <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/money-transfer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="38" column="75" lean-forward="false" selection-start-line="38" selection-start-column="75" selection-end-line="38" selection-end-column="75" />
+        <state relative-caret-position="187">
+          <caret line="54" column="0" lean-forward="true" selection-start-line="22" selection-start-column="19" selection-end-line="54" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/TransferController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="24" column="7" lean-forward="false" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-          <folding>
-            <marker date="1520810404355" expanded="true" signature="421:472" ph="SELECT * FRO... accounts" />
-            <marker date="1520810404355" expanded="true" signature="752:849" ph="INSERT INTO `transfer`... " />
-            <marker date="1520810404355" expanded="true" signature="986:1057" ph="UPDATE `accounts`... " />
-            <marker date="1520810404355" expanded="true" signature="1193:1265" ph="UPDATE `accounts`... " />
-          </folding>
         </state>
       </provider>
     </entry>

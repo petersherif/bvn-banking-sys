@@ -24,13 +24,25 @@ global $message;
                     if ($message == "success") {
                         ?>
                         <div class="alert alert-success">
-                            <strong>Success!</strong> user successfully added.
+                            <strong>Success!</strong> Transfer successfully .
                         </div>
                         <?php
                     } else if ($message == "error") {
                         ?>
                         <div class="alert alert-danger">
                             <strong>Error!</strong> Please, insert full information.
+                        </div>
+                        <?php
+                    } else if ($message == "empty") {
+                        ?>
+                        <div class="alert alert-danger">
+                            <strong>Error!</strong> you balance is not enough.
+                        </div>
+                        <?php
+                    } else if ($message == "can") {
+                        ?>
+                        <div class="alert alert-danger">
+                            <strong>Error!</strong> you can't transfer to your account number
                         </div>
                         <?php
                     } else if ($message == "exist") {
