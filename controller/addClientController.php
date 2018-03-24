@@ -24,6 +24,7 @@ if (isset($_POST['submit'])) {
         if ($query->num_rows != 0) {
             $message = "exist";
         } else {
+            $message = "success";
             $values = "'" . $_POST['full_name'] . "','" . $_POST['email'] . "','" . $_POST['national_id'] . "','" . $_POST['birthday'] . "','" . $_POST['gender'] . "','" . $_POST['address'] . "','" . $_POST['phone'] . "','0','" . $_SESSION["bank_id"] . "'";
             $sql = "INSERT INTO users (`full_name`,`email`,`national_id`,`birthday`,`gender`,`address`,`phone`,`auth`,bank_id)VALUES ($values)";
             $query = connect()->query($sql);
