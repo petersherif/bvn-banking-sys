@@ -66,12 +66,14 @@
                     </li>
                 <?php }?>
 
-
-                <li class="list__item <?php if (isset($_GET['search-clients'])) { ?> active
-						   <?php } ?>"><i
-                            class="fa fa-users icon-black"></i><a href="home.php?search-clients">Search Clients  </a>
-                </li>
-
+                <?php
+                if(isset($_SESSION['auth']) && $_SESSION['auth']==2){
+                ?>
+                    <li class="list__item <?php if (isset($_GET['search-clients'])) { ?> active
+                            <?php } ?>"><i
+                                class="fa fa-users icon-black"></i><a href="home.php?search-clients">Search Clients  </a>
+                    </li>
+                <?php }?>
                 <?php
                 if(isset($_SESSION['auth']) && $_SESSION['auth']==2){
                 ?>
