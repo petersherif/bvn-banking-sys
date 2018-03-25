@@ -23,5 +23,8 @@ if (isset($_GET['search-clients'])) {
 }
 if (isset($_GET['client-profile'])) {
     include('./dashboard/client-profile.php');
+}
+if (isset($_GET['view-transactions'])) {
+    include('./dashboard/view-transactions.php');
 } ?>
 

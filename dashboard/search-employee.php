@@ -11,7 +11,7 @@
 
 		<div class="row">
 			<div class="col-xs-12 col-md-10 col-md-offset-1">
-				<div class="light-box table-box all-members-box">
+				<div class="light-box table-box data-listing-box">
 					
 					<div class="row">
 						<div class="col-xs-12 ph4 search-bar">
