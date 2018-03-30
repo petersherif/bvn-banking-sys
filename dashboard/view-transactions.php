@@ -1,4 +1,6 @@
-<?php include "./controller/SearchClientsController.php" ?>
+<?php
+ $transactions_limit="";
+ include "./controller/view-transactionsController.php" ?>
 <!-- All Transactions table -->
 <section class="search-table">
 	<div class="container-fluid">
@@ -22,27 +24,18 @@
 									<span class="row__cell row__cell--heading">Withdraw</span>
 									<span class="row__cell row__cell--heading">Deposit</span>
 								</li>
-								
+							<?php $i=0;
+								 foreach($row as $record) 
+								 { 
+							?>
 								<li class="table__row data-row">
-									<span class="row__cell" title="15/12/2018">15/12/2018 22:39</span>
+									<span class="row__cell" title="10/11/2018"><?php echo $row[$i]["date"] ;?></span>
 									<span class="row__cell" title="Description includes the ATM or Bank data (bank name and branch or atm id or location name) and the depositor data if any.">Description includes the ATM or Bank data (bank name and branch or atm id or location name) and the depositor data if any.</span>
-									<span class="row__cell color-accent withdraw" title="2500">2500</span>
-									<span class="row__cell color-primary deposit" title=""></span>
+									<span class="row__cell color-accent withdraw" title=""><?php if($row[$i]["type"]==1) echo $row[$i]["amount"] ;?></span>
+									<span class="row__cell color-primary deposit" title="6500"><?php if($row[$i]["type"]==0) echo $row[$i]["amount"] ;?></span>
 								</li>
-
-								<li class="table__row data-row">
-									<span class="row__cell" title="15/12/2018">15/12/2018 22:39</span>
-									<span class="row__cell" title="Description includes the ATM or Bank data (bank name and branch or atm id or location name) and the depositor data if any.">Description includes the ATM or Bank data (bank name and branch or atm id or location name) and the depositor data if any.</span>
-									<span class="row__cell color-accent withdraw" title="1500">1500</span>
-									<span class="row__cell color-primary deposit" title=""></span>
-								</li>
-
-								<li class="table__row data-row">
-									<span class="row__cell" title="10/11/2018">10/11/2018 22:39</span>
-									<span class="row__cell" title="Description includes the ATM or Bank data (bank name and branch or atm id or location name) and the depositor data if any.">Description includes the ATM or Bank data (bank name and branch or atm id or location name) and the depositor data if any.</span>
-									<span class="row__cell color-accent withdraw" title=""></span>
-									<span class="row__cell color-primary deposit" title="6500">6500</span>
-								</li>
+								<?php $i++; 
+								 } ?>
 							</ul>
 						</div>
 					</div>
