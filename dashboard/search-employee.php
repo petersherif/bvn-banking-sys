@@ -32,19 +32,49 @@
 									<span class="row__cell row__cell--heading">Position</span>
 							                            <span class="row__cell row__cell--heading">Actions</span>
 								</li>
-							            <?php $i=0; foreach($row as $record) { ?>
-								<li class="table__row data-row" data-search="<?php echo $row[$i]["user_name"] ?><?php echo $row[$i]["national_id"] ?><?php echo $row[$i]["email"] ?><?php echo $row[$i]["phone"] ?><?php if($row[$i]["auth"]== 2) echo 'Manager'; else echo 'Employee' ;?>">
-									<span class="row__cell" title="<?php echo $row[$i]["user_name"] ?>"><?php echo $row[$i]["user_name"] ?></span>
-									<span class="row__cell" title="<?php echo $row[$i]["national_id"] ?>"><?php echo $row[$i]["national_id"] ?></span>
-									<span class="row__cell" title="<?php echo $row[$i]["email"] ?>"><?php echo $row[$i]["email"] ?></span>
-							              <span class="row__cell" title="<?php echo $row[$i]["phone"] ?>"><?php echo $row[$i]["phone"] ?></span>
-									<span class="row__cell" title="<?php if($row[$i]["auth"]== 2) echo 'Manager'; else echo 'Employee' ;?>"><?php if($row[$i]["auth"]== 2) echo 'Manager'; else echo 'Employee' ;?></span>
+							            <?php foreach($row as $record) { ?>
+								<li class="table__row data-row" data-search="<?php echo $record["user_name"] ?><?php echo $record["national_id"] ?><?php echo $record["email"] ?><?php echo $record["phone"] ?><?php if($record["auth"]== 2) echo 'Manager'; else echo 'Employee' ;?>">
+									<span class="row__cell" title="<?php echo $record["user_name"] ?>"><?php echo $record["user_name"] ?></span>
+									<span class="row__cell" title="<?php echo $record["national_id"] ?>"><?php echo $record["national_id"] ?></span>
+									<span class="row__cell" title="<?php echo $record["email"] ?>"><?php echo $record["email"] ?></span>
+							              <span class="row__cell" title="<?php echo $record["phone"] ?>"><?php echo $record["phone"] ?></span>
+									<span class="row__cell" title="<?php if($record["auth"]== 2) echo 'Manager'; else echo 'Employee' ;?>"><?php if($record["auth"]== 2) echo 'Manager'; else echo 'Employee' ;?></span>
 									<span class="row__cell">
-										<a href="#" class="btn btn-primary--custom btn-sm mh2 mv1">View</a>
-										<a href="#" class="btn btn-danger--custom btn-sm mh2 mv1">Delete</a>
+										<a href="#" class="btn btn-primary--custom mv1">View</a>
+										<button value="<?php echo $record['id']; ?>" class="btn btn-danger--custom mv1 send_id"data-toggle="modal" data-target="#myModal">Delete</button>
 									</span>
+										<!-- The Modal -->
+										<div class="modal fade" id="myModal">
+											<div class="modal-dialog">
+												<div class="modal-content">
+											
+												<!-- Modal Header -->
+												<div class="modal-header">
+													<h4 class="modal-title"><span class="warning">Warning<span></h4>
+													<button type="button" class="close" data-dismiss="modal">&times;</button>
+												</div>
+												
+												<!-- Modal body -->
+												<div class="modal-body">
+													Are You Sure !<br>
+													 You Want To Delete This Employee ? </br>
+												</div>
+												
+												<!-- Modal footer -->
+												<div class="modal-footer">
+													<form method="post" action="?search-employees">
+														<input type="hidden" id="get_id" name="id" value="" /> 
+														<button type="submit" class="btn btn-danger">Delete</button>
+														<a  class="btn btn-primary" data-dismiss="modal" href="#">Close</a>
+													</form>
+												</div>
+												
+												</div>
+											</div>
+										</div>
+									<!-- End Modal -->
 								</li>
-								<?php $i++; } ?>
+								<?php } ?>
 							</ul>
 						</div>
 					</div>
