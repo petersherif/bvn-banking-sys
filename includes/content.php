@@ -6,7 +6,6 @@ if (isset($_GET['money-transfer'])) {
     include('./dashboard/money-transfer.php');
 }
 if (isset($_GET['deposit'])) {
-
     include('./dashboard/deposit.php');
 }
 if (isset($_GET['withdraw'])) {
