@@ -44,7 +44,7 @@ include "./controller/MainController.php";
             </div> <!-- Row -->
         </div> <!-- Container -->
     </section>
-<?php } else { ?>
+<?php } else {?>
     <section class="">
         <div class="container-fluid">
             <div class="row">
@@ -98,9 +98,43 @@ include "./controller/MainController.php";
                         </div>
                     </div>
                 </div> <!-- Brief Client Info -->
-
+                <?php 
+                    $transactions_limit="LIMIT 5";
+                    include "./controller/view-transactionsController.php"; 
+                ?>
                 <div class="col-xs-12 col-sm-4 col-md-6 col-lg-7 mb4">
-                    <div class="light-box light-box--small"></div>
+                    <div class="light-box light-box--small">
+                        <span>Last 5 transactions</span>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-10 col-md-offset-1">
+                                <div class="light-box table-box data-listing-box view-transactions-box">
+
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <ul class="table__rows">
+                                                <li class="table__row">
+                                                    <span class="row__cell row__cell--heading">Date</span>
+                                                    <span class="row__cell row__cell--heading">Withdraw</span>
+                                                    <span class="row__cell row__cell--heading">Deposit</span>
+                                                </li>
+                                            <?php $i=0;
+                                                foreach($row as $record) 
+                                                { 
+                                            ?>
+                                                <li class="table__row data-row">
+                                                    <span class="row__cell" title="10/11/2018"><?php echo $row[$i]["date"] ;?></span>
+                                                    <span class="row__cell color-accent withdraw" title=""><?php if($row[$i]["type"]==1) echo $row[$i]["amount"] ;?></span>
+                                                    <span class="row__cell color-primary deposit" title="6500"><?php if($row[$i]["type"]==0) echo $row[$i]["amount"] ;?></span>
+                                                </li>
+                                                <?php $i++; 
+                                                } ?>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
                 </div>
             </div> <!-- Row -->
         </div> <!-- Container -->
