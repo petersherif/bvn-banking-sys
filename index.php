@@ -114,6 +114,31 @@ include "controller/LoginController.php";
 				</div>
 			</div> <!-- Login Form -->
 		</div> <!-- Login Form Row -->
+
+
+
+<script type="text/javascript">
+
+
+	{
+        'name': "Example",
+        'created': "Wed, 14 Mar 2018 20:52:23 GMT",
+        'resources': [["/bvn-banking-sys/assets/img/full-logo.png",1193,550],"/bvn-banking-sys/assets/vendor/normalize.min.css","/bvn-banking-sys/assets/vendor/bootstrap/css/bootstrap.min.css","/bvn-banking-sys/assets/vendor/tachyons/css/tachyons.min.css","/bvn-banking-sys/assets/vendor/font-awesome/css/font-awesome.min.css","/css","/bvn-banking-sys/assets/css/main.css","/bvn-banking-sys/assets/vendor/jquery/jquery.min.js","/bvn-banking-sys/assets/vendor/bootstrap/js/bootstrap.min.js","/bvn-banking-sys/assets/vendor/chart.js/Chart.min.js","/bvn-banking-sys/assets/js/main.js"],
+        'callback': function( ip ) {
+							        },
+    }
+
+
+</script>
+
+
+
+
+
+
+
+
+
 	</div> <!-- Container -->
 </section>
 
