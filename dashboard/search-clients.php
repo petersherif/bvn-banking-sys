@@ -38,7 +38,7 @@
 									<span class="row__cell" title="<?php echo $record["acc_num"] ?>"><?php echo $record["acc_num"] ?></span>
 									<span class="row__cell" title="<?php echo $record["national_id"] ?>"><?php echo $record["national_id"] ?></span>
 									<span class="row__cell" title="<?php echo $record["balance"] ?>"><?php echo $record["balance"] ?></span>
-									<span class="row__cell"><button value="<?php echo $record['id']; ?>" class="btn btn-danger send_id"data-toggle="modal" data-target="#myModal"><i class="fa fa-times"></i> Delete</button></span>			
+									<span class="row__cell"><button value="<?php echo $record['id']; ?>" class="btn btn-danger--custom mv1 send_id" data-toggle="modal" data-target="#myModal"><i class="fa fa-times"></i> Delete</button></span>			
 								
 										<!-- The Modal -->
 										<div class="modal fade" id="myModal">
@@ -61,8 +61,8 @@
 												<div class="modal-footer">
 													<form method="post" action="?search-clients">
 														<input type="hidden" id="get_id" name="id" value="" /> 
-														<button type="submit" class="btn btn-danger">Delete</button>
-														<a  class="btn btn-primary" data-dismiss="modal" href="#">Close</a>
+														<button type="submit" class="btn btn-danger--custom"><i class="fa fa-times"></i> Delete</button>
+														<a  class="btn btn-primary--custom" data-dismiss="modal" href="#">Close</a>
 													</form>
 												</div>
 												

@@ -3,7 +3,6 @@
 *****************************************/
 .table-box {
 	padding: 7px 0;
-	margin-top: 7.5px;
 
 	.table__heading {
 		color: $white;
@@ -53,7 +52,6 @@
 //Media queries
 @media(max-width: 767px) {
 	.table-box {
-		margin-bottom: 7.5px;
 		float: none;
 		clear: both;
 	}

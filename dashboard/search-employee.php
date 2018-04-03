@@ -41,7 +41,7 @@
 									<span class="row__cell" title="<?php if($record["auth"]== 2) echo 'Manager'; else echo 'Employee' ;?>"><?php if($record["auth"]== 2) echo 'Manager'; else echo 'Employee' ;?></span>
 									<span class="row__cell">
 										<a href="#" class="btn btn-primary--custom mv1">View</a>
-										<button value="<?php echo $record['id']; ?>" class="btn btn-danger--custom mv1 send_id"data-toggle="modal" data-target="#myModal">Delete</button>
+										<button value="<?php echo $record['id']; ?>" class="btn btn-danger--custom mv1 send_id" data-toggle="modal" data-target="#myModal"><i class="fa fa-times"></i> Delete</button>
 									</span>
 										<!-- The Modal -->
 										<div class="modal fade" id="myModal">
@@ -64,8 +64,8 @@
 												<div class="modal-footer">
 													<form method="post" action="?search-employees">
 														<input type="hidden" id="get_id" name="id" value="" /> 
-														<button type="submit" class="btn btn-danger">Delete</button>
-														<a  class="btn btn-primary" data-dismiss="modal" href="#">Close</a>
+														<button type="submit" class="btn btn-danger--custom mv1"><i class="fa fa-times"></i> Delete</button>
+														<a  class="btn btn-primary--custom" data-dismiss="modal" href="#">Close</a>
 													</form>
 												</div>
 												

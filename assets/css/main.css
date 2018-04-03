@@ -65,7 +65,8 @@ input[type=checkbox]:checked + label:before {
   border-radius: 5px;
   box-shadow: 0 0 6px rgba(57, 73, 76, 0.35);
   padding: 32px 15px 25px;
-  position: relative; }
+  position: relative;
+  margin-bottom: 15px; }
   .light-box:before {
     content: '';
     width: 100%;
@@ -148,8 +149,7 @@ input[type=checkbox]:checked + label:before {
 [Table Box]
 *****************************************/
 .table-box {
-  padding: 7px 0;
-  margin-top: 7.5px; }
+  padding: 7px 0; }
   .table-box .table__heading {
     color: #FFFFFF;
     background: #02BAF2;
@@ -181,7 +181,6 @@ input[type=checkbox]:checked + label:before {
 
 @media (max-width: 767px) {
   .table-box {
-    margin-bottom: 7.5px;
     float: none;
     clear: both; } }
 /*****************************************  
@@ -234,8 +233,7 @@ input[type=checkbox]:checked + label:before {
   text-align: center;
   color: #02BAF2;
   font-weight: 700;
-  padding-top: 25px;
-  margin-bottom: 7.5px; }
+  padding-top: 25px; }
   .date-time-box p {
     margin: 0; }
   .date-time-box .date {
@@ -260,7 +258,6 @@ input[type=checkbox]:checked + label:before {
 *****************************************/
 @media (max-width: 767px) {
   .rate-chart-box {
-    margin-top: 7.5px;
     float: none;
     clear: both; } }
 /*****************************************  
@@ -327,7 +324,7 @@ input[type=checkbox]:checked + label:before {
     background-color: #b51919;
     border-color: #a31717; }
 .btn-sm {
-  padding: 10px 20px; }
+  padding: 1px 12px; }
 
 /*****************************************  
 [Profile Box]
