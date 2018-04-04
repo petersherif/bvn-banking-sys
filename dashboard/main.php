@@ -43,6 +43,44 @@ include "./controller/MainController.php";
                         </form>
                     </div> <!-- BVN login form -->
 
+                    <p class="text-center f2 mb4">Or register a new BVN number for the client</p>
+
+                    <!-- Create new BVN number -->
+                    <div class="light-box light-box--small form-box">
+                        <?php
+                        if (isset($message)) {
+                            ?>
+
+                            <div class="alert alert-danger">
+                                <button class="close" data-close="alert"></button>
+                                <span>
+                                    <?php echo $message; ?>
+                                </span>
+                            </div>
+                            <?php
+                        }
+                        ?>
+                        <div class="alert alert-danger length hidden">
+                            <strong>Error!</strong> Dear Emp,The length of the account number must be 11 !
+                        </div>
+                        <form class="form-box__form" method="post">
+                            <div class="form-group">
+                                <i class="fa fa-user"></i>
+                                <input type="text" placeholder="Enter client BVN or account number" name="bvn" id="bvn"
+                                       class="form-control account_number">
+                            </div>
+                            <div class="form-group">
+                                <i class="fa fa-user"></i>
+                                <input type="text" placeholder="Enter client BVN or account number" name="bvn" id="bvn"
+                                       class="form-control account_number">
+                            </div>
+
+                            <div class="form-group">
+                                <input type="submit" name="submit" value="register"
+                                       class="submit form-control btn btn-block btn-primary">
+                            </div>
+                        </form>
+                    </div> <!-- Create new BVN number -->
                 <?php } else {?>
 
                     <div class="row">
