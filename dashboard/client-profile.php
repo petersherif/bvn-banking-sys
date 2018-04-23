@@ -2,6 +2,28 @@
 <section class="profile-section">
 	<div class="container-fluid">
 
+
+								<?php
+                                    $user_id = $_SESSION['user_id'];
+                                    $quer = "SELECT * From accounts WHERE user_id='$user_id'"; 
+                                    $query = connect()->query($quer);
+                                    while ($row = $query->fetch_object()) {
+                                        $acc_num= $row->acc_num;
+                                        $balance= $row->balance;
+                                    }
+
+
+                                      $quer2 = "SELECT * From users WHERE id='$user_id'"; 
+                                    $query = connect()->query($quer2);
+                                    while ($row = $query->fetch_object()) {
+                                        $name= $row->full_name;
+                                        $nat_id= $row->national_id;
+                                        $email= $row->email;
+                                        $img= $row->thumb;
+
+                                    }
+                                        ?>
+                                        
 		<div class="row">
 			<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-3 col-md-offset-2">
 				<div class="light-box light-box--small profile-box mb3">
@@ -9,33 +31,11 @@
 						<div class="col-xs-12">
 							<div class="profile__avatar">
 							<!--	<img src="assets/img/avatar-placeholder.png" alt="" /> -->
-
- 								<?php
-                                    $user_id = $_SESSION['user_id'];
-                                    $quer = "SELECT * From accounts WHERE user_id='$user_id'"; 
-                                    $query = connect()->query($quer);
-                                    while ($row = $query->fetch_object()) {
-                                    	$acc_num= $row->acc_num;
-                                    	$balance= $row->balance;
-                                    }
-
-
-                                      $quer2 = "SELECT * From users WHERE id='$user_id'"; 
-                                    $query = connect()->query($quer2);
-                                    while ($row = $query->fetch_object()) {
-                                    	$name= $row->full_name;
-                                    	$nat_id= $row->national_id;
-                                    	$email= $row->email;
-                                    	$img= $row->thumb;
-
-                                    }
-                                        ?>
-                         
 								<img src="./assets/files/users/thumb/<?php echo $img; ?>"" alt="<?php echo $name ?>" />
 							</div>
 
 							<div class="profile__basic-info" style="text-align: center;">
-								<h6 class="basic-info__text"><?php echo $name;?></h6>
+								<h6 class="basic-info__text"><?php echo $name .'//'. $user_id;?></h6>
 								<p></p>
 							</div>
 						</div>
