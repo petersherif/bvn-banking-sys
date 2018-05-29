@@ -89,6 +89,14 @@ global $message;
                                    class="form-control">
                         </div>
 
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="acc_check">Create account</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="bvn_check">Create Bvn Number</label>
+                        </div>
+
+
                         <div class="form-group">
                             <input type="submit" name="submit" value="add new client"
                                    class="submit form-control btn btn-block btn-primary">
@@ -100,3 +108,19 @@ global $message;
         </div> <!-- Row -->
     </div> <!-- Container -->
 </section>
+
+<script src="assets/vendor/jquery/jquery.min.js"></script>
+
+<script>
+
+    $('#bvn_check').on('change', function () {
+        if (this.checked) {
+            $('#bvn_input').removeClass('hidden')
+        } else {
+            $('#bvn_input').addClass('hidden')
+
+        }
+    });
+</script>
+
+
