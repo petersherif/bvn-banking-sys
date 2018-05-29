@@ -62,7 +62,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title"></h4>
+          <h4 class="modal-title">Employee Details </h4>
         </div>
         <div class="modal-body">
 
@@ -78,6 +78,11 @@
 								<p class="info__text"><span class="info__title">Nat ID :<span id="nat_id"></span></span> </p>
 								<p class="info__text"><span class="info__title">Phone : <span  id="phone"></span>  </span> </p>
 								<p class="info__text"><span class="info__title">Position :  <span  id="pos"></span>  </span> </p>
+
+								<p class="info__text"><span class="info__title">BIRTHDAY :<span id="birthday"></span></span> </p>
+								<p class="info__text"><span class="info__title">ADDRESS : <span  id="address"></span>  </span> </p>
+								<p class="info__text"><span class="info__title">GENDER :  <span  id="gender"></span>  </span> </p>
+
 								</div>
 							        </div>
         <div class="modal-footer">
@@ -130,6 +135,10 @@
                          $("#phone").text(data["phone"]);
                          $("#img").attr('src',data["img"] );
                          $("#pos").text(data["position"]);
+
+                         $("#birthday").text(data["birthday"]);
+                         $("#address").text(data["address"] );
+                         $("#gender").text(data["gender"]);
 
                          } 
                                 },

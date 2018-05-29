@@ -18,8 +18,8 @@ include "./controller/MainController.php";
                             <div class="alert alert-danger">
                                 <button class="close" data-close="alert"></button>
                                 <span>
-				<?php echo $message; ?>
-			</span>
+                <?php echo $message; ?>
+            </span>
                             </div>
                             <?php
                         }
@@ -52,7 +52,19 @@ include "./controller/MainController.php";
                     <div class="light-box light-box--small">
                         <div class="row">
                             <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-0 col-md-8 col-md-offset-2 mb3">
-                                <img src="assets/img/avatar-placeholder.png" alt="" class="mw-100" />
+
+                                <?php
+                                    $user_id = $_SESSION['user_id'];
+                                    $sql = "SELECT thumb From users WHERE id='$user_id'";
+                                    $query = connect()->query($sql);
+                                    while ($row = $query->fetch_object()) {
+                                        
+                                        $imgg=$row->thumb; ?>
+                                   
+
+                                <img src="./assets/files/users/thumb/<?php echo $imgg; ?>" alt="" class="mw-100" />
+                             <?php } ?>
+
                             </div>
                             <div class="col-xs-12 col-sm-8 col-md-12">
                                 <h6 class="f4 f3-ns b ttc">

@@ -19,6 +19,11 @@
                                         $name= $row->full_name;
                                         $nat_id= $row->national_id;
                                         $email= $row->email;
+
+								        $birthday= $row->birthday;
+								        $gender= $row->gender;
+								        $address= $row->address;
+										$phone= $row->phone;
                                         $img= $row->thumb;
 
                                     }
@@ -31,7 +36,7 @@
 						<div class="col-xs-12">
 							<div class="profile__avatar">
 							<!--	<img src="assets/img/avatar-placeholder.png" alt="" /> -->
-								<img src="./assets/files/users/thumb/<?php echo $img; ?>"" alt="<?php echo $name ?>" />
+								<img src="./assets/files/users/thumb/<?php echo $img; ?>" alt="<?php echo $name ?>" />
 							</div>
 
 							<div class="profile__basic-info" style="text-align: center;">
@@ -53,6 +58,11 @@
 								<p class="info__text"><span class="info__title">Nat ID :</span> <?php echo $nat_id ?></p>
 								<p class="info__text"><span class="info__title">Email :</span> <?php echo $email ?></p>
 								<p class="info__text"><span class="info__title">Balance :</span> <?php echo $balance ?></p>
+
+								<p class="info__text"><span class="info__title">Birthday. :</span> <?php echo $birthday ?></p>
+								<p class="info__text"><span class="info__title">Gender :</span> <?php echo $gender ?></p>
+								<p class="info__text"><span class="info__title">Address :</span> <?php echo $address ?></p>
+								<p class="info__text"><span class="info__title">Phone :</span> <?php echo $phone ?></p>								
 							</div>
 						</div>
 					</div>

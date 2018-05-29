@@ -42,8 +42,13 @@ $quer=" SELECT * FROM users where id=$idd";
                "email"=>"$email",
                "nat_id"=>"$nat_id",
                "phone"=>"$phone",
-               "img"=>"$img",
                "position"=>"$position",
+
+               
+               "birthday"=>"$birthday",
+               "address"=>"$address",
+               "gender"=>"$gender",
+               "img"=>"$img"
            );
  
            if($data_to_return['response']=="0"){echo json_encode($data_to_return);}
