@@ -21,6 +21,7 @@ global $message;
                             <div class="alert alert-danger">
                                 <button class="close" data-close="alert"></button>
                                 <span>
+
                                     <?php echo $message; ?>
                                 </span>
                             </div>
@@ -42,23 +43,32 @@ global $message;
                                        class="submit form-control btn btn-block btn-primary">
                             </div>
                         </form>
-                    </div> <!-- BVN login form -->
+                    </div>
+                </div> <!-- BVN login Form -->
+            </div> <!-- Row -->
+        </div> <!-- Container -->
+    </section>
+<?php } else {?>
+    <section class="">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-sm-offset-1 col-md-4 col-lg-3 mb4">
+                    <div class="light-box light-box--small">
+                        <div class="row">
+                            <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-0 col-md-8 col-md-offset-2 mb3">
 
-                    <p class="text-center f2 mb4">Or register a new BVN number for the client</p>
+                                <?php
+                                    $user_id = $_SESSION['user_id'];
+                                    $sql = "SELECT thumb From users WHERE id='$user_id'";
+                                    $query = connect()->query($sql);
+                                    while ($row = $query->fetch_object()) {
+                                        
+                                        $imgg=$row->thumb; ?>
+                                   
 
-                <?php } else { ?>
-                    <div class="row">
-                        <?php
-                        if ($message == "success") {
-                            ?>
-                            <div class="alert alert-success">
-                                <strong>Success!</strong> Bvn successfully added.
-                            </div>
-                            <?php
-                        } else if ($message == "error") {
-                            ?>
-                            <div class="alert alert-danger">
-                                <strong>Error!</strong> Please, Enter Bvn number.
+                                <img src="./assets/files/users/thumb/<?php echo $imgg; ?>" alt="" class="mw-100" />
+                             <?php } ?>
+
                             </div>
                             <?php
                         } else if ($message == "exist") {
@@ -81,7 +91,9 @@ global $message;
 
                     </div>
 
-                    <div class="light-box light-box--small form-box hidden" id="bvn_number">
+                    <div class="light-box light-box--small form-box hidden" id="bvn_
+                                                                                
+                                                                                ">
 
                         <!-- Create new BVN number -->
                         <div class="alert alert-danger length hidden">
@@ -179,7 +191,9 @@ global $message;
                                                 ?>
                                                 <li class="table__row data-row">
                                                     <span class="row__cell"
-                                                          title="10/11/2018"><?php echo $row[$i]["date"]; ?></span>
+                                                          title="10/11/2018"><?php echo $row[$i]
+                                                  
+                                                  ; ?></span>
                                                     <span class="row__cell"
                                                           title="Description includes the ATM or Bank data (bank name and branch or atm id or location name) and the depositor data if any.">Description includes the ATM or Bank data (bank name and branch or atm id or location name) and the depositor data if any.</span>
                                                     <span class="row__cell color-accent withdraw"
