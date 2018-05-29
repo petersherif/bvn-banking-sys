@@ -12,9 +12,10 @@
                                     }
 
 
-                                      $quer2 = "SELECT * From users WHERE id='$user_id'"; 
+                                    $quer2 = "SELECT * From users WHERE id='$user_id'"; 
                                     $query = connect()->query($quer2);
                                     while ($row = $query->fetch_object()) {
+
                                         $name= $row->full_name;
                                         $nat_id= $row->national_id;
                                         $email= $row->email;
@@ -24,7 +25,20 @@
 								        $address= $row->address;
 										$phone= $row->phone;
                                         $img= $row->thumb;
+                                        
 
+                            	 }
+                                    if (isset($_POST['edit-profile'])) {
+                                    	if (!empty($_POST['address']) && !empty($_POST['phone']) && !empty($_POST['email'])) {
+                                    		$user_id=$_SESSION['user_id'];
+                                    		$new_address = $_POST['address'];
+                                    		$new_phone = $_POST['phone'];
+                                    		$new_email = $_POST['email'];
+                                    		$sql2 = "UPDATE `users` set email = '$new_email' , phone = '$new_phone' , address = '$new_address' WHERE id=$user_id ";
+        									$query1 = connect()->query($sql2);
+        									header("location:?client-profile");
+        									exit();
+                                    	}
                                     }
                                         ?>
                                         
@@ -62,70 +76,67 @@
 								<p class="info__text"><span class="info__title">Email :</span> <?php echo $email ?></p>
 								<p class="info__text"><span class="info__title">Balance :</span> <?php echo $balance ?></p>
 
-								<p class="info__text"><span class="info__title">Birthday. :</span> <?php echo $birthday ?></p>
-								<p class="info__text"><span class="info__title">Gender :</span> <?php echo $gender ?></p>
-								<p class="info__text"><span class="info__title">Address :</span> <?php echo $address ?></p>
-								<p class="info__text"><span class="info__title">Phone :</span> <?php echo $phone ?></p>								
+
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="fr">
+								<button data-toggle="modal" data-target="#myModal" class="btn btn-primary--custom">Edit</button>
+								<button class="btn btn-danger--custom">Delete</button>
 							</div>
 						</div>
-					</div>   
-
-                            <div class="profile__info">
-                                <p class="info__text"><span class="info__title">Acc No. :</span> <?php echo $acc_num ?>
-                                </p>
-                                <p class="info__text"><span class="info__title">Nat ID :</span> <?php echo $nat_id ?>
-                                </p>
-                                <p class="info__text"><span class="info__title">Email :</span> <?php echo $email ?></p>
-                                <p class="info__text"><span class="info__title">Balance :</span> <?php echo $balance ?>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <div class="fr">
-                                <button class="btn btn-primary--custom">Edit</button>
-                                <span class="row__cell"><button value="<?php echo $user_id; ?>"
-                                                                class="btn btn-danger--custom mv1 send_id"
-                                                                data-toggle="modal" data-target="#myModal"><i
-                                                class="fa fa-times"></i> Delete</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- The Modal -->
-    <div class="modal fade" id="myModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-
-                <!-- Modal Header -->
-                <div class="modal-header">
-                    <h4 class="modal-title"><span class="warning">Warning<span></h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-
-                <!-- Modal body -->
-                <div class="modal-body">
-                    Are You Sure !<br>
-                    You Want To Delete This Cline ? </br>
-                </div>
-
-                <!-- Modal footer -->
-                <div class="modal-footer">
-                    <form method="post" action="?search-employees">
-                        <input type="hidden" id="get_id" name="id" value=""/>
-                        <button type="submit" class="btn btn-danger--custom mv1"><i class="fa fa-times"></i> Delete
-                        </button>
-                        <a class="btn btn-primary--custom" data-dismiss="modal" href="#">Close</a>
-                    </form>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <!-- End Modal -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
+                            <!-- The Modal -->
+										<div class="modal fade" id="myModal">
+											<div class="modal-dialog">
+												<div class="modal-content">
+											
+												<!-- Modal Header -->
+												<div class="modal-header">
+													<h4 class="modal-title"><span class="warning">Edit Client Data<span></h4>
+													<button type="button" class="close" data-dismiss="modal">&times;</button>
+												</div>
+												
+												<!-- Modal body -->
+												<div class="modal-body">
+													<form method="post" class="form-box__form" >
+
+                        <div class="form-group">
+                            <i class="fa fa-map-marker"></i>
+                            <input type="text" name="address" placeholder="Enter the Client's Address" id="address"
+                                   class="form-control" value="<?php echo $address ;?>">
+                        </div>
+
+                        <div class="form-group">
+                            <i class="fa fa-envelope"></i>
+                            <input type="text" name="email" placeholder="Enter the Client's Email Address"
+                                   id="email"
+                                   class="form-control" value="<?php echo $email ;?>">
+                        </div>
+
+                        <div class="form-group">
+                            <i class="fa fa-phone"></i>
+                            <input type="text" name="phone" placeholder="Enter the Client's Phone Number"
+                                   id="phone-num"
+                                   class="form-control" value="<?php echo $phone ;?>">
+                        </div>
+
+												</div>
+												
+												<!-- Modal footer -->
+												<div class="modal-footer">
+														<input type="hidden" id="get_id" name="id" value="" /> 
+														<button name="edit-profile" type="submit" class="btn btn-success"><i class="fa fa-times"></i> Save</button>
+														<a  class="btn btn-primary--custom" data-dismiss="modal" href="#">Close</a>
+													</form>
+												</div>
+												
+												</div>
+											</div>
+										</div>
+									<!-- End Modal -->
+
