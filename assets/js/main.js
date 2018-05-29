@@ -139,6 +139,7 @@ $(document).ready(function () {
         } else {
           $(this).hide('3000');
         }
+        
 
         // if(dataCellVal.indexOf(text_filter_value) != -1) {
         //     $(this).show('slow');
@@ -148,6 +149,15 @@ $(document).ready(function () {
         // } else {
         //     $(this).hide('slow');
         // }
-    });
+	});
+	// Conffirm Deletion
+
+ 
   });
+  $('.send_id').click(function(){
+	 var id=$(this).val();
+	$( '#get_id' ).val( id );
+		   
 });
+});
+

@@ -31,11 +31,6 @@ ul {
 	margin: 0;
 }
 
-input[type=checkbox],
-input[type=radio] {
-	display: none;
-}
-
 label {
 	font-weight: normal;
 	margin: 0;
@@ -47,7 +42,8 @@ label {
 	}
 }
 
-input[type=checkbox] + label:before {
+input[type=checkbox] + label:before,
+input[type=radio] + label:before {
   content: "\f096";
   font-family: FontAwesome;
   font-style: normal;
@@ -58,9 +54,17 @@ input[type=checkbox] + label:before {
   display: inline;
 }
 
+input[type=radio] + label:before {
+	content: "\f111";
+}
+
 input[type=checkbox]:checked + label:before {
 	content: "\f046"; /* checked icon */
   padding-right: 0;
+	color: $color-primary;
+}
+
+input[type=radio]:checked + label:before {
 	color: $color-primary;
 }
 
@@ -78,6 +82,7 @@ input[type=checkbox]:checked + label:before {
 	box-shadow: $block-shadow;
 	padding: 32px 15px 25px;
 	position: relative;
+	margin-bottom: 15px;
 
 	&:before {
 		content: '';
@@ -95,15 +100,24 @@ input[type=checkbox]:checked + label:before {
 .light-box {
 	@extend %light-box;
 
-	&--small {
-		@media(max-width: 767px) {
-			max-width: 390px;
-			margin-right: auto;
-			margin-left: auto;
-			float: none;
-			clear: both;
-		}
+}
+
+.mw-sm-390 {
+	@media(max-width: 767px) {
+		max-width: 390px;
+		margin-right: auto;
+		margin-left: auto;
+		float: none;
+		clear: both;
 	}
+}
+
+.mw-390 {
+	max-width: 390px;
+	margin-right: auto;
+	margin-left: auto;
+	float: none;
+	clear: both;
 }
 
 // Page preload spinner
