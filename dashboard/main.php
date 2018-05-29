@@ -32,7 +32,7 @@ include "./controller/MainController.php";
                         <form class="form-box__form" method="post">
                             <div class="form-group">
                                 <i class="fa fa-user"></i>
-                                <input type="text" placeholder="Enter client BVN or account number" name="bvn" id="bvn"
+                                <input type="password" placeholder="Enter client BVN or account number" name="bvn" id="bvn"
                                        class="form-control account_number">
                             </div>
 
