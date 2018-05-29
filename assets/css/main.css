@@ -26,10 +26,6 @@ ul {
   padding: 0;
   margin: 0; }
 
-input[type=checkbox],
-input[type=radio] {
-  display: none; }
-
 label {
   font-weight: normal;
   margin: 0;
@@ -38,7 +34,8 @@ label {
     vertical-align: text-bottom;
     font-size: 16px; }
 
-input[type=checkbox] + label:before {
+input[type=checkbox] + label:before,
+input[type=radio] + label:before {
   content: "\f096";
   font-family: FontAwesome;
   font-style: normal;
@@ -48,10 +45,16 @@ input[type=checkbox] + label:before {
   padding-right: 3px;
   display: inline; }
 
+input[type=radio] + label:before {
+  content: "\f111"; }
+
 input[type=checkbox]:checked + label:before {
   content: "\f046";
   /* checked icon */
   padding-right: 0;
+  color: #02BAF2; }
+
+input[type=radio]:checked + label:before {
   color: #02BAF2; }
 
 .form-control {
@@ -79,12 +82,19 @@ input[type=checkbox]:checked + label:before {
     background: #02BAF2; }
 
 @media (max-width: 767px) {
-  .light-box--small {
+  .mw-sm-390 {
     max-width: 390px;
     margin-right: auto;
     margin-left: auto;
     float: none;
     clear: both; } }
+
+.mw-390 {
+  max-width: 390px;
+  margin-right: auto;
+  margin-left: auto;
+  float: none;
+  clear: both; }
 
 .page-loading {
   position: fixed;
@@ -187,8 +197,7 @@ input[type=checkbox]:checked + label:before {
 [Form Box]
 *****************************************/
 .form-box {
-  max-width: 390px;
-  margin: 0 auto 60px; }
+  margin-bottom: 60px; }
   .form-box .form-group {
     margin-bottom: 3px;
     color: #ACACAC;

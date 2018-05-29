@@ -70,8 +70,7 @@
 											</div>
 										</div>
 									<!-- End Modal -->
-                                    </span>
-									
+                                    </span>									
 								</li>
 								<?php } ?>
 							</ul>
@@ -81,4 +80,104 @@
 			</div> 
 		</div>
 	</div>
+
+
+    <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Client Details</h4>
+        </div>
+        <div class="modal-body">
+
+			<div class="profile__avatar">
+					<img src="./assets/files/users/thumb/521421311.jpg" style="width: 570px;height: 200px;" id="usr_img" />
+			</div>
+<div class="col-xs-12">
+
+							<div class="profile__info">
+
+								<p class="info__text"><span class="info__title">Name : <span id="name"></span> </span> </p>
+								<p class="info__text"><span class="info__title">Email : <span id="email"></span> </span> </p>
+								<p class="info__text"><span class="info__title">Nat ID :  <span id="nat_id"></span> </span> </p>
+								<p class="info__text"><span class="info__title">Birthday : <span id="birthday"></span> </span></p>
+								<p class="info__text"><span class="info__title">Gender :  <span id="gender"></span>  </span> </p>
+								<p class="info__text"><span class="info__title">Address : <span id="address"></span> </span> </p>
+								<p class="info__text"><span class="info__title">Phone :  <span id="phone"></span>  </span> </p>
+								<p class="info__text"><span class="info__title">Acc No. :  <span id="acc_num"></span>  </span> </p>
+								<p class="info__text"><span class="info__title">Balance :  <span id="balance"></span>  </span></p>
+								</div>
+							        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+     <!--END - Modal -->
+
 </section>
+
+
+
+<!-- jQuery v.3.3.1 Library -->
+<script src="assets/vendor/jquery/jquery.min.js"></script>
+
+<!-- Bootstrap v.3.3.7 JS -->
+<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Chart.js Library -->
+<script src="assets/vendor/chart.js/Chart.min.js"></script>
+
+<!-- Custom JS -->
+<script src="assets/js/main.js"></script>
+
+<script src="assets/ajax/ajax.js"></script>
+
+     <script type="text/javascript">
+
+  $(document).ready(function (){
+
+              $(document).on("click", ".daa", function () {
+          
+               var userid = $(this).data('id');
+
+                 $("#idd").attr('data-id',userid );
+                  
+                 $.ajax({
+                          type: "post",
+                          url: "../bvn-banking-sys/assets/ajax/ajax_search_clients.php",
+                          
+                          data: { 'userid':userid  },
+                          success: function (msg) { 
+                               
+                            data=JSON.parse(msg);
+                           if(data["response"]==0){
+                         $("#name").text(data["name"]);
+                         $("#email").html(data["email"]);
+                         $("#nat_id").html(data["nat_id"]);
+                         $("#birthday").html(data["birthday"]);
+                         $("#gender").html(data["gender"]);
+                         $("#address").text(data["address"]);
+                         $("#phone").text(data["phone"]);
+                         $("#img").attr('src',data["img"] );
+                         $("#acc_num").text(data["acc_num"]);
+                         $("#balance").text(data["balance"]);
+
+                         } 
+                                },
+                                complete: function(){
+                                }
+                            });
+
+
+                   });
+
+                });
+
+</script>
