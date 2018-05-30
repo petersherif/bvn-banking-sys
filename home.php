@@ -105,18 +105,5 @@ include_once('includes/sidebar.php');
 ?>
 
 
-<!-- jQuery v.3.3.1 Library -->
-<script src="assets/vendor/jquery/jquery.min.js"></script>
-
-<!-- Bootstrap v.3.3.7 JS -->
-<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-
-<!-- Chart.js Library -->
-<script src="assets/vendor/chart.js/Chart.min.js"></script>
-
-<!-- Custom JS -->
-<script src="assets/js/main.js"></script>
-
-<script src="assets/ajax/ajax.js"></script>
 </body>
 </html>
