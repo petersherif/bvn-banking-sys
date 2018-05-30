@@ -65,7 +65,7 @@ $('.account_number').on('keyup', function (e) {
         setTimeout(function () {
             $('.alert-danger').addClass('hidden');
         }, 5000);
-        $(this).val(123456789101);
+        $(this).val(12345678910);
     }
 });
 $('#deposit').on('click', function (event) {
@@ -179,7 +179,7 @@ $('#client').on('click', function (event) {
         data: $('#clientForm').serialize(),
         dataType: 'text',
         success: function (data) {
-            if ($('#full_name').val() === ""|| $('#national_id').val() === "" || $('#birthday').val() === "" || $('#address').val() === "" || $('#gender').val() === "" || $('#phone').val() === "" || $('#email').val() === "" || $('#thumb').val() === "") {
+            if ($('#full_name').val() === "" || $('#national_id').val() === "" || $('#birthday').val() === "" || $('#address').val() === "" || $('#gender').val() === "" || $('#phone').val() === "" || $('#email').val() === "" || $('#thumb').val() === "") {
                 $('.alert-danger').removeClass('hidden');
                 $('.alert-success').addClass('hidden');
                 setTimeout(function () {
@@ -196,4 +196,3 @@ $('#client').on('click', function (event) {
         }
     });
 });
-
