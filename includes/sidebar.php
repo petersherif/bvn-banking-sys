@@ -60,7 +60,7 @@
 				<?php }?>
 
 				<?php
-				if(isset($_SESSION['auth']) && $_SESSION['auth']==2){
+				if(isset($_SESSION['auth']) && $_SESSION['auth']==2 || $_SESSION['auth']==1){
 				?>
 					<li class="list__item <?php if (isset($_GET['search-clients'])) { ?> active
 							<?php } ?>"><a href="home.php?search-clients"><i

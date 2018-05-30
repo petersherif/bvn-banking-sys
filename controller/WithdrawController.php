@@ -3,7 +3,8 @@ if (isset($_POST['amount'])) {
     $amount = $_POST['amount'];
     $account_id = $_SESSION['id'];
     $account = $_SESSION['bvn'];
-    $sql = "INSERT INTO `transaction`(`amount`,`type`,`acc_id`)VALUE ($amount,1,$account_id)";
+    $description = "You have Withdrawed: ".$amount . " L.E";
+    $sql = "INSERT INTO `transaction`(`amount`,`type`,`acc_id`,`description`)VALUE ($amount,1,$account_id,$description)";
     $query = connect()->query($sql);
     ?><?php
     $sql = "SELECT * FROM accounts WHERE id='$account_id'";

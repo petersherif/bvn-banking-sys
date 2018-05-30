@@ -2,7 +2,8 @@
 if (isset($_POST['amount'])) {
     $amount = $_POST['amount'];
     $account_id = $_SESSION['id'];
-    $sql = "INSERT INTO `transaction`(`amount`,`type`,`acc_id`)VALUE ($amount,0,$account_id)";
+    $description = "You have deposited: ".$amount . " L.E";
+    $sql = "INSERT INTO `transaction`(`amount`,`type`,`acc_id`,`description`)VALUE ($amount,0,$account_id,'$description')";
     $query = connect()->query($sql);
     ?><?php
     $sql = "SELECT * FROM accounts WHERE id='$account_id'";
