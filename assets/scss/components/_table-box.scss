@@ -1,0 +1,58 @@
+/*****************************************  
+[Table Box]
+*****************************************/
+.table-box {
+	padding: 7px 0;
+
+	.table__heading {
+		color: $white;
+		background: $color-primary;
+		margin: 0;
+		padding: 3px 15px 10px;
+		font-size: 1.4em;
+	}
+
+	.table__rows {
+		font-size: 1.3em;
+
+		.table__row {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 10px 0;
+			border-bottom: 1px solid $color-border;
+
+			&:last-child {
+				border-bottom: 0;
+				padding-bottom: 3px;
+			}
+
+			&:nth-child(even) {
+				background: mix($white, $color-primary, 90%);
+			}
+		}
+
+		.row__cell {
+			display: block;
+			text-align: center;
+			min-height: 20px;
+			
+			&.row__cell--heading {
+				text-transform: uppercase;
+				font-weight: 700;
+			}
+
+			&:not(:last-child) {
+				border-right: 1px solid $color-border;
+			}
+		}
+	}
+}
+
+//Media queries
+@media(max-width: 767px) {
+	.table-box {
+		float: none;
+		clear: both;
+	}
+}

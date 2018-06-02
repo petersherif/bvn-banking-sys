@@ -1,0 +1,14 @@
+/*****************************************  
+[Currency Rate Graph Box]
+*****************************************/
+.rate-chart-box {
+	
+}
+
+//Media queries
+@media(max-width: 767px) {
+	.rate-chart-box {
+		float: none;
+		clear: both;
+	}
+}

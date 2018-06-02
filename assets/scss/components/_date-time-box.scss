@@ -1,0 +1,31 @@
+/*****************************************  
+[Date & Time Box]
+*****************************************/
+.date-time-box {
+	text-align: center;
+	color: $color-primary;
+	font-weight: 700;
+	padding-top: 25px;
+
+	p {
+		margin: 0;
+	}
+	
+	.date {
+		font-size: 1.3em;
+		text-transform: capitalize;
+	}
+
+	.time {
+		font-size: 2.8em;
+		text-transform: uppercase;
+	}
+} // Date and time box
+
+//Media queries
+@media(max-width: 767px) {
+	.date-time-box {
+		float: none;
+		clear: both;
+	}
+}

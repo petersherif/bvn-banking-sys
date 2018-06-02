@@ -1,0 +1,105 @@
+/*****************************************  
+[All Members Box]
+*****************************************/
+.data-listing-box {
+	
+	max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+	padding: 7px 0 3px;
+	
+	.table__rows {
+
+		font-size: 1em;
+		overflow-y: auto;
+
+		.table__row {
+			justify-content: start;
+			min-width: 700px;
+			padding: 5px 0;
+
+			&:first-child {
+				border-top: 1px solid $color-border;
+
+			}
+
+			&:not(:first-child) {
+				.row__cell {
+					
+					&:first-child {
+						text-transform: capitalize;
+					}
+				}
+			}
+
+			.row__cell {
+
+				width: calc(60% / 3);
+				padding: 0 10px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				
+				&:first-child {
+					width: 20%;
+				}
+
+				&:nth-child(2) {
+					width: 30%;
+				}
+
+				&:last-child {
+					display: flex;
+					justify-content: center
+				}
+
+				&--heading {
+					padding: 5px 10px;
+				}
+			}
+		}
+	}
+}
+
+.view-transactions-box {
+	.table__rows {
+		.table__row {
+			.row__cell {
+				width: calc(60% / 3);;
+
+				&:nth-child(2) {
+					width: 50%;
+				}
+
+				&.deposit,
+				&.withdraw {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+}
+
+//Media queries
+@media(min-width: 768px) {
+	.all-clients-box {
+		.table__rows {
+			.table__row {
+
+				.row__cell {
+					// min-width: 80px;
+				}
+			}
+		}
+	}
+}
+
+@media(max-width: 767px) {
+	.all-clients-box {
+		width: 100%;
+
+		.table__rows {
+			.table__row {
+			}
+		}
+	}
+}

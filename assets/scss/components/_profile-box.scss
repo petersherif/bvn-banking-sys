@@ -1,0 +1,23 @@
+/*****************************************  
+[Profile Box]
+*****************************************/
+.profile-box {
+	.profile {
+		&__avatar {
+			max-height: 250px;
+			max-width: 250px;
+			margin: auto;
+			overflow: hidden;
+			box-shadow: $block-shadow;
+		}
+		
+		&__info {
+
+			.info__title {
+				// min-width: 90px;
+				// display: inline-block;
+			}
+		}
+	}
+
+}
