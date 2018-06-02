@@ -13,21 +13,15 @@ global $message;
 
                 <?php if (!isset($_SESSION['loggedbvn'])) { ?>
                     <!-- BVN login form -->
-                    <div class="light-box light-box--small form-box">
-                        <?php
-                        if (isset($message)) {
-                            ?>
-
+                    <div class="light-box form-box">
+                        <?php if (isset($message)) { ?>
                             <div class="alert alert-danger">
                                 <button class="close" data-close="alert"></button>
                                 <span>
-
                                     <?php echo $message; ?>
                                 </span>
                             </div>
-                            <?php
-                        }
-                        ?>
+                        <?php } ?>
                         <div class="alert alert-danger length hidden">
                             <strong>Error!</strong> Dear Emp,The length of the account number must be 11 !
                         </div>
@@ -43,118 +37,52 @@ global $message;
                                        class="submit form-control btn btn-block btn-primary">
                             </div>
                         </form>
-                    </div>
-                </div> <!-- BVN login Form -->
-            </div> <!-- Row -->
-        </div> <!-- Container -->
-    </section>
-<?php } else {?>
-    <section class="">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-sm-offset-1 col-md-4 col-lg-3 mb4">
-                    <div class="light-box light-box--small">
-                        <div class="row">
-                            <div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-0 col-md-8 col-md-offset-2 mb3">
+                    </div> <!-- BVN login Form -->
 
-                                <?php
-                                    $user_id = $_SESSION['user_id'];
-                                    $sql = "SELECT thumb From users WHERE id='$user_id'";
-                                    $query = connect()->query($sql);
-                                    while ($row = $query->fetch_object()) {
-                                        
-                                        $imgg=$row->thumb; ?>
-                                   
+                <?php } else {?>
 
-                                <img src="./assets/files/users/thumb/<?php echo $imgg; ?>" alt="" class="mw-100" />
-                             <?php } ?>
-
-                            </div>
-                            <?php
-                        } else if ($message == "exist") {
-                            ?>
-                            <div class="alert alert-danger">
-                                <strong>Error!</strong> You Already Have bvn Number.
-                            </div>
-
-                        <?php } ?>
-                        <?php
-                        $user_id = $_SESSION["user_id"];
-                        $sql = "select * from bvn WHERE  user_id=$user_id";
-                        $query = connect()->query($sql);
-
-                        if (!$query->num_rows != 0) { ?>
-                            <input type="button" value="Create Bvn Number"
-                                   class="btn btn-block btn-primary--custom" id="btn_bvn_number">
-                            <br>
-                        <?php } ?>
-
-                    </div>
-
-                    <div class="light-box light-box--small form-box hidden" id="bvn_
-                                                                                
-                                                                                ">
-
-                        <!-- Create new BVN number -->
-                        <div class="alert alert-danger length hidden">
-                            <strong>Error!</strong> Dear Emp,The length of the account number must be 11 !
-                        </div>
-                        <form class="form-box__form" method="post">
-                            <div class="form-group">
-                                <i class="fa fa-user"></i>
-                                <input type="text" placeholder="Enter client BVN or account number" name="bvnNumber"
-                                       id="bvn"
-                                       class="form-control account_number">
-                            </div>
-
-                            <div class="form-group">
-                                <input type="submit" name="submit_bvn" value="register"
-                                       class="submit form-control btn btn-block btn-primary">
-                            </div>
-                        </form>
-                    </div>
 
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="light-box">
                                 <div class="row">
                                     <div class="col-xs-4 mb3">
-                                        <img src="assets/img/avatar-placeholder.png" alt="" class="mw-100"/>
+                                        <?php
+                                            $user_id = $_SESSION['user_id'];
+                                            $sql = "SELECT thumb From users WHERE id='$user_id'";
+                                            $query = connect()->query($sql);
+                                            while ($row = $query->fetch_object()) {
+                                                
+                                                $imgg=$row->thumb; ?>
+                                           
+
+                                            <img src="./assets/files/users/thumb/<?php echo $imgg; ?>" alt="" class="mw-100" />
+                                        <?php } ?>
                                     </div>
                                     <div class="col-xs-8">
-                                        <h6 class="f4 f3-ns b ttc">
-                                            <?php
+                                        <?php
                                             $user_id = $_SESSION['user_id'];
                                             $sql = "SELECT full_name From users WHERE id='$user_id'";
                                             $query = connect()->query($sql);
-                                            while ($row = $query->fetch_object()) {
-                                                ?>
-                                                <?php echo $row->full_name ?>
+                                            while ($row = $query->fetch_object()) { ?>
+                                                <h6 class="f4 f3-ns b ttc">
+                                                    <?php echo $row->full_name ?>
+                                                </h6>
                                             <?php } ?>
-                                        </h6>
-                                        <p class="mb0">
-                                            <span class="w4 dib">Acc No.:</span>
-                                            <?php
+                                        <?php
                                             $user_id = $_SESSION['user_id'];
-                                            $sql = "SELECT acc_num From accounts WHERE user_id='$user_id'";
+                                            $sql = "SELECT * From accounts WHERE user_id='$user_id'";
                                             $query = connect()->query($sql);
-                                            while ($row = $query->fetch_object()) {
-                                                ?>
-                                                <?php echo $row->acc_num ?>
-                                            <?php } ?>
-                                        </p>
-
-                                        <p class="">
-                                            <span class="w4 dib">Balance:</span>
-                                            <?php
-                                            $user_id = $_SESSION['user_id'];
-                                            $sql = "SELECT balance From accounts WHERE user_id='$user_id'";
-                                            $query = connect()->query($sql);
-                                            while ($row = $query->fetch_object()) {
-                                                ?>
-                                                <?php echo $row->balance ?>
-                                            <?php } ?>
-                                        </p>
+                                            while ($row = $query->fetch_object()) { ?>
+                                                <p class="mb0">
+                                                    <span class="w4 dib">Acc No.:</span>
+                                                    <?php echo $row->acc_num ?>
+                                                </p>
+                                                <p class="">
+                                                    <span class="w4 dib">Balance:</span>
+                                                    <?php echo $row->balance ?>
+                                                </p>
+                                        <?php } ?>
                                     </div>
                                 </div>
 
@@ -169,8 +97,8 @@ global $message;
                     </div>
 
                     <?php
-                    $transactions_limit = "LIMIT 5";
-                    include "./controller/view-transactionsController.php";
+                        $transactions_limit = "LIMIT 5";
+                        include "./controller/view-transactionsController.php";
                     ?>
 
                     <div class="row">
@@ -209,7 +137,6 @@ global $message;
                             </div> <!-- Last 5 transactions -->
                         </div>
                     </div>
-
                 <?php } ?>
             </div>
 
@@ -271,15 +198,6 @@ global $message;
                 </div>
             </div> <!-- Date and Time Box, Cur Rate Table & Graph -->
 
-        </div>
-    </div>
+        </div> <!-- Row -->
+    </div> <!-- Container -->
 </section>
-<script src="assets/vendor/jquery/jquery.min.js"></script>
-
-<script>
-
-    $('#btn_bvn_number').on('click', function () {
-        $('#bvn_number').removeClass('hidden');
-        $(this).addClass('hidden')
-    });
-</script>

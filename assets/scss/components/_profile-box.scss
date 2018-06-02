@@ -9,6 +9,16 @@
 			margin: auto;
 			overflow: hidden;
 			box-shadow: $block-shadow;
+			text-align: center;
+
+			.user-name-initial {
+				margin: 0;
+				padding: 10px 0;
+				color: $color-text-invert;
+				background: $color-primary;
+				font-size: 120px;
+				font-weight: 700;
+			}
 		}
 		
 		&__info {

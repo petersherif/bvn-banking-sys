@@ -10,11 +10,17 @@
 		color: $color-text-weak;
 		position: relative;
 
-			&--options {
-				color: $color-text;
-				margin: 20px 0 0;
-			} // options: i.e Rememmber Me, Agree, etc.
+		&--options {
+			color: $color-text;
+			margin: 20px 0 0;
+		} // options: i.e Rememmber Me, Agree, etc.
 		
+		label {
+	    margin-bottom: 5px;
+	    font-size: 17px;
+	    color: mix($black, $color-text-weak, 20%);
+		}
+
 		.fa {
 			position: absolute;
 			transform: translate(-50%, -50%);	

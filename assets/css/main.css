@@ -26,6 +26,10 @@ ul {
   padding: 0;
   margin: 0; }
 
+input[type=checkbox],
+input[type=radio] {
+  display: none; }
+
 label {
   font-weight: normal;
   margin: 0;
@@ -197,7 +201,8 @@ input[type=radio]:checked + label:before {
 [Form Box]
 *****************************************/
 .form-box {
-  margin-bottom: 60px; }
+  max-width: 390px;
+  margin: 0 auto 60px; }
   .form-box .form-group {
     margin-bottom: 3px;
     color: #ACACAC;
@@ -205,6 +210,10 @@ input[type=radio]:checked + label:before {
     .form-box .form-group--options {
       color: #364347;
       margin: 20px 0 0; }
+    .form-box .form-group label {
+      margin-bottom: 5px;
+      font-size: 17px;
+      color: #8a8a8a; }
     .form-box .form-group .fa {
       position: absolute;
       transform: translate(-50%, -50%);
@@ -343,7 +352,15 @@ input[type=radio]:checked + label:before {
   max-width: 250px;
   margin: auto;
   overflow: hidden;
-  box-shadow: 0 0 6px rgba(57, 73, 76, 0.35); }
+  box-shadow: 0 0 6px rgba(57, 73, 76, 0.35);
+  text-align: center; }
+  .profile-box .profile__avatar .user-name-initial {
+    margin: 0;
+    padding: 10px 0;
+    color: #FFFFFF;
+    background: #02BAF2;
+    font-size: 120px;
+    font-weight: 700; }
 
 .navbar-custom {
   background: #FFFFFF;
