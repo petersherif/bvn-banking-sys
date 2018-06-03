@@ -203,6 +203,9 @@ input[type=radio]:checked + label:before {
 .form-box {
   max-width: 390px;
   margin: 0 auto 60px; }
+  .form-box--full-width {
+    max-width: initial;
+    margin-bottom: 0; }
   .form-box .form-group {
     margin-bottom: 3px;
     color: #ACACAC;
@@ -213,7 +216,8 @@ input[type=radio]:checked + label:before {
     .form-box .form-group label {
       margin-bottom: 5px;
       font-size: 17px;
-      color: #8a8a8a; }
+      color: #8a8a8a;
+      cursor: pointer; }
     .form-box .form-group .fa {
       position: absolute;
       transform: translate(-50%, -50%);
@@ -347,21 +351,53 @@ input[type=radio]:checked + label:before {
 /*****************************************  
 [Profile Box]
 *****************************************/
-.profile-box .profile__avatar {
-  max-height: 250px;
-  max-width: 250px;
+.profile__avatar {
+  height: 150px;
+  width: 150px;
   margin: auto;
   overflow: hidden;
   box-shadow: 0 0 6px rgba(57, 73, 76, 0.35);
-  text-align: center; }
-  .profile-box .profile__avatar .user-name-initial {
-    margin: 0;
+  text-align: center;
+  border-radius: 50%;
+  background: #02BAF2;
+  display: flex; }
+  .profile__avatar .user-name-initial {
+    margin: auto;
     padding: 10px 0;
     color: #FFFFFF;
-    background: #02BAF2;
-    font-size: 120px;
+    font-size: 80px;
     font-weight: 700; }
+.profile__avatar-caption .avatar-caption__heading {
+  font-weight: 700;
+  font-size: 18px; }
+.profile__info .info__group-title {
+  margin-bottom: 5px;
+  font-size: 17px;
+  color: #8a8a8a; }
+.profile__info .form-group .info__title {
+  min-width: 90px;
+  text-align: right;
+  padding-right: 10px; }
+.profile__info .form-group.balance > label,
+.profile__info .form-group.balance > p {
+  color: #D51D1D;
+  font-weight: 700; }
+.profile__info .profile__static-info label {
+  cursor: default; }
+.profile__info .info__data {
+  color: #555; }
 
+@media (min-width: 768px) {
+  .profile__info-wrapper {
+    border-left: 1px solid #ACACAC; }
+    .profile__info-wrapper .form-group {
+      padding-left: 20px; } }
+@media (max-width: 767px) {
+  .profile__avatar-wrapper {
+    border-bottom: 1px solid #ACACAC;
+    max-width: 300px;
+    margin: auto;
+    float: none; } }
 .navbar-custom {
   background: #FFFFFF;
   box-shadow: 0 0 6px rgba(57, 73, 76, 0.35);
@@ -546,6 +582,6 @@ input[type=radio]:checked + label:before {
 [Border Colors]
 *****************************************/
 .color-border {
-  color: #ACACAC; }
+  border-color: #ACACAC; }
 
 /*# sourceMappingURL=main.css.map */

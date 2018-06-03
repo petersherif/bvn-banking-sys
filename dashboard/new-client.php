@@ -89,13 +89,19 @@ global $message;
                                    class="form-control">
                         </div>
 
-                        <div class="checkbox">
-                            <label><input type="checkbox" name="acc_check">Create account</label>
-                        </div>
-                        <div class="checkbox">
-                            <label><input type="checkbox" name="bvn_check">Create Bvn Number</label>
+                        <div class="form-group">
+                            <input type="checkbox" class="checkbox" id="create-acc" name="acc_check">
+                            <label for="create-acc">
+                                <span>Create account</span>
+                            </label>
                         </div>
 
+                        <div class="form-group">
+                            <input type="checkbox" class="checkbox" id="create-bvn-num" name="bvn_check">
+                            <label for="create-bvn-num">
+                                <span>Create Bvn Number</span>
+                            </label>
+                        </div>
 
                         <div class="form-group">
                             <input type="submit" name="submit" value="add new client"
