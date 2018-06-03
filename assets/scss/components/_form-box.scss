@@ -5,6 +5,11 @@
 	max-width: 390px;
 	margin: 0 auto 60px;
 
+	&--full-width {
+		max-width: initial;
+		margin-bottom: 0;
+	}
+
 	.form-group {
 		margin-bottom: 3px;
 		color: $color-text-weak;
@@ -19,6 +24,7 @@
 	    margin-bottom: 5px;
 	    font-size: 17px;
 	    color: mix($black, $color-text-weak, 20%);
+	    cursor: pointer;
 		}
 
 		.fa {
