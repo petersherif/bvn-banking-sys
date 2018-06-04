@@ -98,12 +98,7 @@ if (str_replace('/bvn-banking-sys', '', $_SERVER['REQUEST_URI']) == '/' || str_r
 
 
 <!-- Sidebar -->
-<?php
-
-include_once('includes/sidebar.php');
-
-?>
-
+<?php include_once('includes/sidebar.php'); ?>
 
 <!-- jQuery v.3.3.1 Library -->
 <script src="assets/vendor/jquery/jquery.min.js"></script>

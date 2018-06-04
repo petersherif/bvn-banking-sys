@@ -24,7 +24,8 @@ global $message;
                     if ($message == "success") {
                         ?>
                         <div class="alert alert-success">
-                            <strong>Success!</strong> Transfer successfully .
+                            <strong>Success!</strong> Transfer successfully ,you balance
+                            is <?php echo $newSenderBalance ?>.
                         </div>
                         <?php
                     } else if ($message == "error") {

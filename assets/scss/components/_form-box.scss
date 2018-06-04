@@ -5,16 +5,28 @@
 	max-width: 390px;
 	margin: 0 auto 60px;
 
+	&--full-width {
+		max-width: initial;
+		margin-bottom: 0;
+	}
+
 	.form-group {
 		margin-bottom: 3px;
 		color: $color-text-weak;
 		position: relative;
 
-			&--options {
-				color: $color-text;
-				margin: 20px 0 0;
-			} // options: i.e Rememmber Me, Agree, etc.
+		&--options {
+			color: $color-text;
+			margin: 20px 0 0;
+		} // options: i.e Rememmber Me, Agree, etc.
 		
+		label {
+	    margin-bottom: 5px;
+	    font-size: 17px;
+	    color: mix($black, $color-text-weak, 20%);
+	    cursor: pointer;
+		}
+
 		.fa {
 			position: absolute;
 			transform: translate(-50%, -50%);	

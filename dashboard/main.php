@@ -3,6 +3,22 @@
 include "./controller/MainController.php";
 global $message;
 
+$user_id = $_SESSION['user_id'];
+$quer = "SELECT * From accounts WHERE user_id='$user_id'";
+$query = connect()->query($quer);
+while ($row = $query->fetch_object()) {
+    $acc_num = $row->acc_num;
+    $balance = $row->balance;
+}
+
+$quer2 = "SELECT * From users WHERE id='$user_id'";
+$query = connect()->query($quer2);
+while ($row = $query->fetch_object()) {
+
+    $name = $row->full_name;
+    $address = $row->address;
+    $img = $row->thumb;
+}
 ?>
 
 <section class="dashboard-components">
@@ -13,20 +29,15 @@ global $message;
 
                 <?php if (!isset($_SESSION['loggedbvn'])) { ?>
                     <!-- BVN login form -->
-                    <div class="light-box light-box--small form-box">
-                        <?php
-                        if (isset($message)) {
-                            ?>
-
+                    <div class="light-box form-box">
+                        <?php if (isset($message)) { ?>
                             <div class="alert alert-danger">
                                 <button class="close" data-close="alert"></button>
                                 <span>
-                                    <?php echo $message; ?>
-                                </span>
+									<?php echo $message; ?>
+								</span>
                             </div>
-                            <?php
-                        }
-                        ?>
+                        <?php } ?>
                         <div class="alert alert-danger length hidden">
                             <strong>Error!</strong> Dear Emp,The length of the account number must be 11 !
                         </div>
@@ -42,106 +53,36 @@ global $message;
                                        class="submit form-control btn btn-block btn-primary">
                             </div>
                         </form>
-                    </div> <!-- BVN login form -->
-
-                    <p class="text-center f2 mb4">Or register a new BVN number for the client</p>
+                    </div> <!-- BVN login Form -->
 
                 <?php } else { ?>
-                    <div class="row">
-                        <?php
-                        if ($message == "success") {
-                            ?>
-                            <div class="alert alert-success">
-                                <strong>Success!</strong> Bvn successfully added.
-                            </div>
-                            <?php
-                        } else if ($message == "error") {
-                            ?>
-                            <div class="alert alert-danger">
-                                <strong>Error!</strong> Please, Enter Bvn number.
-                            </div>
-                            <?php
-                        } else if ($message == "exist") {
-                            ?>
-                            <div class="alert alert-danger">
-                                <strong>Error!</strong> You Already Have bvn Number.
-                            </div>
 
-                        <?php } ?>
-                        <?php
-                        $user_id = $_SESSION["user_id"];
-                        $sql = "select * from bvn WHERE  user_id=$user_id";
-                        $query = connect()->query($sql);
-
-                        if (!$query->num_rows != 0) { ?>
-                            <input type="button" value="Create Bvn Number"
-                                   class="btn btn-block btn-primary--custom" id="btn_bvn_number">
-                            <br>
-                        <?php } ?>
-
-                    </div>
-
-                    <div class="light-box light-box--small form-box hidden" id="bvn_number">
-
-                        <!-- Create new BVN number -->
-                        <div class="alert alert-danger length hidden">
-                            <strong>Error!</strong> Dear Emp,The length of the account number must be 11 !
-                        </div>
-                        <form class="form-box__form" method="post">
-                            <div class="form-group">
-                                <i class="fa fa-user"></i>
-                                <input type="text" placeholder="Enter client BVN or account number" name="bvnNumber"
-                                       id="bvn"
-                                       class="form-control account_number">
-                            </div>
-
-                            <div class="form-group">
-                                <input type="submit" name="submit_bvn" value="register"
-                                       class="submit form-control btn btn-block btn-primary">
-                            </div>
-                        </form>
-                    </div>
 
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="light-box">
                                 <div class="row">
                                     <div class="col-xs-4 mb3">
-                                        <img src="assets/img/avatar-placeholder.png" alt="" class="mw-100"/>
+                                        <div class="profile__avatar">
+                                            <?php if (false) { ?>
+                                                <img src="./assets/files/users/thumb/<?php echo $img; ?>"
+                                                     alt="<?php echo $name ?>" class="mw-100"/>
+                                            <?php } else { ?>
+                                                <p class="user-name-initial"><?php echo strtoupper($name[0]); ?></p>
+                                            <?php } ?>
+                                        </div>
                                     </div>
                                     <div class="col-xs-8">
                                         <h6 class="f4 f3-ns b ttc">
-                                            <?php
-                                            $user_id = $_SESSION['user_id'];
-                                            $sql = "SELECT full_name From users WHERE id='$user_id'";
-                                            $query = connect()->query($sql);
-                                            while ($row = $query->fetch_object()) {
-                                                ?>
-                                                <?php echo $row->full_name ?>
-                                            <?php } ?>
+                                            <?php echo $name ?>
                                         </h6>
                                         <p class="mb0">
                                             <span class="w4 dib">Acc No.:</span>
-                                            <?php
-                                            $user_id = $_SESSION['user_id'];
-                                            $sql = "SELECT acc_num From accounts WHERE user_id='$user_id'";
-                                            $query = connect()->query($sql);
-                                            while ($row = $query->fetch_object()) {
-                                                ?>
-                                                <?php echo $row->acc_num ?>
-                                            <?php } ?>
+                                            <?php echo $acc_num ?>
                                         </p>
-
                                         <p class="">
                                             <span class="w4 dib">Balance:</span>
-                                            <?php
-                                            $user_id = $_SESSION['user_id'];
-                                            $sql = "SELECT balance From accounts WHERE user_id='$user_id'";
-                                            $query = connect()->query($sql);
-                                            while ($row = $query->fetch_object()) {
-                                                ?>
-                                                <?php echo $row->balance ?>
-                                            <?php } ?>
+                                            <?php echo $balance ?>
                                         </p>
                                     </div>
                                 </div>
@@ -170,7 +111,6 @@ global $message;
                                         <ul class="table__rows">
                                             <li class="table__row">
                                                 <span class="row__cell row__cell--heading">Date</span>
-                                                <span class="row__cell row__cell--heading">Description</span>
                                                 <span class="row__cell row__cell--heading">Withdraw</span>
                                                 <span class="row__cell row__cell--heading">Deposit</span>
                                             </li>
@@ -178,10 +118,8 @@ global $message;
                                             foreach ($row as $record) {
                                                 ?>
                                                 <li class="table__row data-row">
-                                                    <span class="row__cell"
-                                                          title="10/11/2018"><?php echo $row[$i]["date"]; ?></span>
-                                                    <span class="row__cell"
-                                                          title="Description includes the ATM or Bank data (bank name and branch or atm id or location name) and the depositor data if any.">Description includes the ATM or Bank data (bank name and branch or atm id or location name) and the depositor data if any.</span>
+													<span class="row__cell"
+                                                          title="10/11/2018"><?php echo $row[$i]['date']; ?></span>
                                                     <span class="row__cell color-accent withdraw"
                                                           title=""><?php if ($row[$i]["type"] == 1) echo $row[$i]["amount"]; ?></span>
                                                     <span class="row__cell color-primary deposit"
@@ -195,7 +133,6 @@ global $message;
                             </div> <!-- Last 5 transactions -->
                         </div>
                     </div>
-
                 <?php } ?>
             </div>
 
@@ -257,15 +194,6 @@ global $message;
                 </div>
             </div> <!-- Date and Time Box, Cur Rate Table & Graph -->
 
-        </div>
-    </div>
+        </div> <!-- Row -->
+    </div> <!-- Container -->
 </section>
-<script src="assets/vendor/jquery/jquery.min.js"></script>
-
-<script>
-
-    $('#btn_bvn_number').on('click', function () {
-        $('#bvn_number').removeClass('hidden');
-        $(this).addClass('hidden')
-    });
-</script>
