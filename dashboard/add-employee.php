@@ -36,9 +36,8 @@ global $message;
                         </div>
 
                     <?php } ?>
-
                     <div class="alert alert-danger hidden">
-                        <strong>Error!</strong> Dear Emp,Please enter the full information !
+                        <strong>Error!</strong> Dear Emp ,Please, Enter information in right way !
                     </div>
                     <form class="form-box__form" method="post" enctype='multipart/form-data'>
 
@@ -63,7 +62,7 @@ global $message;
                         <div class="form-group">
                             <i class="fa fa-barcode"></i>
                             <input type="text" name="national_id" placeholder="Enter the Employee's Nationallity ID"
-                                   id="national_id" class="form-control">
+                                   id="national_id" class="form-control account_number">
                         </div>
 
                         <div class="form-group">
@@ -96,7 +95,7 @@ global $message;
                         <div class="form-group">
                             <i class="fa fa-phone"></i>
                             <input type="text" name="phone" placeholder="Enter the Employee's Phone Number"
-                                   id="phone" class="form-control">
+                                   id="phone" class="form-control account_number">
                         </div>
 
                         <div class="form-group">

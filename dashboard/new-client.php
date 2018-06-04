@@ -77,7 +77,7 @@ global $message;
 
                         <div class="form-group">
                             <i class="fa fa-envelope"></i>
-                            <input type="text" name="email" placeholder="Enter the Client's Email Address"
+                            <input type="email" name="email" placeholder="Enter the Client's Email Address"
                                    id="email"
                                    class="form-control">
                         </div>
