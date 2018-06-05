@@ -2,22 +2,23 @@
 
 include "./controller/MainController.php";
 global $message;
+if (isset($_SESSION['user_id'])) {
+    $user_id = $_SESSION['user_id'];
+    $quer = "SELECT * From accounts WHERE user_id='$user_id'";
+    $query = connect()->query($quer);
+    while ($row = $query->fetch_object()) {
+        $acc_num = $row->acc_num;
+        $balance = $row->balance;
+    }
 
-$user_id = $_SESSION['user_id'];
-$quer = "SELECT * From accounts WHERE user_id='$user_id'";
-$query = connect()->query($quer);
-while ($row = $query->fetch_object()) {
-    $acc_num = $row->acc_num;
-    $balance = $row->balance;
-}
+    $quer2 = "SELECT * From users WHERE id='$user_id'";
+    $query = connect()->query($quer2);
+    while ($row = $query->fetch_object()) {
 
-$quer2 = "SELECT * From users WHERE id='$user_id'";
-$query = connect()->query($quer2);
-while ($row = $query->fetch_object()) {
-
-    $name = $row->full_name;
-    $address = $row->address;
-    $img = $row->thumb;
+        $name = $row->full_name;
+        $address = $row->address;
+        $img = $row->thumb;
+    }
 }
 ?>
 
