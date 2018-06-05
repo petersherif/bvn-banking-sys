@@ -15,27 +15,27 @@
                     if ($message == "success") {
                         ?>
                         <div class="alert alert-success">
-                            <strong>Success!</strong> mission successfully ,your balance :<?php echo $newBalance ?>
+                            <strong>Withdraw successful!</strong> Your new balance is <?php echo $newBalance ?>
                         </div>
                         <?php
                     } else if ($message == "error") {
                         ?>
                         <div class="alert alert-danger">
-                            <strong>Error!</strong> sorry! your balance is not enough , check your balance
+                            <strong>Oops, withdraw failed!</strong> Sorry, insufficient balance, your balance is <?php echo $balance ?>
                         </div>
                         <?php
                     } ?>
 
                     <div class="alert alert-success hidden">
-                        <strong>Success!</strong> Mission successfully.
+                        <strong>Withdraw successful!</strong>
                     </div>
                     <div class="alert alert-danger hidden">
-                        <strong>Error!</strong> Dear Emp,The lowest value is 50 !
+                        <strong>Oops, withdraw failed!</strong> The lowest value is 50!
                     </div>
                     <form method="post" class="form-box__form">
                         <div class="form-group">
                             <i class="fa fa-money"></i>
-                            <input type="text" name="amount" id="amount" placeholder="Enter the Amount to Withdraw"
+                            <input type="text" name="amount" id="amount" placeholder="Enter the withdraw amount"
                                    class="form-control quantity">
                         </div>
 

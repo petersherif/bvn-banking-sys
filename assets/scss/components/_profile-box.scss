@@ -6,7 +6,7 @@
 	&__avatar {
 		height: 150px;
 		width: 150px;
-		margin: auto;
+		margin: 0 auto 20px;
 		overflow: hidden;
 		box-shadow: $block-shadow;
 		text-align: center;
@@ -46,7 +46,7 @@
 		    padding-right: 10px;
 			}
 
-			&.balance {
+			&.special-info--danger {
 				> label,
 				> p {
 					color: $color-accent;
@@ -63,6 +63,7 @@
 
 		.info__data {
 			color: #555;
+			padding-left: 12px;
 		}
 	}
 }
@@ -70,12 +71,28 @@
 
 @media(min-width: 768px) {
 	.profile {
+		
+		&-box:not(.profile-box--dashboard) {
+			.profile__info-wrapper {
+				border-left: 1px solid $color-border;
 
-		&__info-wrapper {
-			border-left: 1px solid $color-border;
+				.form-group {
+					padding-left: 20px;
+				}
+			}
+		}
+	}
+}
 
-			.form-group {
-				padding-left: 20px;
+@media(min-width: 1200px) {
+	.profile {
+		&-box--dashboard {
+			.profile__info-wrapper {
+				border-left: 1px solid $color-border;
+
+				.form-group {
+					padding-left: 20px;
+				}
 			}
 		}
 	}
