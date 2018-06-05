@@ -19,29 +19,29 @@ if (isset($_SESSION['loggedbvn'])) {
 
                 <div class="light-box form-box">
                     <div class="alert alert-success hidden">
-                        <strong>Success!</strong> Mission successfully.
+                        <strong>Deposit successful!</strong>
                     </div>
                     <div class="alert alert-danger hidden">
-                        <strong>Error!</strong> Dear Emp,The lowest value is 50 !
+                        <strong>Oops, deposit failed!</strong> The lowest value is 50!
                     </div>
                     <?php if (!isset($_SESSION['loggedbvn'])) { ?>
                     <?php
                     if ($message == "success") {
                         ?>
                         <div class="alert alert-success">
-                            <strong>Success!</strong> user successfully added.
+                            <strong>Deposit successful!</strong>
                         </div>
                         <?php
                     } else if ($message == "error") {
                         ?>
                         <div class="alert alert-danger">
-                            <strong>Error!</strong> Please, insert full information.
+                            <strong>Oops, deposit failed!</strong> Please, fill the required fields!
                         </div>
                         <?php
                     } else if ($message == "exist") {
                         ?>
                         <div class="alert alert-danger">
-                            <strong>Error!</strong> account number doesn't exist.
+                            <strong>Oops, deposit failed!</strong> This account number is incorrect, please check the account number and try again!
                         </div>
 
                     <?php } ?>
@@ -49,28 +49,28 @@ if (isset($_SESSION['loggedbvn'])) {
                         <div class="form-group">
                             <i class="fa fa-inbox"></i>
                             <input type="text" name="acc_num"
-                                   placeholder="Enter the Reciever Account Number"
+                                   placeholder="Enter the reciever account number"
                                    id="acc_num"
                                    class="form-control account_number">
                         </div>
                         <div class="form-group">
-                            <i class="fa fa-inbox"></i>
+                            <i class="fa fa-user"></i>
                             <input type="text" name="sender_name"
-                                   placeholder="Enter the Fullname"
+                                   placeholder="Enter the reciever full name"
                                    id="sender_name"
                                    class="form-control ">
                         </div>
                         <div class="form-group">
-                            <i class="fa fa-barcode"></i>
+                            <i class="fa fa-address-card"></i>
                             <input type="text" name="nat_id"
-                                   placeholder="Enter the National ID"
+                                   placeholder="Enter the reciever National ID"
                                    id="nat_id"
                                    class="form-control account_number">
                         </div>
 
                         <div class="form-group">
                             <i class="fa fa-money"></i>
-                            <input type="text" name="amount" placeholder="Enter the Amount to Send" id="amount"
+                            <input type="text" name="amount" placeholder="Enter deposit amount" id="amount"
                                    class="form-control quantity">
                         </div>
 
@@ -85,21 +85,21 @@ if (isset($_SESSION['loggedbvn'])) {
                     if ($message == "success") {
                         ?>
                         <div class="alert alert-success">
-                            <strong>Success!</strong> Mission successfully , Your balance
+                            <strong>Deposit successful!</strong> Your new balance
                             is <?php echo $newBalance ?>.
                         </div>
                         <?php
                     } else if ($message == "error") {
                         ?>
                         <div class="alert alert-danger">
-                            <strong>Error!</strong> Please, enter your balance.
+                            <strong>Oops, deposit failed!</strong> Please, enter the deposit amount!
                         </div>
                         <?php
                     } ?>
                     <form method="post" class="form-box__form">
                         <div class="form-group">
                             <i class="fa fa-money"></i>
-                            <input type="text" name="amount" placeholder="Enter the Amount to Send" id="amount"
+                            <input type="text" name="amount" placeholder="Enter the deposit amount" id="amount"
                                    class="form-control quantity">
                         </div>
 

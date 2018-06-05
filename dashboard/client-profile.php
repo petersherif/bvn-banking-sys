@@ -54,7 +54,7 @@
 								<?php } ?>
 							</div> <!-- profile avatar -->
 
-							<div class="profile__avatar-caption avatar-caption" style="text-align: center;">
+							<div class="profile__avatar-caption avatar-caption tc">
 								<h6 class="avatar-caption__heading"><?php echo ucfirst($name);?></h6>
 							</div> <!-- profile avatar caption -->
 
@@ -62,6 +62,7 @@
 								<p class="tc">Here could be a list of the client banks' names</p>
 							</div>
 						</div> <!-- profile avatar wrapper -->
+
 						<div class="col-xs-12 col-sm-8 pv3 profile__info-wrapper form-box form-box--full-width">
 							
 							<div class="profile__info">
@@ -69,65 +70,61 @@
 
 									<h4 class="info__group-title">Client's info</h4>
 
-									<div class="form-group profile__static-info">
+									<div class="form-group profile__form-group profile__static-info">
 					        	<label class="info__title">National ID</label>
 					        	<p class="info__data dib w-70"><?php echo $nat_id ?></p>
 					        </div>
 
-									<div class="form-group">
+									<div class="form-group profile__form-group">
 					        	<label class="info__title" for="name">Name</label>
 					        	<div class="relative dib w-70">
-					            <i class="fa fa-user"></i>
-					            <input type="text" name="name" placeholder="Enter the Client's Full Name" id="name" class="form-control" value="<?php echo $name ;?>">
+					            <input type="text" name="name" placeholder="Enter the Client's Full Name" id="name" class="form-control editable-input" value="<?php echo $name ;?>">
 				            </div>
 					        </div>
 
-					        <div class="form-group">
+					        <div class="form-group profile__form-group">
 					        	<label class="info__title" for="birthday">Birthday</label>
 					        	<div class="relative dib w-70">
-					            <i class="fa fa-calendar"></i>
-					            <input type="date" name="birthday" placeholder="Enter the Client's Birthday" id="birthday" class="form-control" value="<?php echo $birthday ;?>">
+					            <input type="date" name="birthday" placeholder="Enter the Client's Birthday" id="birthday" class="form-control editable-input" value="<?php echo $birthday ;?>">
 				            </div>
 					        </div>
 					
-					        <div class="form-group">
+					        <div class="form-group profile__form-group">
 					        	<label class="info__title" for="address">Address</label>
 					        	<div class="relative dib w-70">
-					            <i class="fa fa-map-marker"></i>
-					            <input type="text" name="address" placeholder="Enter the Client's Address" id="address" class="form-control" value="<?php echo $address ;?>">
+					            <input type="text" name="address" placeholder="Enter the Client's Address" id="address" class="form-control editable-input" value="<?php echo $address ;?>">
 				            </div>
 					        </div>
 
-					        <div class="form-group">
+					        <div class="form-group profile__form-group">
 					        	<label class="info__title" for="email">Email</label>
 					        	<div class="relative dib w-70">
-					            <i class="fa fa-envelope"></i>
-					            <input type="text" name="email" placeholder="Enter the Client's Email Address" id="email" class="form-control" value="<?php echo $email ;?>">
+					            <input type="text" name="email" placeholder="Enter the Client's Email Address" id="email" class="form-control editable-input" value="<?php echo $email ;?>">
 				            </div>
 					        </div>
 
-					        <div class="form-group">
+					        <div class="form-group profile__form-group">
 					        	<label class="info__title" for="phone-num">Phone</label>
 					        	<div class="relative dib w-70">
-					            <i class="fa fa-phone"></i>
-					            <input type="text" name="phone" placeholder="Enter the Client's Phone Number" id="phone-num" class="form-control" value="<?php echo $phone ;?>">
+					            <input type="text" name="phone" placeholder="Enter the Client's Phone Number" id="phone-num" class="form-control editable-input" value="<?php echo $phone ;?>">
 				            </div>
 					        </div>
 
-									<div class="form-group mt4">
+									<div class="form-group profile__form-group mt4">
 										<input type="hidden" id="get_id" name="id" value="" /> 
 										<button name="edit-profile" type="submit" class="btn btn-primary--custom mr2 ml5">Save</button>
 										<button class="btn btn-danger--custom">Delete Account</button>
+										<p class="ml5">Click Save to keep your updates</p>
 									</div>
 
 									<h4 class="info__group-title mt4">Client's account info</h4>
 
-									<div class="form-group profile__static-info">
+									<div class="form-group profile__form-group profile__static-info">
 					        	<label class="info__title">Account#</label>
 					        	<p class="info__data dib w-70"><?php echo $acc_num ?></p>
 					        </div>
 
-					        <div class="form-group profile__static-info balance">
+					        <div class="form-group profile__form-group profile__static-info special-info--danger">
 					        	<label class="info__title">Balance</label>
 					        	<p class="info__data dib w-70"><?php echo $balance ?></p>
 					        </div>

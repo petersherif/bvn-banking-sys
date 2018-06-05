@@ -8,7 +8,7 @@ global $message;
 
         <div class="row">
             <div class="col-xs-12 text-center">
-                <h2 class="section__heading text-center color-text">Add New Employee</h2>
+                <h2 class="section__heading text-center color-text">Add a New Employee</h2>
             </div> <!-- Section Heading -->
         </div> <!-- Heading Row -->
 
@@ -20,30 +20,30 @@ global $message;
                     if ($message == "success") {
                         ?>
                         <div class="alert alert-success">
-                            <strong>Success!</strong> user successfully added.
+                            <strong>Action succeeded!</strong> Employee added!
                         </div>
                         <?php
                     } else if ($message == "error") {
                         ?>
                         <div class="alert alert-danger">
-                            <strong>Error!</strong> Please, insert full information.
+                            <strong>Oops!</strong> Please, fill the required fields!
                         </div>
                         <?php
                     } else if ($message == "exist") {
                         ?>
                         <div class="alert alert-danger">
-                            <strong>Error!</strong> user already exist.
+                            <strong>Oops!</strong> Employee already exist.
                         </div>
 
                     <?php } ?>
                     <div class="alert alert-danger hidden">
-                        <strong>Error!</strong> Dear Emp ,Please, Enter information in right way !
+                        <strong>Oops!</strong> Please, Enter the right information!
                     </div>
                     <form class="form-box__form" method="post" enctype='multipart/form-data'>
 
                         <div class="form-group">
                             <i class="fa fa-user"></i>
-                            <input type="text" name="full_name" placeholder="Enter the Employee's Fullname"
+                            <input type="text" name="full_name" placeholder="Enter the Employee's full name"
                                    id="full_name" class="form-control">
                         </div>
 
@@ -60,8 +60,8 @@ global $message;
                         </div>
 
                         <div class="form-group">
-                            <i class="fa fa-barcode"></i>
-                            <input type="text" name="national_id" placeholder="Enter the Employee's Nationallity ID"
+                            <i class="fa fa-address-card"></i>
+                            <input type="text" name="national_id" placeholder="Enter the Employee's National ID"
                                    id="national_id" class="form-control account_number">
                         </div>
 

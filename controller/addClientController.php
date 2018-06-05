@@ -17,7 +17,7 @@ if (isset($_POST['submit'])) {
     } elseif ($_POST['address'] == "") {
         $message = 'error';
     } else {
-        if ($_POST['bvn_check']) {
+        if (isset($_POST['bvn_check'])) {
             $values = "'" . $_POST['full_name'] . "','" . $_POST['email'] . "','" . $_POST['national_id'] . "','" . $_POST['birthday'] . "','" . $_POST['gender'] . "','" . $_POST['address'] . "','" . $_POST['phone'] . "','0','" . $_SESSION["bank_id"] . "'";
             $sql = "INSERT INTO users (`full_name`,`email`,`national_id`,`birthday`,`gender`,`address`,`phone`,`auth`,bank_id)VALUES ($values)";
             $query = connect()->query($sql);
@@ -38,7 +38,7 @@ if (isset($_POST['submit'])) {
             $message = "success";
 
 
-        } elseif ($_POST['acc_check']) {
+        } elseif (isset($_POST['acc_check'])) {
 
             $sql = "select * from users WHERE email='$email'";
             $query = connect()->query($sql);
