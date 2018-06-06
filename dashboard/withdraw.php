@@ -21,16 +21,14 @@
                     } else if ($message == "error") {
                         ?>
                         <div class="alert alert-danger">
-                            <strong>Oops, withdraw failed!</strong> Sorry, insufficient balance, your balance is <?php echo $balance ?>
+                            <strong>Oops, withdraw failed!</strong> Sorry, insufficient balance, your balance
+                            is <?php echo $balance ?>
                         </div>
                         <?php
                     } ?>
 
                     <div class="alert alert-success hidden">
                         <strong>Withdraw successful!</strong>
-                    </div>
-                    <div class="alert alert-danger hidden">
-                        <strong>Oops, withdraw failed!</strong> The lowest value is 50!
                     </div>
                     <form method="post" class="form-box__form">
                         <div class="form-group">

@@ -24,7 +24,7 @@ if (isset($_SESSION['loggedbvn'])) {
                     <div class="alert alert-danger hidden">
                         <strong>Oops, deposit failed!</strong> The lowest value is 50!
                     </div>
-                    <?php if (!isset($_SESSION['loggedbvn'])) { ?>
+                    <?php if (!isset($_SESSION['loggedAccount'])) { ?>
                     <?php
                     if ($message == "success") {
                         ?>
@@ -41,7 +41,8 @@ if (isset($_SESSION['loggedbvn'])) {
                     } else if ($message == "exist") {
                         ?>
                         <div class="alert alert-danger">
-                            <strong>Oops, deposit failed!</strong> This account number is incorrect, please check the account number and try again!
+                            <strong>Oops, deposit failed!</strong> This account number is incorrect, please check the
+                            account number and try again!
                         </div>
 
                     <?php } ?>

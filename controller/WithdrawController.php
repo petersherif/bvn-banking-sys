@@ -3,7 +3,7 @@ global $message;
 
 if (isset($_POST['amount'])) {
     $amount = $_POST['amount'];
-    $account_id = $_SESSION['id'];
+    $account_id = $_SESSION['acc_id'];
     $account = $_SESSION['bvn'];
     if ($_POST['amount'] == "") {
         $message = 'error';

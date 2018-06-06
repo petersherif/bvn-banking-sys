@@ -4,13 +4,21 @@ session_start();
 include_once('includes/connect.php');
 if (isset($_GET['logout'])) {
     if (isset($_GET['endProcess'])) {
+        unset($_SESSION['loggedAccount']);
         unset($_SESSION['loggedbvn']);
+        unset($_SESSION['bvn_id']);
+        unset($_SESSION['bvn']);
+        unset($_SESSION['account_number']);
         $URL = "Location: home.php";
         header($URL);
     } else {
         unset($_SESSION['loggedin']);
+        unset($_SESSION['loggedAccount']);
         unset($_SESSION['loggedbvn']);
+        unset($_SESSION['bvn_id']);
+        unset($_SESSION['bvn']);
         unset($_SESSION['id']);
+        unset($_SESSION['account_number']);
         unset($_SESSION['username']);
         unset($_SESSION['acc_id']);
         unset($_SESSION['id']);
