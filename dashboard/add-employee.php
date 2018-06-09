@@ -20,24 +20,24 @@ global $message;
                     if ($message == "success") {
                         ?>
                         <div class="alert alert-success">
-                            <strong>Action succeeded!</strong> Employee added!
+                            <strong>Action successful!</strong> Employee added!
                         </div>
                         <?php
                     } else if ($message == "error") {
                         ?>
                         <div class="alert alert-danger">
-                            <strong>Oops!</strong> Please, fill the required fields!
+                            <strong>Oops, action failed!</strong> Please, fill the required fields!
                         </div>
                         <?php
                     } else if ($message == "exist") {
                         ?>
                         <div class="alert alert-danger">
-                            <strong>Oops!</strong> Employee already exist.
+                            <strong>Oops, action failed!</strong> Employee already exist.
                         </div>
 
                     <?php } ?>
                     <div class="alert alert-danger hidden">
-                        <strong>Oops!</strong> Please, Enter the right information!
+                        <strong>Oops, action failed!</strong> Please, enter the right information!
                     </div>
                     <form class="form-box__form" method="post" enctype='multipart/form-data'>
 

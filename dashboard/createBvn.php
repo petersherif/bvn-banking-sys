@@ -36,7 +36,7 @@
                     } else if ($message == "exist") {
                         ?>
                         <div class="alert alert-danger">
-                            <strong>Oops, action failed!</strong> You already has bvn number , Please go to bvn <a
+                            <strong>Oops, action failed!</strong> You already have bvn number , Please go to bvn <a
                                     href="home.php"> login </a>!
                         </div>
 
