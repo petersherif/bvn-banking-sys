@@ -48,7 +48,7 @@ while ($row = $query->fetch_object()) {
 }
 
 
-if (isset($_POST['id'])) {
+if (isset($_POST['submit_delete'])) {
     $id3 = $_POST['id'];
 
 

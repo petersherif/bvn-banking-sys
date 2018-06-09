@@ -4,7 +4,7 @@ if (isset($_POST['go'])) {
     if ($account_number) {
         global $message;
         if ($_POST['account_number'] == "") {
-            echo 'dd';
+            $message = 'error';
         } else {
             unset($_SESSION['loggedAccount']);
             unset($_SESSION['account_number']);
@@ -18,7 +18,6 @@ if (isset($_POST['go'])) {
                     $account_number = $row['acc_num'];
                     $balance = $row['balance'];
                     $_SESSION['loggedAccount'] = "yes";
-                    $_SESSION['id'] = $sender_id;
                     $_SESSION['user_id'] = $user_id;
                     $_SESSION['account_number'] = $account_number;
                     $_SESSION['acc_id'] = $acc_id;

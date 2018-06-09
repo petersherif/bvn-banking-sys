@@ -30,7 +30,7 @@ if (isset($_GET['add-employee'])) {
 if (isset($_GET['search-clients'])) {
     include('./dashboard/search-clients.php');
 }
-if (isset($_SESSION['loggedbvn']) && isset($_GET['client-profile']) || isset($_SESSION['loggedAccount'])) {
+if (isset($_GET['client-profile'])) {
     include('./dashboard/client-profile.php');
 }
 if (isset($_GET['profile'])) {
