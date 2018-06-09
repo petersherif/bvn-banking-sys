@@ -26,11 +26,11 @@ if (isset($_POST['go'])) {
                     exit;
                 }
             } else {
-                $message = "Please, Enter Valid BVN OR Account Number";
+                $message = "<strong>Oops, action failed!</strong> Please, enter a valid BVN number!";
             }
         }
     } else {
-        $message = "Please, Enter Valid BVN OR Account Number";
+        $message = "<strong>Oops, action failed!</strong> Please, enter a valid BVN number!";
 
     }
 }

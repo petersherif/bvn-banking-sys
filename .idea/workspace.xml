@@ -3,12 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="cf92bec3-199f-43f9-9e2c-475ca9b8714d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/controller/EmpProfileController.php" afterPath="$PROJECT_DIR$/controller/EmpProfileController.php" />
       <change beforePath="$PROJECT_DIR$/controller/MainController.php" afterPath="$PROJECT_DIR$/controller/MainController.php" />
+      <change beforePath="$PROJECT_DIR$/controller/bvnLoginController.php" afterPath="$PROJECT_DIR$/controller/bvnLoginController.php" />
       <change beforePath="$PROJECT_DIR$/dashboard/client-profile.php" afterPath="$PROJECT_DIR$/dashboard/client-profile.php" />
-      <change beforePath="$PROJECT_DIR$/dashboard/emp-profile.php" afterPath="$PROJECT_DIR$/dashboard/emp-profile.php" />
+      <change beforePath="$PROJECT_DIR$/dashboard/deposit.php" afterPath="$PROJECT_DIR$/dashboard/deposit.php" />
       <change beforePath="$PROJECT_DIR$/dashboard/main.php" afterPath="$PROJECT_DIR$/dashboard/main.php" />
-      <change beforePath="$PROJECT_DIR$/includes/content.php" afterPath="$PROJECT_DIR$/includes/content.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,11 +38,45 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search-clients.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="search-clients.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dashboard/search-clients.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="156">
               <caret line="45" column="62" lean-forward="false" selection-start-line="45" selection-start-column="62" selection-end-line="45" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UnAuthDepositController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controller/UnAuthDepositController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dashboard/main.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="731">
+              <caret line="161" column="0" lean-forward="false" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+              <folding>
+                <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="false" />
+                <element signature="n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="deposit.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dashboard/deposit.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="61" lean-forward="false" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -131,11 +164,11 @@
         <option value="$PROJECT_DIR$/controller/addClientController.php" />
         <option value="$PROJECT_DIR$/includes/content.php" />
         <option value="$PROJECT_DIR$/controller/MainController.php" />
-        <option value="$PROJECT_DIR$/dashboard/main.php" />
         <option value="$PROJECT_DIR$/dashboard/emp-profile.php" />
         <option value="$PROJECT_DIR$/controller/EmpProfileController.php" />
-        <option value="$PROJECT_DIR$/dashboard/client-profile.php" />
         <option value="$PROJECT_DIR$/dashboard/search-clients.php" />
+        <option value="$PROJECT_DIR$/dashboard/main.php" />
+        <option value="$PROJECT_DIR$/dashboard/client-profile.php" />
       </list>
     </option>
   </component>
@@ -255,16 +288,15 @@
       <workItem from="1528219125794" duration="33632000" />
       <workItem from="1528273851412" duration="17456000" />
       <workItem from="1528505166964" duration="50000" />
-      <workItem from="1528515895480" duration="2942000" />
+      <workItem from="1528515895480" duration="3439000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="228937000" />
+    <option name="totallyTimeSpent" value="229434000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25945538" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -274,7 +306,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32253087" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32253087" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -362,13 +394,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/UnAuthDepositController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -531,14 +556,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/deposit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-901">
-          <caret line="26" column="61" lean-forward="false" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/add-employee.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
@@ -610,35 +627,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/client-profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="9" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-          <folding>
-            <marker date="1528518384973" expanded="true" signature="204:245" ph="SELECT * Fro... accounts" />
-            <marker date="1528518384973" expanded="true" signature="481:580" ph="SELECT * FRO... banks" />
-            <marker date="1528518384973" expanded="true" signature="749:788" ph="SELECT * Fro... users" />
-            <marker date="1528518384973" expanded="true" signature="1698:1850" ph="UPDATE `users`... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controller/MainController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="51" column="5" lean-forward="true" selection-start-line="38" selection-start-column="3" selection-end-line="51" selection-end-column="5" />
           <folding>
-            <marker date="1528517651134" expanded="true" signature="383:422" ph="SELECT * FRO... accounts" />
-            <marker date="1528517651134" expanded="true" signature="1414:1455" ph="SELECT * Fro... accounts" />
-            <marker date="1528517651134" expanded="true" signature="1663:1762" ph="SELECT * FRO... banks" />
+            <marker date="1528519028838" expanded="true" signature="383:422" ph="SELECT * FRO... accounts" />
+            <marker date="1528519028838" expanded="true" signature="1474:1515" ph="SELECT * Fro... accounts" />
+            <marker date="1528519028838" expanded="true" signature="1723:1822" ph="SELECT * FRO... banks" />
           </folding>
         </state>
       </provider>
@@ -691,6 +687,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="45" column="62" lean-forward="false" selection-start-line="45" selection-start-column="62" selection-end-line="45" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/client-profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#0;n#section#0;n#!!top" expanded="false" />
+            <marker date="1528519257923" expanded="true" signature="204:245" ph="SELECT * Fro... accounts" />
+            <marker date="1528519257923" expanded="true" signature="481:580" ph="SELECT * FRO... banks" />
+            <marker date="1528519257923" expanded="true" signature="749:788" ph="SELECT * Fro... users" />
+            <marker date="1528519257923" expanded="true" signature="1698:1850" ph="UPDATE `users`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/UnAuthDepositController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="161" column="0" lean-forward="false" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/deposit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="61" lean-forward="false" selection-start-line="26" selection-start-column="61" selection-end-line="26" selection-end-column="61" />
           <folding />
         </state>
       </provider>

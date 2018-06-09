@@ -28,7 +28,7 @@ include "./controller/MainController.php";
                         <form class="form-box__form" method="post">
                             <div class="form-group">
                                 <i class="fa fa-user"></i>
-                                <input type="text" placeholder="Enter client BVN or account number" name="bvn" id="bvn"
+                                <input type="text" placeholder="Enter client's BVN number" name="bvn" id="bvn"
                                        class="form-control account_number">
                             </div>
 
@@ -66,11 +66,11 @@ include "./controller/MainController.php";
                                                 <div class="accounts-list">
                                                     <form method="post" class="form-box form-box__form"
                                                           style="margin-bottom: 0;">
-                                                        <div class="form-group">
+                                                        <div class="form-group" style="margin-bottom: 0;">
                                                             <i class="fa fa-university"></i>
                                                             <select id="account_number" name="account_number"
                                                                     class="form-control"
-                                                                    style="padding-top: 0;padding-bottom: 0;height: 30px;">
+                                                                    style="padding-top: 0;padding-bottom: 0;height: 30px;width: calc(100% - 37px);">
 
                                                                 <?php
 
@@ -81,7 +81,8 @@ include "./controller/MainController.php";
                                                             </select>
                                                         </div>
                                                         <button name="go" type="submit"
-                                                                class="btn btn-primary--custom mr2 ml5">Go
+                                                                class="btn btn-primary--custom absolute top-0 right-1 mr2 h-100 bw0">
+                                                            Go
                                                         </button>
                                                     </form>
                                                 </div>
@@ -90,7 +91,8 @@ include "./controller/MainController.php";
 
                                     </div> <!-- profile avatar wrapper -->
 
-                                    <div class="col-xs-10 col-xs-offset-1 col-lg-8 col-lg-offset-0 pv3 profile__info-wrapper">
+                                    <div class="col-xs-10 col-xs-offset-1 col-lg-8 col-lg-offset-0 pv3 profile__info-wrapper form-box"
+                                         style="margin-bottom: 0;max-width: initial;">
                                         <div class="row">
                                             <div class="col-xs-12">
                                                 <div class="profile__info">
@@ -100,24 +102,23 @@ include "./controller/MainController.php";
                                                     </div> <!-- profile avatar caption -->
 
                                                     <div class="form-group profile__form-group profile__static-info">
-                                                        <label class="info__title">Bvn number#</label>
+                                                        <label class="info__title">BVN #</label>
                                                         <p class="info__data dib w-70"><?php echo $bvn_num ?></p>
                                                     </div>
                                                     <?php if (isset($_SESSION['loggedAccount'])) { ?>
 
-                                                        <div class="form-group profile__form-group profile__static-info special-info--danger">
-                                                            <label class="info__title">Account Number</label>
+                                                        <div class="form-group profile__form-group profile__static-info">
+                                                            <label class="info__title">Account#</label>
                                                             <p class="info__data dib w-70"><?php echo $acc_num ?></p>
+                                                        </div>
+                                                        <div class="form-group profile__form-group profile__static-info">
+                                                            <label class="info__title">Bank</label>
+                                                            <p class="info__data dib w-70"><?php echo $banks_name ?></p>
+
                                                         </div>
                                                         <div class="form-group profile__form-group profile__static-info special-info--danger">
                                                             <label class="info__title">Balance</label>
                                                             <p class="info__data dib w-70"><?php echo $balance ?></p>
-                                                        </div>
-                                                        <div class="form-group profile__form-group profile__static-info special-info--danger">
-                                                            <label class="info__title">Bank Name:</label>
-                                                            <p class="info__data dib w-70"><?php echo $banks_name ?></p>
-
-
                                                         </div>
                                                     <?php } ?>
 
@@ -158,8 +159,8 @@ include "./controller/MainController.php";
                                                 foreach ($row as $record) {
                                                     ?>
                                                     <li class="table__row data-row">
-												<span class="row__cell"
-                                                      title="10/11/2018"><?php echo $row[$i]['date']; ?></span>
+                                                        <span class="row__cell"
+                                                              title="10/11/2018"><?php echo $row[$i]['date']; ?></span>
                                                         <span class="row__cell color-accent withdraw"
                                                               title=""><?php if ($row[$i]["type"] == 1) echo $row[$i]["amount"]; ?></span>
                                                         <span class="row__cell color-primary deposit"
