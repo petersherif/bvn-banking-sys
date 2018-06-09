@@ -66,7 +66,7 @@
 						<div class="col-xs-12 col-sm-8 pv3 profile__info-wrapper form-box form-box--full-width">
 							
 							<div class="profile__info">
-								<form method="post" class="form-box__form" >
+								<form method="post" class="form-box__form">
 
 									<h4 class="info__group-title">Client's info</h4>
 
