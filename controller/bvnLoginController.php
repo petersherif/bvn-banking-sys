@@ -3,7 +3,6 @@ global $message;
 if (isset($_POST['submit'])) {
     $bvn = $_POST['bvn'];
     if ($bvn) {
-        global $message;
         if ($_POST['bvn'] == "") {
         } else {
             $sql = "SELECT * FROM bvn WHERE bvn_num = $bvn";

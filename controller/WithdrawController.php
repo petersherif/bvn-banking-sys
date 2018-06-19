@@ -24,7 +24,6 @@ if (isset($_POST['amount'])) {
                 $sql = "UPDATE `accounts` SET balance='$newBalance' WHERE id='$account_id'";
                 $query = connect()->query($sql);
                 $message = 'success';
-
             }
         }
     }

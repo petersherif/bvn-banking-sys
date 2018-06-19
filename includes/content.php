@@ -40,5 +40,25 @@ if (isset($_SESSION['loggedAccount']) && isset($_GET['view-transactions'])) {
     include('./dashboard/view-transactions.php');
 }
 
+// ATM content
+if (isset($_GET['atm-main-options'])) {
+    include('./dashboard/atm-main-options.php');
+}
+if (isset($_GET['atm-balance-inquiry'])) {
+    include('./dashboard/atm-balance-inquiry.php');
+}
+if (isset($_GET['atm-withdraw-options'])) {
+    include('./dashboard/atm-withdraw-options.php');
+}
+if (isset($_GET['atm-withdraw-custom'])) {
+    include('./dashboard/atm-withdraw-custom.php');
+}
+if (isset($_GET['atm-finish'])) {
+    include('./dashboard/atm-finish.php');
+}
+if (isset($_GET['atm-choose-account'])) {
+    include('./dashboard/atm-choose-account.php');
+}
+
 ?>
 
