@@ -24,7 +24,7 @@
           			<strong>Oops, withdraw failed!</strong> Sorry, insufficient balance, your balance is <?php echo $balance ?>
               </div>
               <?php
-          	} ?>
+        	} ?>
 						
 					<h2 class="text-center color-primary mb3 mt1">Welcome to BVN ATM</h2>
 					<hr class="mt0 color-border-primary">
