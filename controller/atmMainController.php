@@ -32,8 +32,8 @@ if (isset($_POST['select_acc'])) {
     }
 }
 
-if (isset($_SESSION['acc_id'])) {
-    $acc_id = $_SESSION['acc_id'];
+if (isset($_SESSION['atm_acc_id'])) {
+    $acc_id = $_SESSION['atm_acc_id'];
 
     $sql = "SELECT * From accounts WHERE id='$acc_id'";
     $query = connect()->query($sql);

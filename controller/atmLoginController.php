@@ -39,8 +39,8 @@ if (isset($_POST['submit'])) {
 
 	}
 }
-if (isset($_SESSION['user_id'])) {
-	$user_id = $_SESSION['user_id'];
+if (isset($_SESSION['atm_user_id'])) {
+	$user_id = $_SESSION['atm_user_id'];
 	$sql = "SELECT * From bvn WHERE user_id='$user_id'";
 	$query = connect()->query($sql);
 	while ($row = $query->fetch_object()) {

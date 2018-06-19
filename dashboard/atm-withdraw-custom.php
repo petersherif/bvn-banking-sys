@@ -1,4 +1,4 @@
-<?php include "./controller/WithdrawController.php" ?>
+<?php include "./controller/atmWithdrawController.php" ?>
 <?php include "./controller/atmMainController.php" ?>
 <!-- ATM withdraw custom amount -->
 <section class="">
@@ -44,7 +44,7 @@
 							<form class="form-box__form" method="post">
                 <div class="form-group">
                   <i class="fa fa-money"></i>
-                  <input type="text" name="amount" id="amount" placeholder="Enter the withdraw amount"
+                  <input type="text" name="atm_amount" id="amount" placeholder="Enter the withdraw amount"
                            class="form-control quantity">
                 </div>
 
