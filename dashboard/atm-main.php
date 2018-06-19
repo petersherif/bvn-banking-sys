@@ -1,6 +1,5 @@
 <?php 
 include('./controller/atmMainController.php');
-include('./controller/atmLoginController.php');
  ?>
 <!-- ATM choose account to continue -->
 <section class="">
