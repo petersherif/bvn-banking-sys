@@ -6,7 +6,7 @@ if (isset($_POST['amount'])) {
     $account_id = $_SESSION['acc_id'];
     $account = $_SESSION['bvn'];
     if ($_POST['amount'] == "") {
-        $message = 'error';
+        $message = 'empty';
     } else {
         $sql = "INSERT INTO `transaction`(`amount`,`type`,`acc_id`)VALUE ($amount,1,$account_id)";
         $query = connect()->query($sql);

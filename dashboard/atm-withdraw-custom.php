@@ -1,4 +1,5 @@
 <?php include "./controller/WithdrawController.php" ?>
+<?php include "./controller/atmMainController.php" ?>
 <!-- ATM withdraw custom amount -->
 <section class="">
 	<div class="container">
@@ -11,14 +12,19 @@
             	$URL = "Location: atm-home.php?atm-finish";
 							header($URL);
 							exit;
-            } else if ($message == "error") {
+            } else if ($message == "empty") {
                 ?>
                 <div class="alert alert-danger">
-                    <strong>Oops, withdraw failed!</strong> Sorry, insufficient balance, your balance
-                    is <?php echo $balance ?>
-                </div>
-                <?php
-          } ?>
+	                	<strong>Oops, withdraw failed!</strong> Please, enter the required amount to withdraw!
+	              </div>
+              <?php
+          	} else if ($message == "error") {
+          		?>
+          		<div class="alert alert-danger">
+          			<strong>Oops, withdraw failed!</strong> Sorry, insufficient balance, your balance is <?php echo $balance ?>
+              </div>
+              <?php
+          	} ?>
 						
 					<h2 class="text-center color-primary mb3 mt1">Welcome to BVN ATM</h2>
 					<hr class="mt0 color-border-primary">
@@ -43,7 +49,7 @@
                 </div>
 
 								<div class="form-group">
-									<input type="submit" name="submit" value="withdraw"
+									<input type="submit" name="withdraw" value="withdraw"
 										   class="submit form-control btn btn-block btn-primary">
 								</div>
 							</form>
