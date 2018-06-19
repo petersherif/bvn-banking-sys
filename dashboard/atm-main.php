@@ -1,5 +1,6 @@
 <?php 
 include('./controller/atmMainController.php');
+include('./controller/atmLoginController.php');
  ?>
 <!-- ATM choose account to continue -->
 <section class="">
@@ -35,8 +36,8 @@ include('./controller/atmMainController.php');
 							<form class="form-box__form" method="post">
 
 								<?php
-								if (isset($_SESSION['bvn_id'])) {
-									    $bvn_id = $_SESSION['bvn_id']; 
+								if (isset($_SESSION['atm_bvn_id'])) {
+									    $bvn_id = $_SESSION['atm_bvn_id']; 
 									    $sql = "select accounts.id,accounts.acc_num,accounts.balance,banks.bank_name from accounts inner join bvn_acc on bvn_acc.acc_id=accounts.id inner JOIN banks on accounts.bank_id=banks.id WHERE bvn_acc.bvn_id='$bvn_id'";
 									    $query = connect()->query($sql);
 									    $row = mysqli_fetch_all($query, MYSQLI_ASSOC);
