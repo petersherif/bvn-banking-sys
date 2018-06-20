@@ -31,7 +31,7 @@ include('./controller/atmMainController.php');
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-9">
-							<p>Choose an account to continue</p>
+							<p>Please, choose an account to continue</p>
 							<form class="form-box__form" method="post">
 
 								<?php

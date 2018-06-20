@@ -16,7 +16,7 @@ if (isset($_POST['submit'])) {
                     $_SESSION['bvn_id'] = $bvn_id;
                     $_SESSION['user_id'] = $user_id;
                     $_SESSION['bvn'] = $bvn;
-                    $URL = "Location: home.php";
+                    $URL = "Location: home.php?pre-select-acc";
                     header($URL);
                     exit;
                 }

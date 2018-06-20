@@ -41,6 +41,7 @@
 
 							<div class="profile__avatar-caption avatar-caption tc">
 								<h6 class="avatar-caption__heading"><?php echo ucfirst($name); ?></h6>
+								<p><?php if ($type == 2) echo 'Manager'; else echo 'Employee'; ?></p>
 							</div> <!-- profile avatar caption -->
 
 							<div class="mv6">

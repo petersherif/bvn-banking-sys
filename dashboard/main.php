@@ -125,12 +125,14 @@ include "./controller/MainController.php";
 												</div> <!-- profile info wrapper -->
 											</div>
 										</div> <!-- row -->
+										<?php if (isset($_SESSION['loggedAccount'])) { ?>
 										<div class="row">
 											<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-lg-5 col-lg-offset-7">
 												<a href="home.php?client-profile"
 												   class="btn btn-block btn-primary--custom">View Client's Profile</a>
 											</div>
 										</div> <!-- row -->
+										<?php } ?>
 									</div>
 								</div> <!-- Brief Client Info -->
 							</div>

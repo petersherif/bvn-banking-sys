@@ -59,6 +59,9 @@ if (isset($_GET['atm-finish'])) {
 if (isset($_GET['atm-choose-account'])) {
     include('./dashboard/atm-choose-account.php');
 }
+if (isset($_GET['pre-select-acc'])) {
+    include('./dashboard/pre-select-acc.php');
+}
 
 ?>
 

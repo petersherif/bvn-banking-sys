@@ -14,7 +14,7 @@ if (isset($_POST['submit'])) {
 		if ($_POST['bvn'] == "" || $_POST['card_num'] == "") {
 			$message = "error";
 		} else {
-			$sql = "SELECT * FROM bvn WHERE bvn_num = $bvn AND card_num = $cardNumber";
+			$sql = "SELECT * FROM bvn WHERE bvn_num = '$bvn' AND card_num = '$cardNumber'";
 			$query = connect()->query($sql);
 			if ($query->num_rows != 0) {
 				while ($row = $query->fetch_assoc()) {

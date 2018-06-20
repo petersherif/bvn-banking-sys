@@ -24,7 +24,7 @@ global $message;
 					if ($message == "success") {
 						?>
 						<div class="alert alert-success">
-							<strong>Transfer successful!</strong> Your new balance
+							<strong>Transfer successful!</strong> Your balance
 							is <?php echo $newSenderBalance ?>.
 						</div>
 						<?php
@@ -59,7 +59,7 @@ global $message;
 
 						<div class="form-group">
 							<i class="fa fa-inbox"></i>
-							<input type="text" placeholder="Enter the reciever account or BVN number" id="receiver_id"
+							<input type="text" placeholder="Enter the reciever account number" id="receiver_id"
 								   name="receiver_id"
 								   class="form-control account_number">
 						</div>

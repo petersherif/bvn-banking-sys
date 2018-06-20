@@ -19,11 +19,11 @@
                         Accounts</a></li>
             <?php } ?>
 
-
+            <?php if (!isset($_SESSION['loggedbvn']) || isset($_SESSION['loggedAccount'])) { ?>
             <li class="list__item <?php if (isset($_GET['deposit'])) { ?> active
 						   <?php } ?>"><a href="home.php?deposit"><i
                             class="fa fa-money icon-green "></i> Deposit</a></li>
-
+            <?php } ?>
 
             <?php if (isset($_SESSION['loggedAccount'])) { ?>
                 <li class="list__item <?php if (isset($_GET['withdraw'])) { ?> active
@@ -42,7 +42,7 @@
                         Transactions</a>
                 </li>
             <?php } ?>
-            <?php if (isset($_SESSION['loggedbvn'])) { ?>
+            <?php if (isset($_SESSION['loggedAccount'])) { ?>
                 <li class="list__item <?php if (isset($_GET['client-profile'])) { ?> active
 						   <?php } ?>"><a href="home.php?client-profile"><i class="fa fa-user-circle icon-blue"></i>
                         Client
