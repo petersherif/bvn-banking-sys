@@ -95,6 +95,9 @@ if (str_replace('/bvn-banking-sys', '', $_SERVER['REQUEST_URI']) == '/atm-home.p
 <!-- Bootstrap v.3.3.7 JS -->
 <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
 
+<!-- Chart.js Library -->
+<script src="assets/vendor/chart.js/Chart.min.js"></script>
+
 <!-- Custom JS -->
 <script src="assets/js/main.js"></script>
 

@@ -147,7 +147,7 @@ global $message;
                                    class="submit form-control btn btn-block btn-primary">
                         </div>
                     </form>
-                    If You Have Bank Account <a href="home.php?create-bvn">Click Her</a>
+                    If you have bank account <a href="home.php?create-bvn">Click Here</a>
                 </div>
             </div> <!-- New client Form -->
         </div> <!-- Row -->

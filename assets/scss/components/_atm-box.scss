@@ -1,0 +1,35 @@
+.atm__receipt- {
+	&wrapper {
+		position: absolute;
+    overflow: hidden;
+    height: 350px;
+	}
+
+	&slot {
+		border-top: 3px solid $black;
+	  height: 8px;
+	  width: 85%;
+	  position: absolute;
+	  top: 0;
+	  left: 7.5%;
+	  z-index: 2;
+	}
+
+	&paper {
+		border: 1px solid $black;
+	  padding: 10px 15px;
+	  min-height: 200px;
+	  position: absolute;
+	  width: 80%;
+	  background: $white;
+		top: 0;
+	  left: 10%;
+	  transform: translateY(-102%);
+	  transition: all 1.5s linear;
+
+	  &.print-receipt {
+  		transform: translateY(0);
+    }
+	}
+}
+

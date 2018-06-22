@@ -414,6 +414,32 @@ input[type=radio]:checked + label:before {
     max-width: 300px;
     margin: auto;
     float: none; } }
+.atm__receipt-wrapper {
+  position: absolute;
+  overflow: hidden;
+  height: 350px; }
+.atm__receipt-slot {
+  border-top: 3px solid #000000;
+  height: 8px;
+  width: 85%;
+  position: absolute;
+  top: 0;
+  left: 7.5%;
+  z-index: 2; }
+.atm__receipt-paper {
+  border: 1px solid #000000;
+  padding: 10px 15px;
+  min-height: 200px;
+  position: absolute;
+  width: 80%;
+  background: #FFFFFF;
+  top: 0;
+  left: 10%;
+  transform: translateY(-102%);
+  transition: all 1.5s linear; }
+  .atm__receipt-paper.print-receipt {
+    transform: translateY(0); }
+
 .navbar-custom {
   background: #FFFFFF;
   box-shadow: 0 0 6px rgba(57, 73, 76, 0.35);
