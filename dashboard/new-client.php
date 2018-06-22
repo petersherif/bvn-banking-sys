@@ -135,6 +135,7 @@ global $message;
                                    class="submit form-control btn btn-block btn-primary">
                         </div>
                     </form>
+
                 </div>
             </div> <!-- New client Form -->
         </div> <!-- Row -->

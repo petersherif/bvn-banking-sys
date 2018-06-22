@@ -150,14 +150,26 @@ $(document).ready(function () {
         //     $(this).hide('slow');
         // }
 	});
-	// Conffirm Deletion
+	// Confirm Deletion
 
  
   });
+
   $('.send_id').click(function(){
 	 var id=$(this).val();
 	$( '#get_id' ).val( id );
 		   
-});
+	});
+
+  //Print Receipt
+  $('.yes-print-receipt, .no-go-green').click(function(event) {
+  	event.preventDefault();
+  	$('.atm-receipt-box').addClass('dn');
+  	$('.atm-finish-box').removeClass('dn');
+  	if ($(this).hasClass('yes-print-receipt')) {
+  		$('.atm__receipt-wrapper').removeClass('dn')
+  		$('.atm__receipt-paper').addClass('print-receipt')
+  	}
+  });
 });
 

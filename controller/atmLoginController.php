@@ -25,6 +25,7 @@ if (isset($_POST['submit'])) {
 					$_SESSION['atm_acc_id'] = $atm_acc_id;
 					$_SESSION['atm_user_id'] = $atm_user_id;
 					$_SESSION['atm_acc_num'] = $atm_acc_num;
+					$_SESSION['cardNumber'] = $_POST['card_num'];;
 					$URL = "Location: atm-home.php";
 					header($URL);
 					exit;

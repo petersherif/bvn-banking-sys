@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 22, 2018 at 03:17 AM
+-- Generation Time: Jun 22, 2018 at 07:12 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 5.6.33
 
@@ -43,7 +43,8 @@ CREATE TABLE `accounts` (
 --
 
 INSERT INTO `accounts` (`id`, `acc_num`, `card_num`, `pin_code`, `balance`, `user_id`, `bank_id`) VALUES
-(6, '10000', '12345678912345', '1234', 109400, 135, 1);
+(6, '10000', '12345678912345', '1234', 106400, 135, 1),
+(72, '10001', '01234567891234', '2255', 100, 135, 1);
 
 -- --------------------------------------------------------
 
@@ -85,7 +86,6 @@ CREATE TABLE `bvn` (
 
 INSERT INTO `bvn` (`id`, `bvn_num`, `user_id`) VALUES
 (61, '100000000', 135),
-(69, '100000008', 153),
 (103, '100000019', 182),
 (105, '100000020', 185),
 (107, '100000021', 187);
@@ -107,7 +107,8 @@ CREATE TABLE `bvn_acc` (
 --
 
 INSERT INTO `bvn_acc` (`id`, `bvn_id`, `acc_id`) VALUES
-(23, 61, 6);
+(23, 61, 6),
+(64, 61, 72);
 
 -- --------------------------------------------------------
 
@@ -154,7 +155,17 @@ INSERT INTO `transaction` (`id`, `amount`, `type`, `acc_id`, `sender_name`, `nat
 (76, 500, 1, 6, NULL, NULL, '2018-06-22 02:41:08'),
 (77, 1000, 1, 6, NULL, NULL, '2018-06-22 02:44:58'),
 (78, 2000, 1, 6, NULL, NULL, '2018-06-22 02:49:11'),
-(79, 1000, 1, 6, NULL, NULL, '2018-06-22 02:49:28');
+(79, 1000, 1, 6, NULL, NULL, '2018-06-22 02:49:28'),
+(80, 1000, 1, 6, NULL, NULL, '2018-06-22 04:40:45'),
+(81, 100, 1, 6, NULL, NULL, '2018-06-22 05:10:11'),
+(82, 100, 1, 6, NULL, NULL, '2018-06-22 05:19:32'),
+(83, 100, 1, 6, NULL, NULL, '2018-06-22 05:20:15'),
+(84, 300, 1, 6, NULL, NULL, '2018-06-22 05:22:53'),
+(85, 100, 1, 6, NULL, NULL, '2018-06-22 06:44:28'),
+(86, 100, 1, 6, NULL, NULL, '2018-06-22 06:45:19'),
+(87, 100, 1, 6, NULL, NULL, '2018-06-22 06:46:43'),
+(88, 100, 1, 6, NULL, NULL, '2018-06-22 06:49:33'),
+(89, 1000, 1, 6, NULL, NULL, '2018-06-22 07:02:43');
 
 -- --------------------------------------------------------
 
@@ -197,7 +208,6 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `full_name`, `user_name`, `email`, `password`, `national_id`, `birthday`, `gender`, `address`, `phone`, `thumb`, `auth`) VALUES
 (134, 'Khalifa', 'admin', '5alifa@ogh.co', '21232f297a57a5a743894a0e4a801fc3', '556646465', '2017-01-08', 'maile', 'Alex', '4333343333', NULL, 2),
 (135, 'ahmed khaled', NULL, 'arabi@najd.com', NULL, 'admin', '1996-01-17', 'Male', 'shobra', '5577777777777', NULL, 0),
-(153, '123', NULL, 'omnia_mna2002@yahoo.com', NULL, '123', '1995-12-11', 'Male', 'dfasdfasdfasdfasdfasdf', '011111216938222', NULL, 0),
 (182, '646465464', NULL, '646@s446554465.com', NULL, '646464654654', '4444-04-04', 'Female', '646546546546', '565464654', NULL, 0),
 (185, 'admin', NULL, 'admin@admin.comddsdssdd', NULL, '46546546546', '5464-04-06', 'Male', '64645465465', '44654654', NULL, 0),
 (187, 'Ashraf', NULL, 'ash@g.coo', NULL, '4545454545', '2018-12-31', 'Male', '6th Of October City', '344433333', NULL, 0);
@@ -265,7 +275,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 
 --
 -- AUTO_INCREMENT for table `banks`
@@ -283,13 +293,13 @@ ALTER TABLE `bvn`
 -- AUTO_INCREMENT for table `bvn_acc`
 --
 ALTER TABLE `bvn_acc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT for table `transaction`
 --
 ALTER TABLE `transaction`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
 
 --
 -- AUTO_INCREMENT for table `transfer`
