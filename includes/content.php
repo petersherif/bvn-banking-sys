@@ -39,6 +39,9 @@ if (isset($_GET['profile'])) {
 if (isset($_SESSION['loggedAccount']) && isset($_GET['view-transactions'])) {
     include('./dashboard/view-transactions.php');
 }
+if (isset($_GET['pre-select-acc'])) {
+    include('./dashboard/pre-select-acc.php');
+}
 
 // ATM content
 if (isset($_GET['atm-main-options'])) {
@@ -59,8 +62,8 @@ if (isset($_GET['atm-finish'])) {
 if (isset($_GET['atm-choose-account'])) {
     include('./dashboard/atm-choose-account.php');
 }
-if (isset($_GET['pre-select-acc'])) {
-    include('./dashboard/pre-select-acc.php');
+if (isset($_GET['atm-deposit'])) {
+    include('./dashboard/atm-deposit.php');
 }
 
 ?>

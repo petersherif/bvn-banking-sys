@@ -1,5 +1,5 @@
 <?php include "./controller/atmMainController.php" ?>
-<!-- ATM withdraw custom amount -->
+<!-- ATM deposit custom amount -->
 <section class="">
 	<div class="container">
 		<div class="row">
@@ -14,16 +14,11 @@
             } else if ($message == "empty") {
                 ?>
                 <div class="alert alert-danger">
-	                	<strong>Oops, withdraw failed!</strong> Please, enter the required amount to withdraw!
+	                	<strong>Oops, deposit failed!</strong> Please, enter the required amount to deposit!
 	              </div>
               <?php
-          	} else if ($message == "error") {
-          		?>
-          		<div class="alert alert-danger">
-          			<strong>Oops, withdraw failed!</strong> Sorry, insufficient balance, your balance is EGP<?php echo $balance ?>
-              </div>
-              <?php
-        	} ?>
+          	}
+          ?>
 						
 					<h2 class="text-center color-primary mb3 mt1">Welcome to BVN ATM</h2>
 					<hr class="mt0 color-border-primary">
@@ -39,16 +34,16 @@
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-9">
-							<p>Enter the required amount</p>
+							<p>Insert the deposit cash</p>
 							<form class="form-box__form" method="post">
                 <div class="form-group">
                   <i class="fa fa-money"></i>
-                  <input type="text" name="atm_withdraw_amount" id="amount" placeholder="Enter the withdraw amount"
+                  <input type="text" name="atm_deposit_amount" id="atm_deposit_amount" placeholder="Enter the deposit amount"
                            class="form-control quantity">
                 </div>
 
 								<div class="form-group">
-									<input type="submit" name="withdraw" value="withdraw"
+									<input type="submit" name="deposit" value="deposit"
 										   class="submit form-control btn btn-block btn-primary">
 								</div>
 							</form>
