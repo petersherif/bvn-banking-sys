@@ -3,13 +3,11 @@ ob_start();
 session_start();
 include_once('includes/connect.php');
 if (isset($_GET['atmEndProcess'])) {
-    unset($_SESSION['atm_bvn_id']);
-    unset($_SESSION['atm_user_id']);
-    unset($_SESSION['atm_bvn']);
-    unset($_SESSION['atm_account_number']);
-    unset($_SESSION['atm_acc_id']);
     unset($_SESSION['loggedatmbvn']);
-    unset($_SESSION['loggedAtmAccount']);
+    unset($_SESSION['atm_bvn_id']);
+    unset($_SESSION['atm_acc_id']);
+    unset($_SESSION['atm_user_id']);
+    unset($_SESSION['atm_acc_num']);
     $URL = "Location: atm-home.php";
     header($URL);
 }

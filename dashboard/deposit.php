@@ -87,7 +87,7 @@ if (isset($_SESSION['loggedbvn'])) {
 						?>
 						<div class="alert alert-success">
 							<strong>Deposit successful!</strong> Your new balance
-							is <?php echo $newBalance ?>.
+							is EGP<?php echo $newBalance ?>.
 						</div>
 						<?php
 					} else if ($message == "error") {

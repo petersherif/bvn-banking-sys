@@ -1,4 +1,3 @@
-<?php include "./controller/atmWithdrawController.php" ?>
 <?php include "./controller/atmMainController.php" ?>
 <!-- ATM withdraw custom amount -->
 <section class="">
@@ -21,7 +20,7 @@
           	} else if ($message == "error") {
           		?>
           		<div class="alert alert-danger">
-          			<strong>Oops, withdraw failed!</strong> Sorry, insufficient balance, your balance is <?php echo $balance ?>
+          			<strong>Oops, withdraw failed!</strong> Sorry, insufficient balance, your balance is EGP<?php echo $balance ?>
               </div>
               <?php
         	} ?>

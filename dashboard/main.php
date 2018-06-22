@@ -118,7 +118,7 @@ include "./controller/MainController.php";
 														</div>
 														<div class="form-group profile__form-group profile__static-info special-info--danger">
 															<label class="info__title">Balance</label>
-															<p class="info__data dib w-70"><?php echo $balance ?></p>
+															<p class="info__data dib w-70">EGP<?php echo $balance ?></p>
 														</div>
 													<?php } ?>
 

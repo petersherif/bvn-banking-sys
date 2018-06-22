@@ -93,9 +93,9 @@ include "controller/atmLoginController.php";
 								<div class="form-group">
 									<i class="fa fa-lock"></i>
 									<input type="password"
-												 placeholder="Please insert your BVN number"
-												 name="bvn"
-												 id="bvn"
+												 placeholder="Please insert your PIN code"
+												 name="pin_code"
+												 id="pin-code"
 										     class="form-control"
 										     required="required">
 								</div>

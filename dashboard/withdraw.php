@@ -15,7 +15,7 @@
                     if ($message == "success") {
                         ?>
                         <div class="alert alert-success">
-                            <strong>Withdraw successful!</strong> Your new balance is <?php echo $newBalance ?>
+                            <strong>Withdraw successful!</strong> Your new balance is EGP<?php echo $newBalance ?>
                         </div>
                         <?php
                     } else if ($message == "error") {

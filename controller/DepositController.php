@@ -7,10 +7,6 @@ if (isset($_POST['amount'])) {
     if ($_POST['amount'] == "") {
         $message = 'error';
     } else {
-
-        $sql = "INSERT INTO `transaction`(`amount`,`type`,`acc_id`)VALUE ($amount,0,$account_id)";
-        $query = connect()->query($sql);
-        ?><?php
         $sql = "SELECT * FROM accounts WHERE id='$account_id'";
         $query = connect()->query($sql);
         if ($query->num_rows > 0) {
@@ -19,6 +15,8 @@ if (isset($_POST['amount'])) {
             }
             $newBalance = $balance + $amount;
             $sql = "UPDATE `accounts` SET balance='$newBalance' WHERE id='$account_id'";
+            $query = connect()->query($sql);
+            $sql = "INSERT INTO `transaction`(`amount`,`type`,`acc_id`)VALUE ($amount,0,$account_id)";
             $query = connect()->query($sql);
             $message = 'success';
         }

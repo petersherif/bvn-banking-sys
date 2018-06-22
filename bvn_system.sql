@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 19, 2018 at 03:57 AM
+-- Generation Time: Jun 22, 2018 at 03:17 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 5.6.33
 
@@ -31,6 +31,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `accounts` (
   `id` int(255) NOT NULL,
   `acc_num` varchar(6) NOT NULL,
+  `card_num` varchar(14) DEFAULT NULL,
+  `pin_code` varchar(4) DEFAULT NULL,
   `balance` int(255) DEFAULT '0',
   `user_id` int(255) NOT NULL,
   `bank_id` int(10) UNSIGNED DEFAULT NULL
@@ -40,12 +42,8 @@ CREATE TABLE `accounts` (
 -- Dumping data for table `accounts`
 --
 
-INSERT INTO `accounts` (`id`, `acc_num`, `balance`, `user_id`, `bank_id`) VALUES
-(6, '10000', 13900, 135, 1),
-(18, '10011', 10, 135, 2),
-(19, '10012', 0, 135, 3),
-(20, '10013', 0, 135, 4),
-(21, '10014', 0, 135, 5);
+INSERT INTO `accounts` (`id`, `acc_num`, `card_num`, `pin_code`, `balance`, `user_id`, `bank_id`) VALUES
+(6, '10000', '12345678912345', '1234', 109400, 135, 1);
 
 -- --------------------------------------------------------
 
@@ -78,7 +76,6 @@ INSERT INTO `banks` (`id`, `bank_name`) VALUES
 CREATE TABLE `bvn` (
   `id` int(255) NOT NULL,
   `bvn_num` varchar(255) NOT NULL,
-  `card_num` varchar(14) DEFAULT NULL,
   `user_id` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -86,12 +83,12 @@ CREATE TABLE `bvn` (
 -- Dumping data for table `bvn`
 --
 
-INSERT INTO `bvn` (`id`, `bvn_num`, `card_num`, `user_id`) VALUES
-(61, '100000000', '12345678912345', 135),
-(69, '100000008', '', 153),
-(103, '100000019', '', 182),
-(105, '100000020', '', 185),
-(107, '100000021', '', 187);
+INSERT INTO `bvn` (`id`, `bvn_num`, `user_id`) VALUES
+(61, '100000000', 135),
+(69, '100000008', 153),
+(103, '100000019', 182),
+(105, '100000020', 185),
+(107, '100000021', 187);
 
 -- --------------------------------------------------------
 
@@ -110,11 +107,7 @@ CREATE TABLE `bvn_acc` (
 --
 
 INSERT INTO `bvn_acc` (`id`, `bvn_id`, `acc_id`) VALUES
-(23, 61, 6),
-(34, 61, 18),
-(35, 61, 19),
-(36, 61, 20),
-(37, 61, 21);
+(23, 61, 6);
 
 -- --------------------------------------------------------
 
@@ -153,7 +146,15 @@ INSERT INTO `transaction` (`id`, `amount`, `type`, `acc_id`, `sender_name`, `nat
 (68, 15000, 0, 6, NULL, NULL, '2018-06-19 03:17:59'),
 (69, 300, 1, 6, NULL, NULL, '2018-06-19 03:46:33'),
 (70, 500, 1, 6, NULL, NULL, '2018-06-19 03:48:58'),
-(71, 300, 1, 6, NULL, NULL, '2018-06-19 03:52:47');
+(71, 300, 1, 6, NULL, NULL, '2018-06-19 03:52:47'),
+(72, 2147483647, 1, 6, NULL, NULL, '2018-06-22 02:29:23'),
+(73, 2147483647, 1, 6, NULL, NULL, '2018-06-22 02:36:49'),
+(74, 2147483647, 1, 6, NULL, NULL, '2018-06-22 02:37:10'),
+(75, 100000, 0, 6, NULL, NULL, '2018-06-22 02:38:54'),
+(76, 500, 1, 6, NULL, NULL, '2018-06-22 02:41:08'),
+(77, 1000, 1, 6, NULL, NULL, '2018-06-22 02:44:58'),
+(78, 2000, 1, 6, NULL, NULL, '2018-06-22 02:49:11'),
+(79, 1000, 1, 6, NULL, NULL, '2018-06-22 02:49:28');
 
 -- --------------------------------------------------------
 
@@ -288,7 +289,7 @@ ALTER TABLE `bvn_acc`
 -- AUTO_INCREMENT for table `transaction`
 --
 ALTER TABLE `transaction`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- AUTO_INCREMENT for table `transfer`
