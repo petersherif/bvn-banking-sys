@@ -36,4 +36,8 @@ if (isset($_POST['atm_amount'])) {
 		}
 	}
 
-} ?>
+} 
+
+
+
+?>

@@ -59,23 +59,7 @@
 							<div class="atm__receipt-paper ttu">
 								<img src="assets/img/full-logo.png" alt="BVN" class="img-responsive w5 db center mb3" />
 								<div class="receipt-paper__header">
-									<p>
-										<span class="w4 dib">trans#</span>
-										<span class="w4 dib">date</span>
-										<span class="w4 dib">time</span>
-									</p>
-									<p>
-										<span class="w4 dib">5013</span>
-										<span class="w4 dib">01/06/18</span>
-										<span class="w4 dib">18:05</span>
-									</p>
-								</div>
-								<div class="receipt-paper__sub-header pl3">
-									<p>card : 535092******1200</p>
-									<p class="f3 b">withdrawal transaction</p>
-								</div>
-								<div class="receipt-paper__body pt4 tj">
-									<p><span class="pr2">amount withdrawn</span>: <span class="pl4">1,000 EGP</span></p>
+									
 								</div>
 								<div class="receipt-paper__footer pt4">
 									<p class="f5">Thanks for using BVN ATM service</p>
