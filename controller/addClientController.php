@@ -29,26 +29,21 @@ if (isset($_POST['submit'])) {
             $link = mysqli_connect("localhost", "root", "", "bvn_system");
             mysqli_query($link, $sql_user);
             $last_user_id = mysqli_insert_id($link);
-            $sql = "SELECT acc_num from accounts ORDER BY acc_num DESC LIMIT 1";
-            $query = connect()->query($sql);
-            $row = $query->fetch_assoc();
-            if (count($row) == 0)
-                $acc_num = 15789711190111589;
-            else
-                $acc_num = $row['acc_num'] + 8848;
-            $card_num = 5264730568882987 + $last_user_id + $pin_code;
-            echo $last_user_id;
+            do {
+                $acc_num = mt_rand(1000000000, 9999999999);
+                $sql = "select * from accounts WHERE acc_num='$acc_num'";
+                $query = connect()->query($sql);
+            } while ($query->num_rows != 0);
+            $card_num = 520072 . mt_rand(10, 99) . 68 . mt_rand(10, 99) . mt_rand(1000, 9999);
             $sql_acc = "INSERT INTO accounts (acc_num,card_num ,pin_code,balance,user_id,bank_id) VALUES ($acc_num,$card_num,$pin_code,0,$last_user_id,1)";
             $link = mysqli_connect("localhost", "root", "", "bvn_system");
             mysqli_query($link, $sql_acc);
             $last_acc_id = mysqli_insert_id($link);
-            $sql = "SELECT bvn_num from bvn ORDER BY bvn_num DESC LIMIT 1";
-            $query = connect()->query($sql);
-            $row = $query->fetch_assoc();
-            if (count($row) == 0)
-                $bvnNumber = 100000000;
-            else
-                $bvnNumber = $row['bvn_num'] + 1;
+            do {
+                $bvnNumber = mt_rand(1000000000, 9999999999);
+                $sql = "select * from bvn WHERE bvn_num='$bvnNumber'";
+                $query = connect()->query($sql);
+            } while ($query->num_rows != 0);
             $sql_bvn = "INSERT INTO bvn (bvn_num,user_id)VALUES ($bvnNumber,$last_user_id)";
             $link = mysqli_connect("localhost", "root", "", "bvn_system");
             mysqli_query($link, $sql_bvn);

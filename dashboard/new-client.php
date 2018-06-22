@@ -20,11 +20,11 @@ global $message;
                     if ($message == "success") {
                         ?>
                         <div class="alert alert-success">
-                            <strong>Action successful!</strong> Client successfully added! ,<br>
-                            your bvn number :<?php echo $bvn_num ?><br>
-                            your account number :<?php echo $acc_num ?>
-                            your account number :<?php echo $card_num ?>
-
+                            <p><strong>Action successful!</strong> Client successfully added!</p>
+                            <hr>
+                            <p class="w-70"><span class="pr3 w-30 dib">BVN</span> : <span class="pl3 fr"><?php echo $bvn_num ?></span></p>
+                            <p class="w-70"><span class="pr3 w-30 dib">Account</span> : <span class="pl3 fr"><?php echo $acc_num ?></span></p>
+                            <p class="w-70"><span class="pr3 w-30 dib">Card</span> : <span class="pl3 fr"><?php echo substr($card_num,0,4) ?> <?php echo substr($card_num,4,4) ?> <?php echo substr($card_num,8,4) ?> <?php echo substr($card_num,12,4) ?></span></p>
                         </div>
                         <?php
                     } else if ($message == "error") {

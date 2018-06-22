@@ -20,7 +20,7 @@ if (isset($_GET['print_receipt'])) {
 	</p>
 </div>
 <div class="receipt-paper__sub-header pl3">
-	<p>card :<?php echo substr($_SESSION['cardNumber'],0,7)."*****".substr($_SESSION['cardNumber'],12,13);  ;?> </p>
+	<p>card :<?php echo substr($_SESSION['cardNumber'],0,7)."*****".substr($_SESSION['cardNumber'],12,16);  ;?> </p>
 	<p class="f3 b">withdrawal transaction</p>
 </div>
 <div class="receipt-paper__body pt4 tj">
