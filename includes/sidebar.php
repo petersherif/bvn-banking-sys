@@ -20,9 +20,9 @@
             <?php } ?>
 
             <?php if (!isset($_SESSION['loggedbvn']) || isset($_SESSION['loggedAccount'])) { ?>
-            <li class="list__item <?php if (isset($_GET['deposit'])) { ?> active
+                <li class="list__item <?php if (isset($_GET['deposit'])) { ?> active
 						   <?php } ?>"><a href="home.php?deposit"><i
-                            class="fa fa-money icon-green "></i> Deposit</a></li>
+                                class="fa fa-money icon-green "></i> Deposit</a></li>
             <?php } ?>
 
             <?php if (isset($_SESSION['loggedAccount'])) { ?>
@@ -44,7 +44,8 @@
             <?php } ?>
             <?php if (isset($_SESSION['loggedAccount'])) { ?>
                 <li class="list__item <?php if (isset($_GET['client-profile'])) { ?> active
-						   <?php } ?>"><a href="home.php?client-profile"><i class="fa fa-user-circle icon-blue"></i>
+						   <?php } ?>"><a href="home.php?client-profile&id=<?php echo $_SESSION['user_id'] ?>"><i
+                                class="fa fa-user-circle icon-blue"></i>
                         Client
                         Profile</a>
                 </li>
