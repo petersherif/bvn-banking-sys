@@ -110,22 +110,10 @@ global $message;
                                    class="form-control">
                         </div>
                         <div class="form-group">
-                            <div class="custom-control custom-radio">
-                                <input type="radio" id="customRadio2" name="customRadio" value="0"
-                                       class="custom-control-input">
-                                <label class="custom-control-label" for="customRadio2">Create Bvn Number</label>
-                            </div>
-                            <div class="custom-control custom-radio">
-                                <input type="radio" id="customRadio1" name="customRadio" value="1"
-                                       class="custom-control-input">
-                                <label class="custom-control-label" for="customRadio1">Create account</label>
-                            </div>
-
-                            <div class="custom-control custom-radio">
-                                <input type="radio" id="customRadio3" name="customRadio" value="2"
-                                       class="custom-control-input">
-                                <label class="custom-control-label" for="customRadio3">Create both</label>
-                            </div>
+                            <i class="fa fa-lock"></i>
+                            <input type="text" name="pin_code" placeholder="Enter the client's pin code"
+                                   id="pin_code"
+                                   class="form-control">
                         </div>
                         <!--                        <div class="form-group">-->
                         <!--                            <input type="radio" class="radio" id="acc" name="acc">-->
@@ -147,7 +135,6 @@ global $message;
                                    class="submit form-control btn btn-block btn-primary">
                         </div>
                     </form>
-                    If You Have Bank Account <a href="home.php?create-bvn">Click Her</a>
                 </div>
             </div> <!-- New client Form -->
         </div> <!-- Row -->
