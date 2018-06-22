@@ -17,30 +17,13 @@ global $message;
 
                 <div class="light-box form-box">
                     <?php
-                    if ($message == "success_bvn") {
-                        ?>
-                        <div class="alert alert-success">
-                            <strong>Action successful!</strong> Client successfully added! ,<br>
-                            your bvn number :<?php echo $only_bvn_num ?><br>
-
-                        </div>
-                        <?php
-                    }
-                    if ($message == "success_acc") {
-                        ?>
-                        <div class="alert alert-success">
-                            <strong>Action successful!</strong> Client successfully added! ,<br>
-                            your acc number :<?php echo $only_acc_num ?><br>
-
-                        </div>
-                        <?php
-                    }
-                    if ($message == "success_both") {
+                    if ($message == "success") {
                         ?>
                         <div class="alert alert-success">
                             <strong>Action successful!</strong> Client successfully added! ,<br>
                             your bvn number :<?php echo $bvn_num ?><br>
                             your account number :<?php echo $acc_num ?>
+                            your account number :<?php echo $card_num ?>
 
                         </div>
                         <?php
@@ -111,7 +94,7 @@ global $message;
                         </div>
                         <div class="form-group">
                             <i class="fa fa-lock"></i>
-                            <input type="text" name="pin_code" placeholder="Enter the client's pin code"
+                            <input type="password" name="pin_code" placeholder="Enter the client's pin code"
                                    id="pin_code"
                                    class="form-control">
                         </div>
