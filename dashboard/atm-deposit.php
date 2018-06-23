@@ -8,7 +8,7 @@
 				<div class="light-box form-box form-box--full-width ba color-border-primary">
 					<?php
             if ($message == "success") {
-            	$URL = "Location: atm-home.php?atm-finish";
+            	$URL = "Location: atm-home.php?atm-finish&operation=2";
 							header($URL);
 							exit;
             } else if ($message == "empty") {
