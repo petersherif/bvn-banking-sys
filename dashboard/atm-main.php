@@ -24,6 +24,7 @@
 							<div class="tc mt5">
 								<a href="atm-home.php?atm-balance-inquiry" class="b mh4">Balance Inquery</a>
 								<a href="atm-home.php?atm-withdraw-options" class="b mh4">Withdraw</a>
+								<a href="atm-home.php?atm-deposit" class="b mh4">Deposit</a>
 							</div>
 							<a href="atm-home.php?atmEndProcess" class="mt5 db">Cancel and eject the card!</a>
 						</div>

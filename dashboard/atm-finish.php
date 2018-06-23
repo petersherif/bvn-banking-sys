@@ -45,7 +45,11 @@
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-9">
-							<p>Withdraw successful, please wait for the cash!</p>
+							<p><?php if(isset($_GET['operation'])){
+								if($_GET['operation']==1) 
+								echo "Withdraw successful, please wait for the cash!";
+								else 
+								echo "Deposit successful!"; } ?></p>
 							<p class="pt2 tc">Do you want to do another operation?</p>
 							<div class="tc mt4">
 								<a href="atm-home.php" class="b mh4">Yes!</a>

@@ -18,8 +18,8 @@ if (!isset($_SESSION['loggedbvn']) && !isset($_SESSION['loggedAccount']) && isse
 if (isset($_SESSION['loggedbvn']) && !isset($_SESSION['loggedAccount']) && isset($_GET['add-account'])) {
     include('./dashboard/addAccount.php');
 }
-if (isset($_GET['select-account'])) {
-    include('./dashboard/select-account.php');
+if (isset($_GET['bvn_registration'])) {
+    include('./dashboard/bvn_registration.php');
 }
 if (isset($_GET['new-client'])) {
     include('./dashboard/new-client.php');
@@ -38,6 +38,9 @@ if (isset($_GET['profile'])) {
 }
 if (isset($_SESSION['loggedAccount']) && isset($_GET['view-transactions'])) {
     include('./dashboard/view-transactions.php');
+}
+if (isset($_GET['pre-select-acc'])) {
+    include('./dashboard/pre-select-acc.php');
 }
 
 // ATM content
@@ -59,8 +62,8 @@ if (isset($_GET['atm-finish'])) {
 if (isset($_GET['atm-choose-account'])) {
     include('./dashboard/atm-choose-account.php');
 }
-if (isset($_GET['pre-select-acc'])) {
-    include('./dashboard/pre-select-acc.php');
+if (isset($_GET['atm-deposit'])) {
+    include('./dashboard/atm-deposit.php');
 }
 
 ?>

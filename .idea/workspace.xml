@@ -2,13 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf92bec3-199f-43f9-9e2c-475ca9b8714d" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/dashboard/atm-deposit.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/assets/ajax/ajax.js" afterPath="$PROJECT_DIR$/assets/ajax/ajax.js" />
-      <change beforePath="$PROJECT_DIR$/controller/CreateAccountController.php" afterPath="$PROJECT_DIR$/controller/CreateAccountController.php" />
+      <change beforePath="$PROJECT_DIR$/assets/ajax/print_receipt.php" afterPath="$PROJECT_DIR$/assets/ajax/print_receipt.php" />
+      <change beforePath="$PROJECT_DIR$/bvn_system.sql" afterPath="$PROJECT_DIR$/bvn_system.sql" />
       <change beforePath="$PROJECT_DIR$/controller/addClientController.php" afterPath="$PROJECT_DIR$/controller/addClientController.php" />
+      <change beforePath="$PROJECT_DIR$/controller/atmMainController.php" afterPath="$PROJECT_DIR$/controller/atmMainController.php" />
+      <change beforePath="$PROJECT_DIR$/dashboard/atm-finish.php" afterPath="$PROJECT_DIR$/dashboard/atm-finish.php" />
+      <change beforePath="$PROJECT_DIR$/dashboard/atm-main.php" afterPath="$PROJECT_DIR$/dashboard/atm-main.php" />
+      <change beforePath="$PROJECT_DIR$/dashboard/atm-withdraw-custom.php" afterPath="$PROJECT_DIR$/dashboard/atm-withdraw-custom.php" />
+      <change beforePath="$PROJECT_DIR$/dashboard/atm-withdraw-options.php" afterPath="$PROJECT_DIR$/dashboard/atm-withdraw-options.php" />
       <change beforePath="$PROJECT_DIR$/dashboard/new-client.php" afterPath="$PROJECT_DIR$/dashboard/new-client.php" />
-      <change beforePath="$PROJECT_DIR$/dashboard/select-account.php" afterPath="$PROJECT_DIR$/dashboard/select-account.php" />
+      <change beforePath="$PROJECT_DIR$/dashboard/select-account.php" afterPath="" />
       <change beforePath="$PROJECT_DIR$/includes/content.php" afterPath="$PROJECT_DIR$/includes/content.php" />
+      <change beforePath="$PROJECT_DIR$/includes/sidebar.php" afterPath="$PROJECT_DIR$/includes/sidebar.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,15 +29,15 @@
       <file leaf-file-name="new-client.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dashboard/new-client.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="24" column="71" lean-forward="false" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
+            <state relative-caret-position="51">
+              <caret line="21" column="57" lean-forward="false" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="select-account.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dashboard/select-account.php">
+      <file leaf-file-name="bvn_registration.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dashboard/bvn_registration.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
               <caret line="90" column="81" lean-forward="false" selection-start-line="90" selection-start-column="81" selection-end-line="90" selection-end-column="81" />
@@ -42,27 +49,27 @@
       <file leaf-file-name="addClientController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/addClientController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="58" column="28" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+            <state relative-caret-position="187">
+              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding>
-                <marker date="1529669999110" expanded="true" signature="671:718" ph="select * fro... users" />
-                <marker date="1529669999110" expanded="true" signature="1100:1214" ph="INSERT INTO users... " />
-                <marker date="1529669999110" expanded="true" signature="1409:1467" ph="SELECT acc_n... accounts" />
-                <marker date="1529669999110" expanded="true" signature="1799:1928" ph="INSERT INTO accounts... " />
-                <marker date="1529669999110" expanded="true" signature="2121:2174" ph="SELECT bvn_n... bvn" />
-                <marker date="1529669999110" expanded="true" signature="2429:2495" ph="INSERT INTO bvn... " />
-                <marker date="1529669999110" expanded="true" signature="2696:2765" ph="INSERT INTO bvn_acc... " />
-                <marker date="1529669999110" expanded="true" signature="2997:3038" ph="SELECT * Fro... bvn" />
-                <marker date="1529669999110" expanded="true" signature="3214:3260" ph="SELECT * Fro... accounts" />
+                <marker date="1529722155159" expanded="true" signature="671:718" ph="select * fro... users" />
+                <marker date="1529722155159" expanded="true" signature="1100:1214" ph="INSERT INTO users... " />
+                <marker date="1529722155159" expanded="true" signature="1491:1538" ph="select * fro... accounts" />
+                <marker date="1529722155159" expanded="true" signature="1754:1883" ph="INSERT INTO accounts... " />
+                <marker date="1529722155159" expanded="true" signature="2159:2203" ph="select * fro... bvn" />
+                <marker date="1529722155159" expanded="true" signature="2324:2390" ph="INSERT INTO bvn... " />
+                <marker date="1529722155159" expanded="true" signature="2591:2660" ph="INSERT INTO bvn_acc... " />
+                <marker date="1529722155159" expanded="true" signature="2892:2933" ph="SELECT * Fro... bvn" />
+                <marker date="1529722155159" expanded="true" signature="3109:3155" ph="SELECT * Fro... accounts" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CreateAccountController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CreateAccountController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/CreateAccountController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
+            <state relative-caret-position="578">
               <caret line="68" column="13" lean-forward="false" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="13" />
               <folding>
                 <marker date="1529721366203" expanded="true" signature="184:231" ph="SELECT * FRO... bvn" />
@@ -78,11 +85,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="content.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="navbar.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/navbar.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sidebar.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/includes/sidebar.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="11" column="23" lean-forward="false" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+              <folding>
+                <element signature="e#829#889#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="content.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/includes/content.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="43" />
+            <state relative-caret-position="238">
+              <caret line="23" column="33" lean-forward="false" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -106,6 +135,7 @@
       <find>$email</find>
       <find>SENDER</find>
       <find>incl</find>
+      <find>add</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -149,7 +179,6 @@
         <option value="$PROJECT_DIR$/controller/bvnLoginController.php" />
         <option value="$PROJECT_DIR$/dashboard/addAccount.php" />
         <option value="$PROJECT_DIR$/home.php" />
-        <option value="$PROJECT_DIR$/includes/sidebar.php" />
         <option value="$PROJECT_DIR$/dashboard/deposit.php" />
         <option value="$PROJECT_DIR$/dashboard/createBvn.php" />
         <option value="$PROJECT_DIR$/controller/MainController.php" />
@@ -159,12 +188,13 @@
         <option value="$PROJECT_DIR$/controller/EmployeeController.php" />
         <option value="$PROJECT_DIR$/dashboard/client-profile.php" />
         <option value="$PROJECT_DIR$/dashboard/search-clients.php" />
-        <option value="$PROJECT_DIR$/includes/content.php" />
         <option value="$PROJECT_DIR$/assets/ajax/ajax.js" />
-        <option value="$PROJECT_DIR$/controller/addClientController.php" />
-        <option value="$PROJECT_DIR$/dashboard/new-client.php" />
         <option value="$PROJECT_DIR$/dashboard/select-account.php" />
         <option value="$PROJECT_DIR$/controller/CreateAccountController.php" />
+        <option value="$PROJECT_DIR$/dashboard/new-client.php" />
+        <option value="$PROJECT_DIR$/controller/addClientController.php" />
+        <option value="$PROJECT_DIR$/includes/sidebar.php" />
+        <option value="$PROJECT_DIR$/includes/content.php" />
       </list>
     </option>
   </component>
@@ -299,12 +329,12 @@
       <workItem from="1528556569763" duration="1118000" />
       <workItem from="1529636446855" duration="7765000" />
       <workItem from="1529662451396" duration="12108000" />
-      <workItem from="1529718259381" duration="3459000" />
+      <workItem from="1529718259381" duration="4223000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="254703000" />
+    <option name="totallyTimeSpent" value="255467000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -467,13 +497,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dashboard/search-account.php" />
     <entry file="file://$PROJECT_DIR$/dashboard/addAccount.php" />
-    <entry file="file://$PROJECT_DIR$/includes/sidebar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="27" column="22" lean-forward="false" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controller/CreateBvnController.php" />
     <entry file="file://$PROJECT_DIR$/dashboard/createBvn.php" />
     <entry file="file://$PROJECT_DIR$/dashboard/add-employee.php">
@@ -509,13 +532,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="51" column="5" lean-forward="true" selection-start-line="38" selection-start-column="3" selection-end-line="51" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/navbar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -566,6 +582,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="71" column="13" lean-forward="false" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
+          <folding>
+            <marker date="1529635234869" expanded="true" signature="98:139" ph="SELECT * Fro... accounts" />
+            <marker date="1529635234869" expanded="true" signature="319:418" ph="SELECT * FRO... banks" />
+            <marker date="1529635234869" expanded="true" signature="547:586" ph="SELECT * Fro... users" />
+            <marker date="1529635234869" expanded="true" signature="1336:1488" ph="UPDATE `users`... " />
+            <marker date="1529635234869" expanded="true" signature="1687:1723" ph="DELETE FROM `users`... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -626,23 +649,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/includes/content.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/new-client.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="24" column="71" lean-forward="false" selection-start-line="24" selection-start-column="71" selection-end-line="24" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dashboard/select-account.php">
+    <entry file="file://$PROJECT_DIR$/dashboard/bvn_registration.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="90" column="81" lean-forward="false" selection-start-line="90" selection-start-column="81" selection-end-line="90" selection-end-column="81" />
@@ -650,27 +657,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dashboard/new-client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="21" column="57" lean-forward="false" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controller/addClientController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="58" column="28" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+        <state relative-caret-position="187">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding>
-            <marker date="1529669999110" expanded="true" signature="671:718" ph="select * fro... users" />
-            <marker date="1529669999110" expanded="true" signature="1100:1214" ph="INSERT INTO users... " />
-            <marker date="1529669999110" expanded="true" signature="1409:1467" ph="SELECT acc_n... accounts" />
-            <marker date="1529669999110" expanded="true" signature="1799:1928" ph="INSERT INTO accounts... " />
-            <marker date="1529669999110" expanded="true" signature="2121:2174" ph="SELECT bvn_n... bvn" />
-            <marker date="1529669999110" expanded="true" signature="2429:2495" ph="INSERT INTO bvn... " />
-            <marker date="1529669999110" expanded="true" signature="2696:2765" ph="INSERT INTO bvn_acc... " />
-            <marker date="1529669999110" expanded="true" signature="2997:3038" ph="SELECT * Fro... bvn" />
-            <marker date="1529669999110" expanded="true" signature="3214:3260" ph="SELECT * Fro... accounts" />
+            <marker date="1529722155159" expanded="true" signature="671:718" ph="select * fro... users" />
+            <marker date="1529722155159" expanded="true" signature="1100:1214" ph="INSERT INTO users... " />
+            <marker date="1529722155159" expanded="true" signature="1491:1538" ph="select * fro... accounts" />
+            <marker date="1529722155159" expanded="true" signature="1754:1883" ph="INSERT INTO accounts... " />
+            <marker date="1529722155159" expanded="true" signature="2159:2203" ph="select * fro... bvn" />
+            <marker date="1529722155159" expanded="true" signature="2324:2390" ph="INSERT INTO bvn... " />
+            <marker date="1529722155159" expanded="true" signature="2591:2660" ph="INSERT INTO bvn_acc... " />
+            <marker date="1529722155159" expanded="true" signature="2892:2933" ph="SELECT * Fro... bvn" />
+            <marker date="1529722155159" expanded="true" signature="3109:3155" ph="SELECT * Fro... accounts" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/CreateAccountController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="578">
           <caret line="68" column="13" lean-forward="false" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="13" />
           <folding>
             <marker date="1529721366203" expanded="true" signature="184:231" ph="SELECT * FRO... bvn" />
@@ -682,6 +697,32 @@
             <marker date="1529721366203" expanded="true" signature="2134:2182" ph="select * fro... accounts" />
             <marker date="1529721366203" expanded="true" signature="2458:2517" ph="INSERT INTO bvn_acc... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/navbar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/sidebar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" column="23" lean-forward="false" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+          <folding>
+            <element signature="e#829#889#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/content.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="23" column="33" lean-forward="false" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 22, 2018 at 07:12 AM
+-- Generation Time: Jun 23, 2018 at 04:33 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 5.6.33
 
@@ -30,9 +30,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `accounts` (
   `id` int(255) NOT NULL,
-  `acc_num` varchar(6) NOT NULL,
-  `card_num` varchar(14) DEFAULT NULL,
-  `pin_code` varchar(4) DEFAULT NULL,
+  `acc_num` varchar(225) NOT NULL,
+  `card_num` varchar(225) DEFAULT NULL,
+  `pin_code` varchar(225) CHARACTER SET utf8 DEFAULT NULL,
   `balance` int(255) DEFAULT '0',
   `user_id` int(255) NOT NULL,
   `bank_id` int(10) UNSIGNED DEFAULT NULL
@@ -43,8 +43,7 @@ CREATE TABLE `accounts` (
 --
 
 INSERT INTO `accounts` (`id`, `acc_num`, `card_num`, `pin_code`, `balance`, `user_id`, `bank_id`) VALUES
-(6, '10000', '12345678912345', '1234', 106400, 135, 1),
-(72, '10001', '01234567891234', '2255', 100, 135, 1);
+(151, '1010098107', '5200729468937276', '1234', 327313, 354, 1);
 
 -- --------------------------------------------------------
 
@@ -85,10 +84,7 @@ CREATE TABLE `bvn` (
 --
 
 INSERT INTO `bvn` (`id`, `bvn_num`, `user_id`) VALUES
-(61, '100000000', 135),
-(103, '100000019', 182),
-(105, '100000020', 185),
-(107, '100000021', 187);
+(263, '1352309463', 354);
 
 -- --------------------------------------------------------
 
@@ -107,8 +103,7 @@ CREATE TABLE `bvn_acc` (
 --
 
 INSERT INTO `bvn_acc` (`id`, `bvn_id`, `acc_id`) VALUES
-(23, 61, 6),
-(64, 61, 72);
+(210, 263, 151);
 
 -- --------------------------------------------------------
 
@@ -131,41 +126,30 @@ CREATE TABLE `transaction` (
 --
 
 INSERT INTO `transaction` (`id`, `amount`, `type`, `acc_id`, `sender_name`, `nat_id`, `date`) VALUES
-(55, 10000, 0, 6, NULL, NULL, '2018-06-05 23:39:33'),
-(56, 100, 1, 6, NULL, NULL, '2018-06-06 01:40:31'),
-(57, 100, 1, 6, NULL, NULL, '2018-06-06 01:40:38'),
-(58, 800, 1, 6, NULL, NULL, '2018-06-11 12:17:51'),
-(59, 800, 0, 6, NULL, NULL, '2018-06-11 12:18:03'),
-(60, 2000, 1, 6, NULL, NULL, '2018-06-19 02:57:57'),
-(61, 500, 1, 6, NULL, NULL, '2018-06-19 03:01:45'),
-(62, 300, 1, 6, NULL, NULL, '2018-06-19 03:02:13'),
-(63, 9000, 1, 6, NULL, NULL, '2018-06-19 03:05:11'),
-(64, 9000, 1, 6, NULL, NULL, '2018-06-19 03:15:34'),
-(65, 6999, 1, 6, NULL, NULL, '2018-06-19 03:15:43'),
-(66, 100, 1, 6, NULL, NULL, '2018-06-19 03:15:59'),
-(67, 1, 1, 6, NULL, NULL, '2018-06-19 03:16:05'),
-(68, 15000, 0, 6, NULL, NULL, '2018-06-19 03:17:59'),
-(69, 300, 1, 6, NULL, NULL, '2018-06-19 03:46:33'),
-(70, 500, 1, 6, NULL, NULL, '2018-06-19 03:48:58'),
-(71, 300, 1, 6, NULL, NULL, '2018-06-19 03:52:47'),
-(72, 2147483647, 1, 6, NULL, NULL, '2018-06-22 02:29:23'),
-(73, 2147483647, 1, 6, NULL, NULL, '2018-06-22 02:36:49'),
-(74, 2147483647, 1, 6, NULL, NULL, '2018-06-22 02:37:10'),
-(75, 100000, 0, 6, NULL, NULL, '2018-06-22 02:38:54'),
-(76, 500, 1, 6, NULL, NULL, '2018-06-22 02:41:08'),
-(77, 1000, 1, 6, NULL, NULL, '2018-06-22 02:44:58'),
-(78, 2000, 1, 6, NULL, NULL, '2018-06-22 02:49:11'),
-(79, 1000, 1, 6, NULL, NULL, '2018-06-22 02:49:28'),
-(80, 1000, 1, 6, NULL, NULL, '2018-06-22 04:40:45'),
-(81, 100, 1, 6, NULL, NULL, '2018-06-22 05:10:11'),
-(82, 100, 1, 6, NULL, NULL, '2018-06-22 05:19:32'),
-(83, 100, 1, 6, NULL, NULL, '2018-06-22 05:20:15'),
-(84, 300, 1, 6, NULL, NULL, '2018-06-22 05:22:53'),
-(85, 100, 1, 6, NULL, NULL, '2018-06-22 06:44:28'),
-(86, 100, 1, 6, NULL, NULL, '2018-06-22 06:45:19'),
-(87, 100, 1, 6, NULL, NULL, '2018-06-22 06:46:43'),
-(88, 100, 1, 6, NULL, NULL, '2018-06-22 06:49:33'),
-(89, 1000, 1, 6, NULL, NULL, '2018-06-22 07:02:43');
+(4, 158879, 0, 151, NULL, NULL, '2018-06-22 22:12:12'),
+(5, 500, 1, 151, NULL, NULL, '2018-06-22 22:12:31'),
+(6, 1005, 0, 151, NULL, NULL, '2018-06-22 22:26:18'),
+(7, 158879, 0, 151, NULL, NULL, '2018-06-22 22:48:04'),
+(8, 1005, 0, 151, NULL, NULL, '2018-06-22 22:53:37'),
+(9, 100, 1, 151, NULL, NULL, '2018-06-22 22:56:56'),
+(10, 1005, 0, 151, NULL, NULL, '2018-06-22 23:00:00'),
+(11, 300, 1, 151, NULL, NULL, '2018-06-22 23:36:16'),
+(12, 1000, 0, 151, NULL, NULL, '2018-06-22 23:38:38'),
+(13, 100, 1, 151, NULL, NULL, '2018-06-22 23:49:59'),
+(14, 1000, 0, 151, NULL, NULL, '2018-06-23 00:04:18'),
+(15, 1005, 0, 151, NULL, NULL, '2018-06-23 00:07:06'),
+(16, 1005, 0, 151, NULL, NULL, '2018-06-23 00:12:42'),
+(17, 1000, 1, 151, NULL, NULL, '2018-06-23 00:13:37'),
+(18, 1005, 0, 151, NULL, NULL, '2018-06-23 00:15:36'),
+(19, 1005, 0, 151, NULL, NULL, '2018-06-23 00:27:09'),
+(20, 1005, 0, 151, NULL, NULL, '2018-06-23 00:33:17'),
+(21, 1005, 0, 151, NULL, NULL, '2018-06-23 00:36:05'),
+(22, 1000, 1, 151, NULL, NULL, '2018-06-23 03:30:09'),
+(23, 1005, 0, 151, NULL, NULL, '2018-06-23 03:30:33'),
+(24, 300, 1, 151, NULL, NULL, '2018-06-23 03:34:37'),
+(25, 100, 1, 151, NULL, NULL, '2018-06-23 03:37:28'),
+(26, 100, 1, 151, NULL, NULL, '2018-06-23 03:38:28'),
+(27, 1005, 0, 151, NULL, NULL, '2018-06-23 03:38:54');
 
 -- --------------------------------------------------------
 
@@ -207,10 +191,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `full_name`, `user_name`, `email`, `password`, `national_id`, `birthday`, `gender`, `address`, `phone`, `thumb`, `auth`) VALUES
 (134, 'Khalifa', 'admin', '5alifa@ogh.co', '21232f297a57a5a743894a0e4a801fc3', '556646465', '2017-01-08', 'maile', 'Alex', '4333343333', NULL, 2),
-(135, 'ahmed khaled', NULL, 'arabi@najd.com', NULL, 'admin', '1996-01-17', 'Male', 'shobra', '5577777777777', NULL, 0),
-(182, '646465464', NULL, '646@s446554465.com', NULL, '646464654654', '4444-04-04', 'Female', '646546546546', '565464654', NULL, 0),
-(185, 'admin', NULL, 'admin@admin.comddsdssdd', NULL, '46546546546', '5464-04-06', 'Male', '64645465465', '44654654', NULL, 0),
-(187, 'Ashraf', NULL, 'ash@g.coo', NULL, '4545454545', '2018-12-31', 'Male', '6th Of October City', '344433333', NULL, 0);
+(354, 'Peter', NULL, 'peter@p.co', NULL, '3422020', '2018-01-31', 'Male', '6th of October City', '3493439', NULL, 0);
 
 --
 -- Indexes for dumped tables
@@ -275,7 +256,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=152;
 
 --
 -- AUTO_INCREMENT for table `banks`
@@ -287,19 +268,19 @@ ALTER TABLE `banks`
 -- AUTO_INCREMENT for table `bvn`
 --
 ALTER TABLE `bvn`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=108;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=264;
 
 --
 -- AUTO_INCREMENT for table `bvn_acc`
 --
 ALTER TABLE `bvn_acc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=211;
 
 --
 -- AUTO_INCREMENT for table `transaction`
 --
 ALTER TABLE `transaction`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=90;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `transfer`
@@ -311,7 +292,7 @@ ALTER TABLE `transfer`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=188;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=355;
 
 --
 -- Constraints for dumped tables

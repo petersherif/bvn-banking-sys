@@ -7,6 +7,10 @@
             <li class="list__item <?php if (str_replace('/bvn-banking-sys', '', $_SERVER['REQUEST_URI']) == '/home.php') { ?> active
 						   <?php } ?>"><a href="home.php"><i class="fa fa-home icon-primary"></i> Dashboard</a></li>
 
+            <li class="list__item <?php if (isset($_GET['bvn_registration'])) { ?> active
+						   <?php } ?>"><a href="home.php?bvn_registration"><i class="fa fa-plus icon-primary"></i>
+                    BVN Registration
+                </a></li>
             <?php if (!isset($_SESSION['loggedAccount'])) { ?>
 
                 <li class="list__item <?php if (isset($_GET['new-client'])) { ?> active

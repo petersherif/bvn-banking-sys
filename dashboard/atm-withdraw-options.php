@@ -8,7 +8,7 @@
 				<div class="light-box form-box form-box--full-width ba color-border-primary">
 					<?php
             if ($message == "success") {
-            	$URL = "Location: atm-home.php?atm-finish";
+            	$URL = "Location: atm-home.php?atm-finish&operation=1";
 							header($URL);
 							exit;
             } else if ($message == "empty") {
@@ -41,33 +41,33 @@
 						<div class="col-xs-12 col-sm-9">
 							<form class="form-box__form" method="post">
 								<div class="form-group">
-									<input type="radio" value="100" name="atm_amount" id="100" class="" />
+									<input type="radio" value="100" name="atm_withdraw_amount" id="100" class="" />
 									<label for="100" class="w4">
 										<span>100</span>
 									</label>
-									<input type="radio" value="300" name="atm_amount" id="300" class="" />
+									<input type="radio" value="300" name="atm_withdraw_amount" id="300" class="" />
 									<label for="300">
 										<span>300</span>
 									</label>
 								</div>
 
 								<div class="form-group">
-									<input type="radio" value="500" name="atm_amount" id="500" class="" />
+									<input type="radio" value="500" name="atm_withdraw_amount" id="500" class="" />
 									<label for="500" class="w4">
 										<span>500</span>
 									</label>
-									<input type="radio" value="1000" name="atm_amount" id="1000" class="" />
+									<input type="radio" value="1000" name="atm_withdraw_amount" id="1000" class="" />
 									<label for="1000">
 										<span>1000</span>
 									</label>
 								</div>
 
 								<div class="form-group">
-									<input type="radio" value="2000" name="atm_amount" id="2000" class="" />
+									<input type="radio" value="2000" name="atm_withdraw_amount" id="2000" class="" />
 									<label for="2000" class="w4">
 										<span>2000</span>
 									</label>
-									<input type="radio" value="3000" name="atm_amount" id="3000" class="" />
+									<input type="radio" value="3000" name="atm_withdraw_amount" id="3000" class="" />
 									<label for="3000">
 										<span>3000</span>
 									</label>
