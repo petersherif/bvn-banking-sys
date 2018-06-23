@@ -69,4 +69,48 @@ if (isset($_POST['submit'])) {
         }
     }
 }
+
+
+if (isset($_POST['createAccount'])) {
+    if ($_POST['bvn_num'] == "") {
+        $message = 'acc_error';
+    } elseif ($_POST['pin_code'] == "") {
+        $message = 'acc_error';
+    } else {
+        $bvn = $_POST['bvn_num'];
+        $sql = "SELECT * FROM bvn WHERE bvn_num = $bvn";
+        $query = connect()->query($sql);
+        if ($query->num_rows > 0) {
+            while ($row = $query->fetch_object()) {
+                $bvn_id = $row->id;
+                $bvn_user_id = $row->user_id;
+            }
+            $sql = "SELECT * FROM accounts WHERE user_id='$bvn_user_id' AND bank_id=1";
+            $query = connect()->query($sql);
+            if ($query->num_rows > 0) {
+                $message = 'acc_exist';
+            } else {
+                $pin_code = $_POST['pin_code'];
+                do {
+                    $acc_num = mt_rand(1000000000, 9999999999);
+                    $sql = "select * from accounts WHERE acc_num='$acc_num'";
+                    $query = connect()->query($sql);
+                } while ($query->num_rows != 0);
+                $card_num = 520072 . mt_rand(10, 99) . 68 . mt_rand(10, 99) . mt_rand(1000, 9999);
+                $sql_acc = "INSERT INTO accounts (acc_num,card_num ,pin_code,balance,user_id,bank_id) VALUES ($acc_num,$card_num,$pin_code,0,$bvn_user_id,1)";
+                $link = mysqli_connect("localhost", "root", "", "bvn_system");
+                mysqli_query($link, $sql_acc);
+                $last_acc_id = mysqli_insert_id($link);
+                $sql = "INSERT INTO bvn_acc (bvn_id,acc_id)VALUES ($bvn_id,$last_acc_id)";
+                $query = connect()->query($sql);
+
+                $message = 'acc_success';
+
+            }
+
+        } else {
+            $message = 'acc_not_exist';
+        }
+    }
+}
 ?>
