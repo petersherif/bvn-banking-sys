@@ -60,7 +60,7 @@ global $message;
 						<div class="form-group">
 							<i class="fa fa-inbox"></i>
 							<input type="text" placeholder="Enter the reciever account number" id="receiver_id"
-								   name="receiver_id"
+								   name="receiver_num"
 								   class="form-control account_number">
 						</div>
 
