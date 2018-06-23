@@ -12,9 +12,6 @@ if (isset($_GET['deposit'])) {
 if (isset($_SESSION['loggedAccount']) && isset($_GET['withdraw'])) {
     include('./dashboard/withdraw.php');
 }
-if (!isset($_SESSION['loggedbvn']) && !isset($_SESSION['loggedAccount']) && isset($_GET['create-bvn'])) {
-    include('./dashboard/createBvn.php');
-}
 if (isset($_SESSION['loggedbvn']) && !isset($_SESSION['loggedAccount']) && isset($_GET['add-account'])) {
     include('./dashboard/addAccount.php');
 }

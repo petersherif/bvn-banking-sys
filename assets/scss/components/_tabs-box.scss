@@ -1,0 +1,46 @@
+/*****************************************  
+[Tabs]
+*****************************************/
+.nav-tabs {
+	li {
+		a {
+			background: $white;
+			color: $color-primary;
+		}
+	}
+
+	li.active {
+		a {
+			padding-top: 17px;
+			border-radius: $br-lv1 $br-lv1 0 0;
+			border-top: 0;
+
+	    &:before {
+				content: '';
+				width: 100%;
+				height: 7px;
+				border-radius: $br-lv1-t;
+				position: absolute;
+				right: 0;
+				left: 0;
+				top: 0;
+				background: $color-primary;
+		    z-index: 5;
+	    }
+		}
+	}
+}
+
+.tab-content {
+	.light-box {
+		box-shadow: none;
+		border: 1px solid #ddd;
+    border-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+
+    &:before {
+    	display: none;
+    }
+	}
+}
