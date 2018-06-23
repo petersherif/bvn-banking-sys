@@ -186,7 +186,7 @@ global $message;
                                                class="form-control">
                                     </div>
                                     <div class="form-group">
-                                        <input type="submit" name="createAccount" value="add new client"
+                                        <input type="submit" name="createAccount" value="Create new account"
                                                class="submit form-control btn btn-block btn-primary">
                                     </div>
                                 </form>
