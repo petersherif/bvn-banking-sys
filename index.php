@@ -15,6 +15,9 @@ include "controller/LoginController.php";
 	<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
 	<title>BVN - Login</title>
 
+	<!-- page preload spinner -->
+  <link href="assets/css/preload.css" rel="stylesheet">
+    
 	<!-- Normalize libirary - To Make browsers render all elements more consistently. -->
 	<link href="assets/vendor/normalize.min.css" rel="stylesheet">
 
@@ -45,6 +48,9 @@ include "controller/LoginController.php";
 </head>
 
 <body class="">
+
+<!-- Page Preload, back to top, etc. -->
+<?php include_once('includes/shared-components.php'); ?>
 
 <!-- Login Page Header -->
 <header class="header">

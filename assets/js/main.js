@@ -1,30 +1,23 @@
 $(document).ready(function () {
 
 	// Add padding-left to body and navbar if the page has a sidebar
-	let bodyAndNavbar = $('body, .navbar-custom'),
+	let bodyAndNavbar = $('body .container, body .container-fluid, .navbar-custom'),
 			hasSidebar = $('body').find('.sidebar'),
 			sidebarWidth;
 
 	hasSidebar ? (sidebarWidth = $('.sidebar').width(), bodyAndNavbar.css('paddingLeft', sidebarWidth)) : '';
 	
+	$(window).resize(function() {
+		hasSidebar ? (sidebarWidth = $('.sidebar').width(), bodyAndNavbar.css('paddingLeft', sidebarWidth)) : '';
+	});
 
 	// Hides the page loader when the page load completely
-	// $(window).on('load', function() {
-	// 	$('.page-loading').fadeOut();
-	// 	// Body overflow is hidden by default. The next line adds to the body
-	// 	// the class .loaded{overflow-x: hidden; overflow-y: auto;}
-	// 	$('body').addClass('loaded');
-	// });
-
-	// Move placeholder when focus
-
-	/* $('[placeholder]').focus(function(){
-		$(this).attr('text',$(this).attr('placeholder'));
-		$(this).attr('placeholder','');
-	}).blur(function(){
-		$(this).attr('placeholder',$(this).attr('text'));
+	$(window).on('load', function() {
+		$('.page-loading').fadeOut();
+		// Body overflow is hidden by default. The next line adds to the body
+		// the class .loaded{overflow-x: hidden; overflow-y: auto;}
+		$('body').addClass('loaded');
 	});
-*/
 
 	// Append date and time to date and time box
 	var dateTimeBox = $('.date-time-box'),
@@ -149,16 +142,13 @@ $(document).ready(function () {
         // } else {
         //     $(this).hide('slow');
         // }
-	});
-	// Confirm Deletion
-
- 
+		});
   });
 
+	// Confirm Deletion
   $('.send_id').click(function(){
-	 var id=$(this).val();
-	$( '#get_id' ).val( id );
-		   
+	 	var id=$(this).val();
+		$( '#get_id' ).val( id );
 	});
 
   //Print Receipt
@@ -171,5 +161,14 @@ $(document).ready(function () {
   		$('.atm__receipt-paper').addClass('print-receipt')
   	}
   });
+
+  //Show last active tab after a page reload
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+		localStorage.setItem('lastActiveTab', $(e.target).attr('href'));
+	});
+	var lastActiveTab = localStorage.getItem('lastActiveTab');
+	if(lastActiveTab){
+		$('#main-tabs a[href="' + lastActiveTab + '"]').tab('show');
+	}
 });
 

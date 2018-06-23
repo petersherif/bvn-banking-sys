@@ -66,7 +66,7 @@ if (isset($_POST['submit_delete'])) {
 <section class="profile-section">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 component-wrapper">
+            <div class="col-xs-12 col-sm-10 col-sm-offset-1 component-wrapper">
                 <div class="light-box light-box--small profile-box mb3">
 
                     <div class="row">

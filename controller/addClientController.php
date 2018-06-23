@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
             $last_user_id = mysqli_insert_id($link);
 
             do {
-                $acc_num = mt_rand(1000000000, 9999999999);
+                $acc_num = mt_rand(10000000000, 99999999999);
                 $sql = "select * from accounts WHERE acc_num='$acc_num'";
                 $query = connect()->query($sql);
             } while ($query->num_rows != 0);
@@ -41,7 +41,7 @@ if (isset($_POST['submit'])) {
             mysqli_query($link, $sql_acc);
             $last_acc_id = mysqli_insert_id($link);
             do {
-                $bvnNumber = mt_rand(1000000000, 9999999999);
+                $bvnNumber = mt_rand(10000000000, 99999999999);
                 $sql = "select * from bvn WHERE bvn_num='$bvnNumber'";
                 $query = connect()->query($sql);
             } while ($query->num_rows != 0);
@@ -92,7 +92,7 @@ if (isset($_POST['createAccount'])) {
             } else {
                 $pin_code = $_POST['pin_code'];
                 do {
-                    $acc_num = mt_rand(1000000000, 9999999999);
+                    $acc_num = mt_rand(10000000000, 99999999999);
                     $sql = "select * from accounts WHERE acc_num='$acc_num'";
                     $query = connect()->query($sql);
                 } while ($query->num_rows != 0);

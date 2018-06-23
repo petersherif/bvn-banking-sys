@@ -18,7 +18,7 @@ if (isset($_POST['generate_bvn'])) {
 				$message = "generate-exist";
 			} else {
 				do {
-	        $bvnNumber = mt_rand(1000000000, 9999999999);
+	        $bvnNumber = mt_rand(10000000000, 99999999999);
 	        $sql = "select * from bvn WHERE bvn_num='$bvnNumber'";
 	        $query = connect()->query($sql);
 	      } while ($query->num_rows != 0);

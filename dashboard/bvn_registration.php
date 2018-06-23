@@ -13,9 +13,9 @@
 
 
 				<div class="form-box">
-					<ul class="nav nav-tabs nav-justified">
-						<li class="active"><a data-toggle="tab" href="#generate-bvn-tab">Generate BVN</a></li>
-						<li><a data-toggle="tab" href="#connect-bvn-tab">Connect BVN</a></li>
+					<ul class="nav nav-tabs nav-justified" id="main-tabs">
+							<li class="active"><a data-toggle="tab" href="#generate-bvn-tab">Generate BVN</a></li>
+							<li><a data-toggle="tab" href="#connect-bvn-tab">Connect BVN</a></li>
 					</ul>
 					
 					<div class="tab-content">
