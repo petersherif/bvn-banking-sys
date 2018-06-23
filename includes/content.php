@@ -18,7 +18,7 @@ if (!isset($_SESSION['loggedbvn']) && !isset($_SESSION['loggedAccount']) && isse
 if (isset($_SESSION['loggedbvn']) && !isset($_SESSION['loggedAccount']) && isset($_GET['add-account'])) {
     include('./dashboard/addAccount.php');
 }
-if (isset($_SESSION['loggedbvn']) && !isset($_SESSION['loggedAccount']) && isset($_GET['select-account'])) {
+if (isset($_GET['select-account'])) {
     include('./dashboard/select-account.php');
 }
 if (isset($_GET['new-client'])) {

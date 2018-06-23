@@ -23,7 +23,7 @@ global $message;
                             <strong>Action successful!</strong> Client successfully added! ,<br>
                             your bvn number :<?php echo $bvn_num ?><br>
                             your account number :<?php echo $acc_num ?>
-                            your account number :<?php echo $card_num ?>
+                            your card number :<?php echo $card_num ?>
 
                         </div>
                         <?php

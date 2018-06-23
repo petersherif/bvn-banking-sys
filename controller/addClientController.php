@@ -37,7 +37,6 @@ if (isset($_POST['submit'])) {
             else
                 $acc_num = $row['acc_num'] + 8848;
             $card_num = 5264730568882987 + $last_user_id + $pin_code;
-            echo $last_user_id;
             $sql_acc = "INSERT INTO accounts (acc_num,card_num ,pin_code,balance,user_id,bank_id) VALUES ($acc_num,$card_num,$pin_code,0,$last_user_id,1)";
             $link = mysqli_connect("localhost", "root", "", "bvn_system");
             mysqli_query($link, $sql_acc);
