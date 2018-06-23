@@ -56,20 +56,30 @@ if (isset($_POST['connect_bvn'])) {
 			}
 			$sql = "select * from accounts WHERE acc_num='$acc_num'";
 			$query = connect()->query($sql);
-			while ($row = $query->fetch_object()) {
-				$acc_id = $row->id;
-				$acc_user_id = $row->user_id;
-			}
-			if ($bvn_user_id == $acc_user_id) {
-				$sql_bvn_acc = "INSERT INTO bvn_acc (bvn_id,acc_id)VALUES ($bvn_id,$acc_id)";
-				$query = connect()->query($sql_bvn_acc);
-				$message = "connect-success";
+			if ($query->num_rows != 0) {
+				while ($row = $query->fetch_object()) {
+					$acc_id = $row->id;
+					$acc_user_id = $row->user_id;
+				}
+				$sql = "select * from bvn_acc WHERE bvn_id = '$bvn_id' AND acc_id = '$acc_id'";
+				$query = connect()->query($sql);
+				if ($query->num_rows != 0) {
+					$message = "connect-connected";
+				} else {
+					if ($bvn_user_id == $acc_user_id) {
+						$sql_bvn_acc = "INSERT INTO bvn_acc (bvn_id,acc_id)VALUES ($bvn_id,$acc_id)";
+						$query = connect()->query($sql_bvn_acc);
+						$message = "connect-success";
+					} else {
+						$message = 'connect-error';
+					}
+				}
 			} else {
-				$message = 'connect-error';
+				$message = "connect-not-exist";
 			}
 
 		} else {
-			$message = "connect-exist";
+			$message = "connect-not-exist";
 		}
 	}
 }

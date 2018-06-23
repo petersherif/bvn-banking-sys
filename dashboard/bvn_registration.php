@@ -74,10 +74,16 @@
 										<strong>Oops, action failed!</strong> Please, fill the required fields!
 									</div>
 									<?php
-								} else if ($message == "connect-exist") {
+								} else if ($message == "connect-not-exist") {
 									?>
 									<div class="alert alert-danger">
 										<strong>Oops, action failed!</strong> The account number or BVN is incorrect!
+									</div>
+									<?php
+								} else if ($message == "connect-connected") {
+									?>
+									<div class="alert alert-danger">
+										<strong>Oops, action failed!</strong> The account number and BVN are already connected!
 									</div>
 					
 								<?php } ?>
