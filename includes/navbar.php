@@ -23,7 +23,7 @@
                        aria-expanded="false"><i class="fa fa-user"></i><span
                                 class="visible-xs-inline pl3">Profile</span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="home?profile&id=<?php echo $_SESSION['id'] ?>">Profile</a></li>
+                        <li><a href="home.php?profile&id=<?php echo $_SESSION['id'] ?>">Profile</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="home.php?logout">Logout</a></li>
                     </ul>

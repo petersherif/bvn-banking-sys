@@ -20,19 +20,21 @@
 							<ul class="table__rows">
 								<li class="table__row">
 									<span class="row__cell row__cell--heading">Date</span>
-									<span class="row__cell row__cell--heading">Description</span>
 									<span class="row__cell row__cell--heading">Withdraw</span>
 									<span class="row__cell row__cell--heading">Deposit</span>
+									<span class="row__cell row__cell--heading">Sent Money</span>
+									<span class="row__cell row__cell--heading">Received Money</span>
 								</li>
 							<?php $i=0;
 								 foreach($row as $record) 
 								 { 
 							?>
 								<li class="table__row data-row">
-									<span class="row__cell" title="10/11/2018"><?php echo $row[$i]["date"] ;?></span>
-									<span class="row__cell" title="Description includes the ATM or Bank data (bank name and branch or atm id or location name) and the depositor data if any.">Description includes the ATM or Bank data (bank name and branch or atm id or location name) and the depositor data if any.</span>
-									<span class="row__cell color-accent withdraw" title=""><?php if($row[$i]["type"]==1) echo $row[$i]["amount"] ;?></span>
-									<span class="row__cell color-primary deposit" title="6500"><?php if($row[$i]["type"]==0) echo $row[$i]["amount"] ;?></span>
+									<span class="row__cell" title="<?php echo $row[$i]["date"] ;?>"><?php echo $row[$i]["date"] ;?></span>
+									<span class="row__cell color-accent withdraw" title="<?php if($row[$i]["type"]==1) echo $row[$i]["amount"] ;?>"><?php if($row[$i]["type"]==1) echo $row[$i]["amount"] ;?></span>
+									<span class="row__cell color-primary deposit" title="<?php if($row[$i]["type"]==0) echo $row[$i]["amount"] ;?>"><?php if($row[$i]["type"]==0) echo $row[$i]["amount"] ;?></span>
+									<span class="row__cell color-accent withdraw" title="<?php if($row[$i]["type"]==1) echo $row[$i]["amount"] ;?>"><?php if($row[$i]["type"]==1) echo $row[$i]["amount"] ;?></span>
+									<span class="row__cell color-primary deposit" title="<?php if($row[$i]["type"]==0) echo $row[$i]["amount"] ;?>"><?php if($row[$i]["type"]==0) echo $row[$i]["amount"] ;?></span>
 								</li>
 								<?php $i++; 
 								 } ?>

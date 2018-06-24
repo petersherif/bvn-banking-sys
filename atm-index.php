@@ -1,5 +1,5 @@
 <?php
-include "controller/LoginController.php";
+include "controller/atmLoginController.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,11 +13,8 @@ include "controller/LoginController.php";
 	<!-- favicon -->
 	<link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
-	<title>BVN - Login</title>
+	<title>BVN - ATM</title>
 
-	<!-- page preload spinner -->
-  <link href="assets/css/preload.css" rel="stylesheet">
-    
 	<!-- Normalize libirary - To Make browsers render all elements more consistently. -->
 	<link href="assets/vendor/normalize.min.css" rel="stylesheet">
 
@@ -49,33 +46,14 @@ include "controller/LoginController.php";
 
 <body class="">
 
-<!-- Page Preload, back to top, etc. -->
-<?php include_once('includes/shared-components.php'); ?>
-
-<!-- Login Page Header -->
-<header class="header">
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-12 text-center">
-				<img src="assets/img/full-logo.png" alt="BVN" class="header__logo v-mid"/>
-			</div>
-		</div>
-	</div>
-</header>
-
-<!-- Login form -->
+<!-- ATM Login -->
 <section class="login-section">
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-12 text-center">
-				<h2 class="section__heading text-center color-text">Login to BVN</h2>
-			</div> <!-- Section Heading -->
-		</div> <!-- Heading Row -->
+			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3">
 
-		<div class="row">
-			<div class="col-xs-12">
-
-				<div class="light-box light-box--small form-box">
+				<div class="light-box form-box form-box--full-width ba color-border-primary">
+						
 					<?php if (isset($message)) { ?>
 
 						<div class="alert alert-danger">
@@ -84,62 +62,54 @@ include "controller/LoginController.php";
 						</div>
 						<?php
 					} ?>
-					<form class="form-box__form" method="post">
-						<div class="form-group">
-							<i class="fa fa-user"></i>
-							<input type="text" placeholder="Username" name="user_name" id="username"
-								   class="form-control"
-								   required="required">
-						</div>
 
-						<div class="form-group">
-							<i class="fa fa-lock"></i>
-							<input type="password" placeholder="Password" name="password" id="password"
-								   class="form-control" autocomplete="new-password" required="required">
-							<a href="#" class="helper">Forgot?</a>
-						</div>
+					<h2 class="text-center color-primary mb3 mt1">Welcome to BVN ATM</h2>
+					<hr class="mt0 color-border-primary">
+					<div class="row">
 
-						<div class="form-group">
-							<input type="submit" name="login" value="log in"
-								   class="submit form-control btn btn-block btn-primary">
+						<div class="col-xs-12 col-sm-3 col-sm-offset-0">
+							<div class="row">
+								<div class="col-xs-3 col-xs-offset-3 col-sm-12 col-sm-offset-0">
+									<img src="assets/img/full-logo.png" alt="BVN" class="img-responsive mt3 mt5-l mb4"/>
+								</div>
+								<div class="col-xs-2 col-xs-offset-2 col-sm-6 col-sm-offset-2 text-center mt3 bt bw2 color-border-primary ph0">
+									<i class="fa fa-credit-card icon-primary fa-3x rotate-90"></i>
+								</div>
+							</div>
 						</div>
+						<div class="col-xs-12 col-sm-9">
+							<p>Kindly, put your fingerprint to approve your identity!</p>
+							<form class="form-box__form" method="post">
+								<div class="form-group">
+									<i class="fa fa-address-card"></i>
+									<input type="text"
+												 placeholder="Please insert your card number"
+												 name="card_num"
+												 id="cardnum"
+										   	 class="form-control"
+										   	 required="required">
+								</div>
 
-						<div class="form-group form-group--options">
-							<input type="checkbox" class="remember-me" id="remember-me">
-							<label for="remember-me">
-								<span>Remember me</span>
-							</label>
+								<div class="form-group">
+									<i class="fa fa-lock"></i>
+									<input type="password"
+												 placeholder="Please insert your PIN code"
+												 name="pin_code"
+												 id="pin-code"
+										     class="form-control"
+										     required="required">
+								</div>
+
+								<div class="form-group">
+									<input type="submit" name="submit" value="enter"
+										   class="submit form-control btn btn-block btn-primary">
+								</div>
+							</form>
 						</div>
-
-					</form>
+					</div>
 				</div>
 			</div> <!-- Login Form -->
 		</div> <!-- Login Form Row -->
-
-
-
-<script type="text/javascript">
-
-
-	{
-        'name': "Example",
-        'created': "Wed, 14 Mar 2018 20:52:23 GMT",
-        'resources': [["/bvn-banking-sys/assets/img/full-logo.png",1193,550],"/bvn-banking-sys/assets/vendor/normalize.min.css","/bvn-banking-sys/assets/vendor/bootstrap/css/bootstrap.min.css","/bvn-banking-sys/assets/vendor/tachyons/css/tachyons.min.css","/bvn-banking-sys/assets/vendor/font-awesome/css/font-awesome.min.css","/css","/bvn-banking-sys/assets/css/main.css","/bvn-banking-sys/assets/vendor/jquery/jquery.min.js","/bvn-banking-sys/assets/vendor/bootstrap/js/bootstrap.min.js","/bvn-banking-sys/assets/vendor/chart.js/Chart.min.js","/bvn-banking-sys/assets/js/main.js"],
-        'callback': function( ip ) {
-							        },
-    }
-
-
-</script>
-
-
-
-
-
-
-
-
-
 	</div> <!-- Container -->
 </section>
 

@@ -196,3 +196,19 @@ $('#client').on('click', function (event) {
         }
     });
 });
+
+
+$('.yes-print-receipt').on('click', function (event) {
+    event.preventDefault();
+    $.ajax({
+        url: 'assets/ajax/print_receipt.php?print_receipt',
+        method: 'post',
+        dataType: 'text',
+        success: function (data) {
+            $(".receipt-paper__header").empty();
+            $(".receipt-paper__header").append(data);
+        }
+    });
+});
+
+

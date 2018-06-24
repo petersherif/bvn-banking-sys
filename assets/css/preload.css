@@ -1,0 +1,43 @@
+.page-loading {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #F9FAFB;
+  z-index: 99999; }
+  .page-loading .spinner {
+    border-radius: 50px;
+    line-height: 100px;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    letter-spacing: 0.05em; }
+    .page-loading .spinner:before, .page-loading .spinner:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(2, 186, 242, 0.4);
+      border-radius: 50px;
+      opacity: 0; }
+    .page-loading .spinner:before {
+      transform: scale(1);
+      animation: pulse 1000ms infinite linear; }
+    .page-loading .spinner:after {
+      animation: pulse 1000ms 350ms infinite linear; }
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.1);
+    opacity: 1; }
+  100% {
+    transform: scale(1);
+    opacity: 0; } }

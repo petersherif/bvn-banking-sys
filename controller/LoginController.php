@@ -36,10 +36,10 @@ if (isset($_POST['login'])) {
             }
 
         } else {
-            $message = "Please, Enter Valid Username OR Password";
+            $message = "<strong>Oops, login failed!</strong> Please, enter valid username and password!";
         }
     } else {
-        $message = "Please, Enter Valid Username OR Password";
+        $message = "<strong>Oops, login failed!</strong> Please, enter valid username and password!";
     }
 }
 

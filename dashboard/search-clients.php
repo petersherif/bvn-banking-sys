@@ -43,7 +43,7 @@
                                         <span class="row__cell"
                                               title="<?php echo $record["national_id"] ?>"><?php echo $record["national_id"] ?></span>
                                         <span class="row__cell"
-                                              title="<?php echo $record["balance"] ?>"><?php echo $record["balance"] ?></span>
+                                              title="<?php echo $record["balance"] ?>"><?php echo $record["balance"] ?> EGP</span>
                                         <span class="row__cell">
                                               <a href="home.php?profile&id=<?php echo $record['id']; ?>"
                                                  class="btn btn-primary--custom btn-sm mh2 mv1">View</a>
@@ -148,61 +148,3 @@
         <!--END - Modal -->
 
 </section>
-
-
-<!-- jQuery v.3.3.1 Library -->
-<script src="assets/vendor/jquery/jquery.min.js"></script>
-
-<!-- Bootstrap v.3.3.7 JS -->
-<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-
-<!-- Chart.js Library -->
-<script src="assets/vendor/chart.js/Chart.min.js"></script>
-
-<!-- Custom JS -->
-<script src="assets/js/main.js"></script>
-
-<script src="assets/ajax/ajax.js"></script>
-
-<script type="text/javascript">
-
-    $(document).ready(function () {
-
-        $(document).on("click", ".daa", function () {
-
-            var userid = $(this).data('id');
-
-            $("#idd").attr('data-id', userid);
-
-            $.ajax({
-                type: "post",
-                url: "../bvn-banking-sys/assets/ajax/ajax_search_clients.php",
-
-                data: {'userid': userid},
-                success: function (msg) {
-
-                    data = JSON.parse(msg);
-                    if (data["response"] == 0) {
-                        $("#name").text(data["name"]);
-                        $("#email").html(data["email"]);
-                        $("#nat_id").html(data["nat_id"]);
-                        $("#birthday").html(data["birthday"]);
-                        $("#gender").html(data["gender"]);
-                        $("#address").text(data["address"]);
-                        $("#phone").text(data["phone"]);
-                        $("#img").attr('src', data["img"]);
-                        $("#acc_num").text(data["acc_num"]);
-                        $("#balance").text(data["balance"]);
-
-                    }
-                },
-                complete: function () {
-                }
-            });
-
-
-        });
-
-    });
-
-</script>
