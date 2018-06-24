@@ -27,7 +27,7 @@ if (isset($account)) {
                     $message = 'can';
                 } else {
 
-                    $sql = "INSERT INTO transfer(amount,sender_id,reciever_id)VALUE ($amount,$sender_id,$receiver_id)";
+                    $sql = "INSERT INTO transfer(amount,sender_id,receiver_id)VALUE ($amount,$sender_id,$receiver_id)";
                     $query = connect()->query($sql);
                     echo $sender_id;
                     echo $receiver_id;

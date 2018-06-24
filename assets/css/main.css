@@ -463,7 +463,8 @@ input[type=radio]:checked + label:before {
   background: #FFFFFF;
   box-shadow: 0 0 6px rgba(57, 73, 76, 0.35);
   z-index: 9999;
-  transition: width .3s ease-in-out; }
+  transition: width .3s ease-in-out;
+  overflow-y: auto; }
   .sidebar__header {
     height: 50px;
     position: relative;
