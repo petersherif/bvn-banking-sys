@@ -269,7 +269,7 @@ input[type=radio]:checked + label:before {
     overflow-y: auto; }
     .data-listing-box .table__rows .table__row {
       justify-content: start;
-      min-width: 700px;
+      min-width: 450px;
       padding: 5px 0; }
       .data-listing-box .table__rows .table__row:first-child {
         border-top: 1px solid #ACACAC; }
