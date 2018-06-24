@@ -17,7 +17,7 @@ global $message;
 				<div class="form-box">
 					<ul class="nav nav-tabs nav-justified" id="main-tabs">
 						<li class="active"><a data-toggle="tab" href="#new-client-tab">New Client</a></li>
-						<li><a data-toggle="tab" href="#open-acount-tab">Open Account</a></li>
+						<li><a data-toggle="tab" href="#open-account-tab">Open Account</a></li>
 					</ul>
 
 					<div class="tab-content">
@@ -51,7 +51,7 @@ global $message;
 									</div>
 
 								<?php } ?>
-								<p>Create a new client profile with a BVN and an account</p>
+								<p>Create a new client profile with BVN and a new account</p>
 								<form method="post" class="form-box__form">
 
 									<div class="form-group">
@@ -112,20 +112,6 @@ global $message;
 											   id="new_client_pin_code"
 											   class="form-control">
 									</div>
-									<!--                        <div class="form-group">-->
-									<!--                            <input type="radio" class="radio" id="acc" name="acc">-->
-									<!--                            <label for="acc">-->
-									<!--                                <span>Create account</span>-->
-									<!--                            </label>-->
-									<!--                            <input type="radio" class="radio" id="bvn" name="bvn" checked>-->
-									<!--                            <label for="bvn">-->
-									<!--                                <span>Create Bvn Number</span>-->
-									<!--                            </label>-->
-									<!--                            <input type="radio" class="radio" id="both" name="both" value="both">-->
-									<!--                            <label for="both">-->
-									<!--                                <span>Create both</span>-->
-									<!--                            </label>-->
-									<!--                        </div>-->
 
 									<div class="form-group">
 										<input type="submit" name="submit" value="add new client"
@@ -134,7 +120,7 @@ global $message;
 								</form>
 							</div>
 						</div>
-						<div id="open-acount-tab" class="tab-pane fade">
+						<div id="open-account-tab" class="tab-pane fade">
 							<div class="light-box form-box">
 								<?php
 								if ($message == "acc_success") {
@@ -175,15 +161,15 @@ global $message;
 											   placeholder="Enter the client's BVN"
 											   class="form-control">
 									</div>
-									<p class="mt3 mb2">Insert a 4-digits Pin Code for the credit card</p>
+									<p class="mt3 mb2">Insert a 4-digit Pin Code for the credit card</p>
 									<div class="form-group">
 										<i class="fa fa-address-card"></i>
 										<input type="text" name="pin_code" id="open_account_pin_code"
-											   placeholder="Enter the credit card's Pin code"
+											   placeholder="Enter Pin code for the credit card"
 											   class="form-control">
 									</div>
 									<div class="form-group">
-										<input type="submit" name="createAccount" value="add new client"
+										<input type="submit" name="createAccount" value="Open New Account"
 											   class="submit form-control btn btn-block btn-primary">
 									</div>
 								</form>
