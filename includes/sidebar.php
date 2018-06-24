@@ -15,7 +15,7 @@
 
                 <li class="list__item <?php if (isset($_GET['new-client'])) { ?> active
 						   <?php } ?>"><a href="home.php?new-client"><i class="fa fa-user-plus icon-brown"></i> New
-                        Client</a></li>
+                        Client/Account</a></li>
             <?php } ?><?php if (isset($_SESSION['loggedbvn']) && !isset($_SESSION['loggedAccount'])) { ?>
 
                 <li class="list__item <?php if (isset($_GET['add-account'])) { ?> active
