@@ -1,12 +1,15 @@
 $(document).ready(function () {
 
 	// Add padding-left to body and navbar if the page has a sidebar
-	let bodyAndNavbar = $('body, .navbar-custom'),
+	let bodyAndNavbar = $('body .container, body .container-fluid, .navbar-custom'),
 			hasSidebar = $('body').find('.sidebar'),
 			sidebarWidth;
 
 	hasSidebar ? (sidebarWidth = $('.sidebar').width(), bodyAndNavbar.css('paddingLeft', sidebarWidth)) : '';
 	
+	$(window).resize(function() {
+		hasSidebar ? (sidebarWidth = $('.sidebar').width(), bodyAndNavbar.css('paddingLeft', sidebarWidth)) : '';
+	});
 
 	// Hides the page loader when the page load completely
 	$(window).on('load', function() {
