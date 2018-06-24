@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 23, 2018 at 04:33 AM
+-- Generation Time: Jun 24, 2018 at 07:04 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 5.6.33
 
@@ -43,7 +43,9 @@ CREATE TABLE `accounts` (
 --
 
 INSERT INTO `accounts` (`id`, `acc_num`, `card_num`, `pin_code`, `balance`, `user_id`, `bank_id`) VALUES
-(151, '1010098107', '5200729468937276', '1234', 327313, 354, 1);
+(151, '1010098107', '5200729468937276', '1234', 327313, 354, 1),
+(152, '1010094207', '5200729468934321', '1234', 1815568, 355, 4),
+(153, '1114819364', '5200721768689861', '5213', 6300, 355, 1);
 
 -- --------------------------------------------------------
 
@@ -84,7 +86,8 @@ CREATE TABLE `bvn` (
 --
 
 INSERT INTO `bvn` (`id`, `bvn_num`, `user_id`) VALUES
-(263, '1352309463', 354);
+(263, '1352309463', 354),
+(272, '1177965790', 355);
 
 -- --------------------------------------------------------
 
@@ -103,7 +106,9 @@ CREATE TABLE `bvn_acc` (
 --
 
 INSERT INTO `bvn_acc` (`id`, `bvn_id`, `acc_id`) VALUES
-(210, 263, 151);
+(210, 263, 151),
+(224, 272, 152),
+(225, 272, 153);
 
 -- --------------------------------------------------------
 
@@ -149,7 +154,10 @@ INSERT INTO `transaction` (`id`, `amount`, `type`, `acc_id`, `sender_name`, `nat
 (24, 300, 1, 151, NULL, NULL, '2018-06-23 03:34:37'),
 (25, 100, 1, 151, NULL, NULL, '2018-06-23 03:37:28'),
 (26, 100, 1, 151, NULL, NULL, '2018-06-23 03:38:28'),
-(27, 1005, 0, 151, NULL, NULL, '2018-06-23 03:38:54');
+(27, 1005, 0, 151, NULL, NULL, '2018-06-23 03:38:54'),
+(28, 1504555, 0, 152, NULL, NULL, '2018-06-24 05:03:57'),
+(29, 5000, 1, 152, NULL, NULL, '2018-06-24 05:04:28'),
+(30, 5000, 1, 152, NULL, NULL, '2018-06-24 05:04:34');
 
 -- --------------------------------------------------------
 
@@ -191,7 +199,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `full_name`, `user_name`, `email`, `password`, `national_id`, `birthday`, `gender`, `address`, `phone`, `thumb`, `auth`) VALUES
 (134, 'Khalifa', 'admin', '5alifa@ogh.co', '21232f297a57a5a743894a0e4a801fc3', '556646465', '2017-01-08', 'maile', 'Alex', '4333343333', NULL, 2),
-(354, 'Peter', NULL, 'peter@p.co', NULL, '3422020', '2018-01-31', 'Male', '6th of October City', '3493439', NULL, 0);
+(354, 'Peter', NULL, 'peter@p.co', NULL, '3422020', '2018-01-31', 'Male', '6th of October City', '3493439', NULL, 0),
+(355, 'Hola', NULL, 'petddddswer@p.co', NULL, '443221111123444', '2018-01-31', 'Male', '6th of October City', '349343944', NULL, 0);
 
 --
 -- Indexes for dumped tables
@@ -256,7 +265,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=152;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=154;
 
 --
 -- AUTO_INCREMENT for table `banks`
@@ -268,31 +277,31 @@ ALTER TABLE `banks`
 -- AUTO_INCREMENT for table `bvn`
 --
 ALTER TABLE `bvn`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=264;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=273;
 
 --
 -- AUTO_INCREMENT for table `bvn_acc`
 --
 ALTER TABLE `bvn_acc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=211;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=226;
 
 --
 -- AUTO_INCREMENT for table `transaction`
 --
 ALTER TABLE `transaction`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `transfer`
 --
 ALTER TABLE `transfer`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=355;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=356;
 
 --
 -- Constraints for dumped tables
