@@ -43,7 +43,7 @@
                                         <span class="row__cell"
                                               title="<?php echo $record["national_id"] ?>"><?php echo $record["national_id"] ?></span>
                                         <span class="row__cell"
-                                              title="<?php echo $record["balance"] ?>">EGP<?php echo $record["balance"] ?></span>
+                                              title="<?php echo $record["balance"] ?>"><?php echo $record["balance"] ?> EGP</span>
                                         <span class="row__cell">
                                               <a href="home.php?profile&id=<?php echo $record['id']; ?>"
                                                  class="btn btn-primary--custom btn-sm mh2 mv1">View</a>

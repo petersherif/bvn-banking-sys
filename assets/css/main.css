@@ -16,6 +16,10 @@ body {
     overflow-x: hidden;
     overflow-y: auto; }
 
+.container-fluid {
+  margin-right: 15px;
+  margin-left: 15px; }
+
 a {
   color: #02BAF2; }
   a:hover {
@@ -286,11 +290,12 @@ input[type=radio]:checked + label:before {
         .data-listing-box .table__rows .table__row .row__cell--heading {
           padding: 5px 10px; }
 
-.view-transactions-box .table__rows .table__row .row__cell {
-  width: calc(60% / 3); }
-  .view-transactions-box .table__rows .table__row .row__cell:nth-child(2) {
-    width: 50%; }
-  .view-transactions-box .table__rows .table__row .row__cell.deposit, .view-transactions-box .table__rows .table__row .row__cell.withdraw {
+.view-transactions-box .table__rows .table__row .row__cell,
+.view-transactions-box .table__rows .table__row .row__cell:nth-child(2) {
+  width: calc(80% / 4); }
+  .view-transactions-box .table__rows .table__row .row__cell.deposit, .view-transactions-box .table__rows .table__row .row__cell.withdraw,
+  .view-transactions-box .table__rows .table__row .row__cell:nth-child(2).deposit,
+  .view-transactions-box .table__rows .table__row .row__cell:nth-child(2).withdraw {
     font-size: 16px; }
 
 @media (max-width: 767px) {
@@ -482,6 +487,8 @@ input[type=radio]:checked + label:before {
     overflow: hidden;
     padding: 0 13px;
     width: 100%;
+    height: 50px;
+    line-height: 50px;
     cursor: pointer;
     white-space: nowrap;
     transition: all .225s ease-in-out; }
@@ -493,8 +500,8 @@ input[type=radio]:checked + label:before {
       color: #364347;
       text-decoration: none;
       display: block;
-      margin-top: 15px;
-      margin-bottom: 15px; }
+      height: 100%;
+      width: 100%; }
       .sidebar__list .list__item a:hover {
         color: #02BAF2; }
     .sidebar__list .list__item:hover a, .sidebar__list .list__item.active a {

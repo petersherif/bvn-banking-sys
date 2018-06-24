@@ -8,8 +8,12 @@ include "./controller/MainController.php";
 <section class="dashboard-components">
 	<div class="container-fluid">
 		<div class="row">
-
-			<div class="col-xs-12 col-sm-6 col-sm-offset-1 col-lg-7">
+			
+			<?php if (!isset($_SESSION['loggedbvn'])) { ?>
+			<div class="col-xs-12 col-sm-6 col-lg-5">
+			<?php } else { ?>
+			<div class="col-xs-12 col-sm-7 col-lg-8">
+			<?php } ?>
 
 				<?php if (!isset($_SESSION['loggedbvn'])) { ?>
 					<!-- BVN login form -->
@@ -23,7 +27,7 @@ include "./controller/MainController.php";
 							</div>
 						<?php } ?>
 						<div class="alert alert-danger length hidden">
-							<strong>Error!</strong> Dear Emp,The length of the account number must be 11 !
+							<strong>Oops, action failed!</strong> Please, enter a valid BVN number!
 						</div>
 						<form class="form-box__form" method="post">
 							<div class="form-group">
@@ -118,7 +122,7 @@ include "./controller/MainController.php";
 														</div>
 														<div class="form-group profile__form-group profile__static-info special-info--danger">
 															<label class="info__title">Balance</label>
-															<p class="info__data dib w-70">EGP<?php echo $balance ?></p>
+															<p class="info__data dib w-70"><?php echo $balance ?> EGP</p>
 														</div>
 													<?php } ?>
 
@@ -156,17 +160,18 @@ include "./controller/MainController.php";
 													<span class="row__cell row__cell--heading">Date</span>
 													<span class="row__cell row__cell--heading">Withdraw</span>
 													<span class="row__cell row__cell--heading">Deposit</span>
+													<span class="row__cell row__cell--heading">Sent Money</span>
+													<span class="row__cell row__cell--heading">Received Money</span>
 												</li>
 												<?php $i = 0;
 												foreach ($row as $record) {
 													?>
 													<li class="table__row data-row">
-														<span class="row__cell"
-															  title="10/11/2018"><?php echo $row[$i]['date']; ?></span>
-														<span class="row__cell color-accent withdraw"
-															  title=""><?php if ($row[$i]["type"] == 1) echo $row[$i]["amount"]; ?></span>
-														<span class="row__cell color-primary deposit"
-															  title="6500"><?php if ($row[$i]["type"] == 0) echo $row[$i]["amount"]; ?></span>
+														<span class="row__cell" title="10/11/2018"><?php echo $row[$i]['date']; ?></span>
+														<span class="row__cell color-accent withdraw" title=""><?php if ($row[$i]["type"] == 1) echo $row[$i]["amount"]; ?></span>
+														<span class="row__cell color-primary deposit" title="6500"><?php if ($row[$i]["type"] == 0) echo $row[$i]["amount"]; ?></span>
+														<span class="row__cell color-accent withdraw" title=""><?php if ($row[$i]["type"] == 1) echo $row[$i]["amount"]; ?></span>
+														<span class="row__cell color-primary deposit" title="6500"><?php if ($row[$i]["type"] == 0) echo $row[$i]["amount"]; ?></span>
 													</li>
 													<?php $i++;
 												} ?>
@@ -181,7 +186,11 @@ include "./controller/MainController.php";
 
 			</div>
 
-			<div class="col-xs-12 col-sm-4 col-lg-3">
+			<?php if (!isset($_SESSION['loggedbvn'])) { ?>
+			<div class="col-xs-12 col-sm-6 col-lg-7">
+			<?php } else { ?>
+			<div class="col-xs-12 col-sm-5 col-lg-4">
+			<?php } ?>
 				<div class="row">
 					<div class="col-xs-12">
 						<div class="light-box date-time-box">

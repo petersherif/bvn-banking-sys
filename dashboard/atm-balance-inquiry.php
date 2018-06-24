@@ -23,7 +23,7 @@ include('./controller/atmMainController.php')
 							</div>
 						</div>
 						<div class="col-xs-12 col-sm-9">
-							<p>Your balance is EGP<?php echo $balance; ?></p>
+							<p>Your balance is <?php echo $balance; ?> EGP</p>
 							<p class="pt2 tc">Do you want to do another operation?</p>
 							<div class="tc mt4">
 								<a href="atm-home.php" class="b mh4">Yes!</a>

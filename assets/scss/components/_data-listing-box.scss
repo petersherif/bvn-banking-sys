@@ -63,12 +63,9 @@
 .view-transactions-box {
 	.table__rows {
 		.table__row {
-			.row__cell {
-				width: calc(60% / 3);;
-
-				&:nth-child(2) {
-					width: 50%;
-				}
+			.row__cell,
+			.row__cell:nth-child(2) {
+				width: calc(80% / 4);;
 
 				&.deposit,
 				&.withdraw {
