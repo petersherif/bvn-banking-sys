@@ -31,17 +31,17 @@ if (isset($_POST['submit'])) {
             $last_user_id = mysqli_insert_id($link);
 
             do {
-                $acc_num = mt_rand(10000000000, 99999999999);
+                $acc_num = rand(10000, 99999) . rand(10000, 99999);
                 $sql = "select * from accounts WHERE acc_num='$acc_num'";
                 $query = connect()->query($sql);
             } while ($query->num_rows != 0);
-            $card_num = 520072 . mt_rand(10, 99) . 68 . mt_rand(10, 99) . mt_rand(1000, 9999);
+            $card_num = 520072 . rand(10, 99) . 68 . rand(10, 99) . rand(1000, 9999);
             $sql_acc = "INSERT INTO accounts (acc_num,card_num ,pin_code,balance,user_id,bank_id) VALUES ($acc_num,$card_num,$pin_code,0,$last_user_id,1)";
             $link = mysqli_connect("localhost", "root", "", "bvn_system");
             mysqli_query($link, $sql_acc);
             $last_acc_id = mysqli_insert_id($link);
             do {
-                $bvnNumber = mt_rand(10000000000, 99999999999);
+                $bvnNumber = rand(10000, 99999) . rand(100000, 999999);
                 $sql = "select * from bvn WHERE bvn_num='$bvnNumber'";
                 $query = connect()->query($sql);
             } while ($query->num_rows != 0);
@@ -92,11 +92,11 @@ if (isset($_POST['createAccount'])) {
             } else {
                 $pin_code = $_POST['pin_code'];
                 do {
-                    $acc_num = mt_rand(10000000000, 99999999999);
+                    $acc_num = rand(10000, 99999) . rand(10000, 99999);
                     $sql = "select * from accounts WHERE acc_num='$acc_num'";
                     $query = connect()->query($sql);
                 } while ($query->num_rows != 0);
-                $card_num = 520072 . mt_rand(10, 99) . 68 . mt_rand(10, 99) . mt_rand(1000, 9999);
+                $card_num = 520072 . rand(10, 99) . 68 . rand(10, 99) . rand(1000, 9999);
                 $sql_acc = "INSERT INTO accounts (acc_num,card_num ,pin_code,balance,user_id,bank_id) VALUES ($acc_num,$card_num,$pin_code,0,$bvn_user_id,1)";
                 $link = mysqli_connect("localhost", "root", "", "bvn_system");
                 mysqli_query($link, $sql_acc);

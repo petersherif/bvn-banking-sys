@@ -92,7 +92,7 @@ if (isset($_SESSION['loggedin'])){
 <body class="">
 
 <!-- Page Preload, back to top, etc. -->
-<?php include_once('includes/shared-components.php'); ?>
+<?php include('includes/shared-components.php'); ?>
 
 <!-- Navbar -->
 <?php include('includes/navbar.php'); ?>

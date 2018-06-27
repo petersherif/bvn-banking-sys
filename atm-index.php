@@ -85,7 +85,7 @@ include "controller/atmLoginController.php";
 									<input type="text"
 												 placeholder="Please insert your card number"
 												 name="card_num"
-												 id="cardnum"
+												 id="username"
 										   	 class="form-control"
 										   	 required="required">
 								</div>
@@ -95,7 +95,7 @@ include "controller/atmLoginController.php";
 									<input type="password"
 												 placeholder="Please insert your PIN code"
 												 name="pin_code"
-												 id="pin-code"
+												 id="password"
 										     class="form-control"
 										     required="required">
 								</div>

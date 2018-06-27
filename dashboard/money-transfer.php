@@ -37,7 +37,7 @@ global $message;
 					} else if ($message == "empty") {
 						?>
 						<div class="alert alert-danger">
-							<strong>Oops, transfer failed!</strong> Sorry, insufficient balance, your balance is <?php echo $balance ?> EGP
+							<strong>Oops, transfer failed!</strong> Sorry, insufficient balance, your balance is <?php echo $sender_balance ?> EGP
 						</div>
 						<?php
 					} else if ($message == "can") {
