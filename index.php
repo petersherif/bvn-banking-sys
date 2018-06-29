@@ -121,6 +121,9 @@ include "controller/LoginController.php";
 <!-- jQuery v.3.3.1 Library -->
 <script src="assets/vendor/jquery/jquery.min.js"></script>
 
+<!-- Preload script -->
+<script src="assets/js/preload.js"></script>
+
 <!-- Bootstrap v.3.3.7 JS -->
 <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
 

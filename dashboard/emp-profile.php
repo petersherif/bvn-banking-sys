@@ -108,11 +108,15 @@
 										<button name="submit" type="submit"
 												class="btn btn-primary--custom mr2 ml5">Save
 										</button>
+										<?php if($_SESSION['auth'] == 2) { ?>
 										<button type="button" class="btn btn-danger--custom" data-toggle="modal"
 												value="<?php echo $id; ?>"
 												data-target="#myModal">Delete Account
 										</button>
+										<?php } ?>
 										<p class="ml5">Click Save to keep your updates</p>
+
+										<?php if($_SESSION['auth'] == 2) { ?>
 										<div class="modal fade" id="myModal">
 											<div class="modal-dialog">
 												<div class="modal-content">
@@ -151,6 +155,7 @@
 												</div>
 											</div>
 										</div>
+										<?php } ?>
 
 									</div>
 								</form>

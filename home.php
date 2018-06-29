@@ -117,11 +117,17 @@ if (str_replace('/bvn-banking-sys', '', $_SERVER['REQUEST_URI']) == '/' || str_r
 <!-- jQuery v.3.3.1 Library -->
 <script src="assets/vendor/jquery/jquery.min.js"></script>
 
+<!-- Preload script -->
+<script src="assets/js/preload.js"></script>
+
 <!-- Bootstrap v.3.3.7 JS -->
 <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
 
-<!-- Chart.js Library -->
-<script src="assets/vendor/chart.js/Chart.min.js"></script>
+<?php 
+if (str_replace('/bvn-banking-sys', '', $_SERVER['REQUEST_URI']) == '/home.php') { ?>
+    <!-- Chart.js Library -->
+    <script src="assets/vendor/chart.js/Chart.min.js"></script>
+<?php } ?>
 
 <!-- Custom JS -->
 <script src="assets/js/main.js"></script>
