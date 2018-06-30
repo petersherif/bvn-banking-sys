@@ -145,14 +145,14 @@ include "./controller/MainController.php";
 					<?php if (isset($_SESSION['loggedAccount'])) { ?>
 
 						<?php
-						$transactions_limit = "LIMIT 5";
+						$transactions_limit = "LIMIT 3";
 						include "./controller/view-transactionsController.php";
 						?>
 
 						<div class="row">
 							<div class="col-xs-12">
 								<div class="light-box table-box data-listing-box view-transactions-box">
-									<h4 class="table__heading">Last 5 transactions</h4>
+									<h4 class="table__heading">Last transactions</h4>
 									<div class="row">
 										<div class="col-xs-12">
 											<ul class="table__rows">
@@ -163,18 +163,31 @@ include "./controller/MainController.php";
 													<span class="row__cell row__cell--heading">Sent Money</span>
 													<span class="row__cell row__cell--heading">Received Money</span>
 												</li>
-												<?php $i = 0;
-												foreach ($row as $record) {
-													?>
+												<?php
+													 foreach($row as $record) 
+													 { 
+												?>
 													<li class="table__row data-row">
-														<span class="row__cell" title="10/11/2018"><?php echo $row[$i]['date']; ?></span>
-														<span class="row__cell color-accent withdraw" title=""><?php if ($row[$i]["type"] == 1) echo $row[$i]["amount"]; ?></span>
-														<span class="row__cell color-primary deposit" title="6500"><?php if ($row[$i]["type"] == 0) echo $row[$i]["amount"]; ?></span>
-														<span class="row__cell color-accent withdraw" title=""><?php if ($row[$i]["type"] == 1) echo $row[$i]["amount"]; ?></span>
-														<span class="row__cell color-primary deposit" title="6500"><?php if ($row[$i]["type"] == 0) echo $row[$i]["amount"]; ?></span>
+														<span class="row__cell" title="<?php echo $record["date"] ;?>"><?php echo $record["date"] ;?></span>
+														<span class="row__cell color-accent withdraw" title="<?php if($record["type"]==1) { echo $record["amount"];} else { echo '-'; }?>"><?php if($record["type"]==1) { echo $record["amount"]; } else { echo '-'; }?></span>
+														<span class="row__cell color-primary deposit" title="<?php if($record["type"]==0) { echo $record["amount"]; } else { echo '-'; }?>"><?php if($record["type"]==0) { echo $record["amount"]; } else { echo '-'; }?></span>
+														<span class="row__cell color-accent withdraw" title="-">-</span>
+														<span class="row__cell color-primary deposit" title="-">-</span>
 													</li>
-													<?php $i++;
-												} ?>
+
+												<?php
+													} 
+													 foreach($row_transfer as $record_transfer) 
+													 { 
+												?>
+													<li class="table__row data-row">
+														<span class="row__cell" title="<?php echo $record_transfer["date"] ;?>"><?php echo $record_transfer["date"] ;?></span>
+														<span class="row__cell color-accent withdraw" title="-">-</span>
+														<span class="row__cell color-primary deposit" title="-">-</span>
+														<span class="row__cell color-accent withdraw" title="<?php if($record_transfer["sender_id"]==$user_id) { echo $record_transfer["amount"]; } else { echo '-'; }?>"><?php if($record_transfer["sender_id"]==$user_id) { echo $record_transfer["amount"]; } else { echo '-'; }?></span>
+														<span class="row__cell color-primary deposit" title="<?php if($record_transfer["sender_id"]!=$user_id) { echo $record_transfer["amount"]; } else { echo '-'; }?>"><?php if($record_transfer["sender_id"]!=$user_id) { echo $record_transfer["amount"]; } else { echo '-'; }?></span>
+													</li>
+												<?php } ?>
 											</ul>
 										</div>
 									</div>
