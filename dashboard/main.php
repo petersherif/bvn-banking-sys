@@ -146,13 +146,14 @@ include "./controller/MainController.php";
 
 						<?php
 						$transactions_limit = "LIMIT 3";
+						$transfer_limit = "LIMIT 2";
 						include "./controller/view-transactionsController.php";
 						?>
 
 						<div class="row">
 							<div class="col-xs-12">
 								<div class="light-box table-box data-listing-box view-transactions-box">
-									<h4 class="table__heading">Last transactions</h4>
+									<h4 class="table__heading">Last 5 transactions</h4>
 									<div class="row">
 										<div class="col-xs-12">
 											<ul class="table__rows">
