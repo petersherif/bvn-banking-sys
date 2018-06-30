@@ -34,34 +34,34 @@ if (isset($account)) {
                     $message = 'can';
                 } else {
 
-                        if ($sender_balance < $amount || $sender_balance == 0) {
-                            $message = 'empty';
+                    if ($sender_balance < $amount || $sender_balance == 0) {
+                        $message = 'empty';
 
-                        } else {
+                    } else {
 
-                            
-                            $newSenderBalance = ($sender_balance) - ($amount);
-                            $sql = "UPDATE `accounts` SET balance='$newSenderBalance' WHERE user_id='$sender_id'";
-                            $query = connect()->query($sql);
-                            $sql = "SELECT * FROM accounts WHERE user_id='$receiver_id'";
-                            $query = connect()->query($sql);
-                            if ($query->num_rows > 0) {
-                                while ($row = $query->fetch_assoc()) {
-                                    $receiver_balance = $row['balance'];
-                                }
-                                $newReceiverBalance = ($receiver_balance) + ($amount);
-                                $sql = "UPDATE `accounts` SET balance='$newReceiverBalance' WHERE user_id='$receiver_id'";
-                                $query = connect()->query($sql);
-                                $sql = "INSERT INTO transfer(amount,sender_id,receiver_id)VALUE ($amount,$sender_id,$receiver_id)";
-                                $query = connect()->query($sql);
-                                $message = 'success';
+
+                        $newSenderBalance = ((float)$sender_balance) - ((float)$amount);
+                        $sql = "UPDATE `accounts` SET balance='$newSenderBalance' WHERE user_id='$sender_id'";
+                        $query = connect()->query($sql);
+                        $sql = "SELECT * FROM accounts WHERE user_id='$receiver_id'";
+                        $query = connect()->query($sql);
+                        if ($query->num_rows > 0) {
+                            while ($row = $query->fetch_assoc()) {
+                                $receiver_balance = $row['balance'];
                             }
+                            $newReceiverBalance = ((float)$receiver_balance) + ((float)$amount);
+                            $sql = "UPDATE `accounts` SET balance='$newReceiverBalance' WHERE user_id='$receiver_id'";
+                            $query = connect()->query($sql);
+                            $sql = "INSERT INTO transfer(amount,sender_id,receiver_id)VALUE ($amount,$sender_id,$receiver_id)";
+                            $query = connect()->query($sql);
+                            $message = 'success';
                         }
                     }
+                }
             } else {
                 $message = 'exist';
             }
-        } 
+        }
 
     }
 }
