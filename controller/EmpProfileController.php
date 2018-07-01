@@ -49,7 +49,7 @@ while ($row = $query->fetch_object()) {
 
 
 if (isset($_POST['submit_delete'])) {
-    $id3 = $_POST['id'];
+    $id3 = $_GET['id'];
 
 
     $sql = "DELETE FROM `users` WHERE id=$id3 ";

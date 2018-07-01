@@ -76,7 +76,7 @@
                                                     <div class="modal-footer">
                                                         <form method="post" action="?search-clients">
                                                             <input type="hidden" id="get_id" name="id" value=""/>
-                                                            <button type="submit" class="btn btn-danger--custom"><i
+                                                            <button type="submit" name='delete' class="btn btn-danger--custom"><i
                                                                         class="fa fa-times"></i> Delete
                                                             </button>
                                                             <a class="btn btn-primary--custom" data-dismiss="modal"
@@ -100,51 +100,5 @@
     </div>
 
 
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Client Details</h4>
-                </div>
-                <div class="modal-body">
-
-                    <div class="profile__avatar">
-                        <img src="./assets/files/users/thumb/521421311.jpg" style="width: 570px;height: 200px;"
-                             id="usr_img"/>
-                    </div>
-                    <div class="col-xs-12">
-
-                        <div class="profile__info">
-
-                            <p class="info__text"><span class="info__title">Name : <span id="name"></span> </span></p>
-                            <p class="info__text"><span class="info__title">Email : <span id="email"></span> </span></p>
-                            <p class="info__text"><span class="info__title">Nat ID :  <span id="nat_id"></span> </span>
-                            </p>
-                            <p class="info__text"><span class="info__title">Birthday : <span
-                                            id="birthday"></span> </span></p>
-                            <p class="info__text"><span class="info__title">Gender :  <span id="gender"></span>  </span>
-                            </p>
-                            <p class="info__text"><span class="info__title">Address : <span id="address"></span> </span>
-                            </p>
-                            <p class="info__text"><span class="info__title">Phone :  <span id="phone"></span>  </span>
-                            </p>
-                            <p class="info__text"><span class="info__title">Acc No. :  <span
-                                            id="acc_num"></span>  </span></p>
-                            <p class="info__text"><span class="info__title">Balance :  <span
-                                            id="balance"></span>  </span></p>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <!--END - Modal -->
 
 </section>

@@ -132,7 +132,7 @@ include "./controller/MainController.php";
 										<?php if (isset($_SESSION['loggedAccount'])) { ?>
 										<div class="row">
 											<div class="col-xs-12 col-sm-8 col-sm-offset-2 col-lg-5 col-lg-offset-7">
-												<a href="home.php?client-profile"
+												<a href="home.php?client-profile&id=<?php echo $_SESSION['user_id'] ?>"
 												   class="btn btn-block btn-primary--custom">View Client's Profile</a>
 											</div>
 										</div> <!-- row -->

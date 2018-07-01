@@ -4,6 +4,7 @@ if (isset($_POST['submit'])) {
     global $message;
     $username = $_POST['user_name'];
     $email = $_POST['email'];
+    $nat_id = $_POST['national_id'];
     if ($_POST['user_name'] == "") {
         $message = 'error';
 
@@ -25,11 +26,10 @@ if (isset($_POST['submit'])) {
         $message = 'error';
     } else {
 
-        $sql = "select * from users WHERE user_name='$username' OR email='$email'";
+        $sql = "select * from users WHERE user_name='$username' OR email='$email' OR national_id='$nat_id'";
         $query = connect()->query($sql);
-
         if ($query->num_rows != 0) {
-            $message = "exist";
+$message='exist';
         } else {
             $target_dir = "./assets/files/users/thumb/";
             $target_file = $target_dir . basename($_FILES["thumb"]["name"]);
@@ -39,7 +39,7 @@ if (isset($_POST['submit'])) {
             $values = "'" . $_POST['user_name'] . "','" . $_POST['full_name'] . "','" . $_POST['email'] . "','" . md5($_POST['password']) . "','" . $_POST['national_id'] . "','" . $_POST['birthday'] . "','" . $_POST['gender'] . "','" . $_POST['address'] . "','" . $_POST['phone'] . "','" . $_FILES["thumb"]["name"] . "','" . $_POST['auth'] . "'";
             $sql = "insert into users (`user_name`,`full_name`,`email`,`password`,`national_id`,`birthday`,`gender`,`address`,`phone`,`thumb`,`auth`)VALUES ($values)";
             $query = connect()->query($sql);
-            $message = 'success';
+            $message='success';
 
 
         }

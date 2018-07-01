@@ -1,4 +1,8 @@
 $(document).ready(function () {
+	$('.send_id').click(function(){
+		var id=$(this).val();
+	   $( '#get_id' ).val( id );
+   });
 
 	// Add padding-left to body and navbar if the page has a sidebar
 	let bodyAndNavbar = $('body .container, body .container-fluid, .navbar-custom'),
@@ -138,10 +142,7 @@ $(document).ready(function () {
   });
 
 	// Confirm Deletion
-  $('.send_id').click(function(){
-	 	var id=$(this).val();
-		$( '#get_id' ).val( id );
-	});
+
 
   //Print Receipt
   $('.yes-print-receipt, .no-go-green').click(function(event) {

@@ -142,7 +142,7 @@
                                                             <form method="post" action="?search-clients">
                                                                 <input type="hidden" id="id" name="id"
                                                                        value="<?php echo $id ?>"/>
-                                                                <button type="submit_delete"
+                                                                <button  type="submit" name="submit_delete"
                                                                         class="btn btn-danger--custom">
                                                                     <i
                                                                             class="fa fa-times"></i> Delete
