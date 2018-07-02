@@ -252,15 +252,8 @@ include "./controller/MainController.php";
 						</div>
 					</div> <!-- Currency Rate Box -->
 				</div>
-
-				<div class="row">
-					<div class="col-xs-12">
-						<div class="light-box rate-chart-box">
-							<canvas id="rate-chart"></canvas>
-						</div>
-					</div> <!-- Cur Rate Chart -->
-				</div>
-			</div> <!-- Date and Time Box, Cur Rate Table & Graph -->
+				
+			</div> <!-- Date and Time Box, Cur Rate Table -->
 		</div> <!-- Row -->
 	</div> <!-- Container -->
 </section>
